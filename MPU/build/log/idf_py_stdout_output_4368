@@ -1,0 +1,226 @@
+t:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,le�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 20 2025 14:56:31[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aca8h ( 44200) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001acd0 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d06c vaddr=40080000 size=02fach ( 12204) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1656ch ( 91500) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036594 vaddr=40082fac size=0b048h ( 45128) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     uart_events[0m
+[0;32mI (219) app_init: App version:      1[0m
+[0;32mI (223) app_init: Compile time:     Feb 20 2025 14:55:50[0m
+[0;32mI (229) app_init: ELF file SHA256:  95e846dc0...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2C88 len 0002D378 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E000 len 00012000 (72 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (336) main_task: Calling app_main()[0m
+Raw data: fc bc ff b9 0f bb
+AccXLSB: -836, AccYLSB: -71, AccZLSB: 4027
+AceX: -0.204102, AceY: -0.017334, AceZ: 0.983154
+AngleRoll: -0.988994, AnglePitch: 11.726171
+Raw data: fc bc ff bb 0f bf
+AccXLSB: -836, AccYLSB: -69, AccZLSB: 4031
+AceX: -0.204102, AceY: -0.016846, AceZ: 0.984131
+AngleRoll: -0.960226, AnglePitch: 11.714958
+Raw data: fc ba ff b9 0f c0
+AccXLSB: -838, AccYLSB: -71, AccZLSB: 4032
+AceX: -0.204590, AceY: -0.017334, AceZ: 0.984375
+AngleRoll: -0.987721, AnglePitch: 11.739279
+Raw data: fc b6 ff b7 0f c6
+AccXLSB: -842, AccYLSB: -73, AccZLSB: 4038
+AceX: -0.205566, AceY: -0.017822, AceZ: 0.985840
+AngleRoll: -1.013892, AnglePitch: 11.776617
+Raw data: fc bb ff b9 0f bc
+AccXLSB: -837, AccYLSB: -71, AccZLSB: 4028
+AceX: -0.204346, AceY: -0.017334, AceZ: 0.983398
+AngleRoll: -0.988710, AnglePitch: 11.736976
+Raw data: fc be ff b6 0f b9
+AccXLSB: -834, AccYLSB: -74, AccZLSB: 4025
+AceX: -0.203613, AceY: -0.018066, AceZ: 0.982666
+AngleRoll: -1.031367, AnglePitch: 11.704391
+Raw data: fc be ff b7 0f b5
+AccXLSB: -834, AccYLSB: -73, AccZLSB: 4021
+AceX: -0.203613, AceY: -0.017822, AceZ: 0.981689
+AngleRoll: -1.018403, AnglePitch: 11.715760
+Raw data: fc bf ff b7 0f b5
+AccXLSB: -833, AccYLSB: -73, AccZLSB: 4021
+AceX: -0.203369, AceY: -0.017822, AceZ: 0.981689
+AngleRoll: -1.018453, AnglePitch: 11.702100
+Raw data: 02 47 ff fe 0e 3a
+AccXLSB: 583, AccYLSB: -2, AccZLSB: 3642
+AceX: 0.142334, AceY: -0.000488, AceZ: 0.889160
+AngleRoll: -0.031068, AnglePitch: -9.094570
+Raw data: 02 0e ff 64 10 5e
+AccXLSB: 526, AccYLSB: -156, AccZLSB: 4190
+AceX: 0.128418, AceY: -0.038086, AceZ: 1.022949
+AngleRoll: -2.115633, AnglePitch: -7.150405
+Raw data: 0c 81 00 dc 11 37
+AccXLSB: 3201, AccYLSB: 220, AccZLSB: 4407
+AceX: 0.781494, AceY: 0.053711, AceZ: 1.075928
+AngleRoll: 2.312943, AnglePitch: -35.958675
+Raw data: 03 23 fe 07 0b aa
+AccXLSB: 803, AccYLSB: -505, AccZLSB: 2986
+AceX: 0.196045, AceY: -0.123291, AceZ: 0.729004
+AngleRoll: -9.275659, AnglePitch: -14.850595
+Raw data: 04 eb fa d9 0e ac
+AccXLSB: 1259, AccYLSB: -1319, AccZLSB: 3756
+AceX: 0.307373, AceY: -0.322021, AceZ: 0.916992
+AngleRoll: -18.415895, AnglePitch: -17.550226
+Raw data: fe a3 fc 3a 0d 46
+AccXLSB: -349, AccYLSB: -966, AccZLSB: 3398
+AceX: -0.085205, AceY: -0.235840, AceZ: 0.829590
+AngleRoll: -15.790754, AnglePitch: 5.642109
+Raw data: 06 a4 00 52 0e 05
+AccXLSB: 1700, AccYLSB: 82, AccZLSB: 3589
+AceX: 0.415039, AceY: 0.020020, AceZ: 0.876221
+AngleRoll: 1.182895, AnglePitch: -25.339706
+Raw data: 04 6d f4 28 0a 75
+AccXLSB: 1133, AccYLSB: -3032, AccZLSB: 2677
+AceX: 0.276611, AceY: -0.740234, AceZ: 0.653564
+AngleRoll: -46.206814, AnglePitch: -15.648715
+Raw data: fc 24 fa d2 0d 99
+AccXLSB: -988, AccYLSB: -1326, AccZLSB: 3481
+AceX: -0.241211, AceY: -0.323730, AceZ: 0.849854
+AngleRoll: -20.125395, AnglePitch: 14.854795
+Raw data: 04 a1 06 bf 11 4c
+AccXLSB: 1185, AccYLSB: 1727, AccZLSB: 4428
+AceX: 0.289307, AceY: 0.421631, AceZ: 1.081055
+AngleRoll: 20.644402, AnglePitch: -13.999750
+Raw data: 06 04 f6 f2 0c d9
+AccXLSB: 1540, AccYLSB: -2318, AccZLSB: 3289
+AceX: 0.375977, AceY: -0.565918, AceZ: 0.802979
+AngleRoll: -32.548931, AnglePitch: -20.943178
+Raw data: 07 d0 f4 c9 07 e0
+AccXLSB: 2000, AccYLSB: -2871, AccZLSB: 2016
+AceX: 0.488281, AceY: -0.700928, AceZ: 0.492188
+AngleRoll: -45.313393, AnglePitch: -29.687729
+Raw data: 09 29 f6 af 06 3e
+AccXLSB: 2345, AccYLSB: -2385, AccZLSB: 1598
+AceX: 0.572510, AceY: -0.582275, AceZ: 0.390137
+AngleRoll: -40.045872, AnglePitch: -39.242939
+Raw data: fd bc fe 52 10 87
+AccXLSB: -580, AccYLSB: -430, AccZLSB: 4231
+AceX: -0.141602, AceY: -0.104980, AceZ: 1.032959
+AngleRoll: -5.749685, AnglePitch: 7.766138
+Raw data: fd 0c ff af 10 a2
+AccXLSB: -756, AccYLSB: -81, AccZLSB: 4258
+AceX: -0.184570, AceY: -0.019775, AceZ: 1.039551
+AngleRoll: -1.073030, AnglePitch: 10.066060
+Raw data: 0a eb f7 c5 0a b2
+AccXLSB: 2795, AccYLSB: -2107, AccZLSB: 2738
+AceX: 0.682373, AceY: -0.514404, AceZ: 0.668457
+AngleRoll: -28.303020, AnglePitch: -38.973000
+Raw data: 10 41 f7 44 03 7c
+AccXLSB: 4161, AccYLSB: -2236, AccZLSB: 892
+AceX: 1.015869, AceY: -0.545898, AceZ: 0.217773
+AngleRoll: -27.718929, AnglePitch: -59.948380
+Raw data: 08 ee f4 9f f7 0c
+AccXLSB: 2286, AccYLSB: -2913, AccZLSB: -2292
+AceX: 0.558105, AceY: -0.711182, AceZ: -0.559570
+AngleRoll: -41.983067, AnglePitch: -31.663748
+Raw data: 06 73 f3 fd f7 9b
+AccXLSB: 1651, AccYLSB: -3075, AccZLSB: -2149
+AceX: 0.403076, AceY: -0.750732, AceZ: -0.524658
+AngleRoll: -48.610435, AnglePitch: -23.753790
+Raw data: 0d 57 f8 cb f6 2b
+AccXLSB: 3415, AccYLSB: -1845, AccZLSB: -2517
+AceX: 0.833740, AceY: -0.450439, AceZ: -0.614502
+AngleRoll: -23.504255, AnglePitch: -47.577465
+Raw data: 03 7c f0 5e fb ba
+AccXLSB: 892, AccYLSB: -4002, AccZLSB: -1094
+AceX: 0.217773, AceY: -0.977051, AceZ: -0.267090
+AngleRoll: -70.571564, AnglePitch: -12.133883
+Raw data: 02 46 f0 48 f9 9d
+AccXLSB: 582, AccYLSB: -4024, AccZLSB: -1635
+AceX: 0.142090, AceY: -0.982422, AceZ: -0.399170
+AngleRoll: -66.670120, AnglePitch: -7.631833
+Raw data: 06 15 0e 25 05 c8
+AccXLSB: 1557, AccYLSB: 3621, AccZLSB: 1480
+AceX: 0.380127, AceY: 0.884033, AceZ: 0.361328
+AngleRoll: 59.321285, AnglePitch: -21.703955
+Raw data: 05 da 0e 12 fa 2f
+AccXLSB: 1498, AccYLSB: 3602, AccZLSB: -1489
+AceX: 0.365723, AceY: 0.879395, AceZ: -0.363525
+AngleRoll: 59.613529, AnglePitch: -21.023567
+Raw data: 09 1d 0c b4 f7 d3
+AccXLSB: 2333, AccYLSB: 3252, AccZLSB: -2093
+AceX: 0.569580, AceY: 0.793945, AceZ: -0.510986
+AngleRoll: 46.056282, AnglePitch: -31.100916
+Raw data: 10 43 01 9d fd 1d
+AccXLSB: 4163, AccYLSB: 413, AccZLSB: -739
+AceX: 1.016357, AceY: 0.100830, AceZ: -0.180420
+AngleRoll: 5.578964, AnglePitch: -78.505241
+Raw data: 08 0c 04 89 f2 7e
+AccXLSB: 2060, AccYLSB: 1161, AccZLSB: -3458
+AceX: 0.502930, AceY: 0.283447, AceZ: -0.844238
+AngleRoll: 16.089710, AnglePitch: -29.455158
+Raw data: 03 13 07 4c f1 28
+AccXLSB: 787, AccYLSB: 1868, AccZLSB: -3800
+AceX: 0.192139, AceY: 0.456055, AceZ: -0.927734
+AngleRoll: 25.704483, AnglePitch: -10.528988
+Raw data: 00 34 f0 c2 05 f4
+AccXLSB: 52, AccYLSB: -3902, AccZLSB: 1524
+AceX: 0.012695, AceY: -0.952637, AceZ: 0.372070
+AngleRoll: -68.654633, AnglePitch: -0.711193
+Raw data: 0b 0f 0b 45 f9 eb
+AccXLSB: 2831, AccYLSB: 2885, AccZLSB: -1557
+AceX: 0.691162, AceY: 0.704346, AceZ: -0.380127
+AngleRoll: 41.762814, AnglePitch: -40.812195
+Raw data: 09 f5 f5 f9 f3 fc
+AccXLSB: 2549, AccYLSB: -2567, AccZLSB: -3076
+AceX: 0.622314, AceY: -0.626709, AceZ: -0.750977
+AngleRoll: -32.723595, AnglePitch: -32.465805
+Raw data: 0b 1c 0d 64 0a 6c
+AccXLSB: 2844, AccYLSB: 3428, AccZLSB: 2668
+AceX: 0.694336, AceY: 0.836914, AceZ: 0.651367
+AngleRoll: 41.317856, AnglePitch: -33.213261
+Raw data: 00 07 07 1d 0e df
+AccXLSB: 7, AccYLSB: 1821, AccZLSB: 3807
+AceX: 0.001709, AceY: 0.444580, AceZ: 0.929443
+AngleRoll: 25.563122, AnglePitch: -0.095038

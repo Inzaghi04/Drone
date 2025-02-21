@@ -1,0 +1,581 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d6090: i2c_master_init at C:/esp/MPU/main/main.c:29
+[0m
+[0;33m0x400d6094: i2c_write_bytes at C:/esp/MPU/main/main.c:32
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4008ded8: _xt_context_save at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_context.S:217
+[0m
+[0;33m0x400d1e36: panic_handler at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/panic_handler.c:193 (discriminator 1)
+[0m
+[0;33m0x400d6090: i2c_master_init at C:/esp/MPU/main/main.c:29
+[0m
+[0;33m0x400d6094: i2c_write_bytes at C:/esp/MPU/main/main.c:32
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x400841b0: spi1_start at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/spi_flash_os_func_app.c:105
+0x4008415c: main_flash_region_protected at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/spi_flash_os_func_app.c:208
+[0m
+[0;33m0x40084140: delay_us at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/spi_flash_os_func_app.c:176
+0x40084100: get_buffer_malloc at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/spi_flash_os_func_app.c:182
+0x400840f4: release_buffer_malloc at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash/spi_flash_os_func_app.c:203
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d216c: panic_soc_fill_info at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:459
+[0m
+[0;33m0x400d2170: panic_print_backtrace at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/arch/xtensa/panic_arch.c:477
+[0m
+[0;33mMultiple decode errors occured: Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0m

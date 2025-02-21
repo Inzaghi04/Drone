@@ -1,0 +1,129 @@
+OT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+l�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 20 2025 14:56:31[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ac58h ( 44120) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ac80 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d01c vaddr=40080000 size=02ffch ( 12284) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1653ch ( 91452) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036564 vaddr=40082ffc size=0aff8h ( 45048) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     uart_events[0m
+[0;32mI (219) app_init: App version:      1[0m
+[0;32mI (223) app_init: Compile time:     Feb 20 2025 14:55:50[0m
+[0;32mI (229) app_init: ELF file SHA256:  93f2d55aa...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2C88 len 0002D378 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E000 len 00012000 (72 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (326) main_task: Started on CPU0[0m
+[0;32mI (336) main_task: Calling app_main()[0m
+AceX: 1.068115, AceY: -0.010254, AceZ: 0.044922
+AngleRoll: -0.549537, AnglePitch: -87.529854
+AceX: 1.068604, AceY: -0.008789, AceZ: 0.045166
+AngleRoll: -0.470816, AnglePitch: -87.534409
+AceX: 1.067627, AceY: -0.010498, AceZ: 0.041992
+AngleRoll: -0.562940, AnglePitch: -87.678345
+AceX: 1.067627, AceY: -0.009766, AceZ: 0.044922
+AngleRoll: -0.523609, AnglePitch: -87.534416
+AceX: 1.069336, AceY: -0.010010, AceZ: 0.044922
+AngleRoll: -0.535842, AnglePitch: -87.535545
+AceX: 1.071045, AceY: -0.009766, AceZ: 0.044678
+AngleRoll: -0.521946, AnglePitch: -87.555016
+AceX: 1.070312, AceY: -0.009277, AceZ: 0.043701
+AngleRoll: -0.496207, AnglePitch: -87.609848
+AceX: 1.067871, AceY: -0.009033, AceZ: 0.046143
+AngleRoll: -0.484206, AnglePitch: -87.478889
+AceX: 1.068848, AceY: -0.009521, AceZ: 0.042480
+AngleRoll: -0.509985, AnglePitch: -87.667618
+AceX: 1.068115, AceY: -0.010254, AceZ: 0.045166
+AngleRoll: -0.549532, AnglePitch: -87.517113
+AceX: 1.068359, AceY: -0.010010, AceZ: 0.043457
+AngleRoll: -0.536361, AnglePitch: -87.609772
+AceX: 1.069336, AceY: -0.011475, AceZ: 0.045898
+AngleRoll: -0.614229, AnglePitch: -87.466690
+AceX: 1.068115, AceY: -0.009766, AceZ: 0.044189
+AngleRoll: -0.523385, AnglePitch: -87.573853
+AceX: 1.068359, AceY: -0.009521, AceZ: 0.043945
+AngleRoll: -0.510189, AnglePitch: -87.589966
+AceX: 1.068359, AceY: -0.010010, AceZ: 0.044189
+AngleRoll: -0.536346, AnglePitch: -87.571548
+AceX: 1.068848, AceY: -0.010254, AceZ: 0.044678
+AngleRoll: -0.549166, AnglePitch: -87.544281
+AceX: 1.070068, AceY: -0.010742, AceZ: 0.042480
+AngleRoll: -0.574708, AnglePitch: -87.655136
+AceX: 1.069092, AceY: -0.012939, AceZ: 0.041504
+AngleRoll: -0.692908, AnglePitch: -87.671371
+AceX: 1.063965, AceY: 0.001953, AceZ: 0.079346
+AngleRoll: 0.104887, AnglePitch: -85.733749
+AceX: 1.040527, AceY: 0.061523, AceZ: -0.091309
+AngleRoll: 3.370874, AnglePitch: -83.959816
+AceX: 0.775879, AceY: -0.173340, AceZ: 0.438721
+AngleRoll: -11.005167, AnglePitch: -58.701015
+AceX: 1.030762, AceY: 0.304199, AceZ: 0.021484
+AngleRoll: 16.439049, AnglePitch: -73.518837
+AceX: 0.908203, AceY: 0.051514, AceZ: 0.682617
+AngleRoll: 2.596082, AnglePitch: -52.992836
+AceX: 1.027832, AceY: -0.108398, AceZ: 0.456055
+AngleRoll: -5.506293, AnglePitch: -65.483841
+AceX: 1.039062, AceY: -0.308594, AceZ: 0.403320
+AngleRoll: -15.475637, AnglePitch: -63.953186
+AceX: 0.962402, AceY: -0.102539, AceZ: 0.650879
+AngleRoll: -5.043634, AnglePitch: -55.602604
+AceX: 0.976562, AceY: 0.021240, AceZ: 0.498535
+AngleRoll: 1.109781, AnglePitch: -62.934643
+AceX: 0.959717, AceY: -0.133057, AceZ: 0.474609
+AngleRoll: -7.084139, AnglePitch: -62.815098
+AceX: 1.126709, AceY: -0.535400, AceZ: 0.472656
+AngleRoll: -23.662756, AnglePitch: -57.630756
+AceX: 0.853516, AceY: -0.035889, AceZ: 0.746338
+AngleRoll: -1.812999, AnglePitch: -48.799854
+AceX: 1.150635, AceY: -0.117676, AceZ: 0.033203
+AngleRoll: -5.836943, AnglePitch: -83.934319
+AceX: 1.071289, AceY: -0.016846, AceZ: 0.030762
+AngleRoll: -0.900514, AnglePitch: -88.124901
+AceX: 1.068359, AceY: -0.004150, AceZ: 0.043945
+AngleRoll: -0.222395, AnglePitch: -87.634087
+AceX: 1.073975, AceY: -0.020752, AceZ: 0.026123
+AngleRoll: -1.106637, AnglePitch: -88.220703
