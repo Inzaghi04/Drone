@@ -1,0 +1,85 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\esp\MOTOR\build\bootloader\esp-idf\esptool_py && C:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/esp/MOTOR/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MOTOR.c.obj
+C:/esp/MOTOR/main/MOTOR.c: In function 'init_wifi':
+C:/esp/MOTOR/main/MOTOR.c:140:18: warning: unused variable 'netif' [-Wunused-variable]
+  140 |     esp_netif_t *netif = esp_netif_create_default_wifi_sta();
+      |                  ^~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable MOTOR.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/esp/MOTOR/build/MOTOR.bin
+[7/8] cmd.exe /C "cd /D C:\esp\MOTOR\build\esp-idf\esptool_py && C:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/esp/MOTOR/build/partition_table/partition-table.bin C:/esp/MOTOR/build/MOTOR.bin"
+MOTOR.bin binary size 0xd1160 bytes. Smallest app partition is 0x100000 bytes. 0x2eea0 bytes (18%) free.
+[7/8] cmd.exe /C "cd /D C:\esp\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\esp\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/esp/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/esp/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hardesptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 MOTOR.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e4:65:b8:28:cd:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e1fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16358...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16358 compressed) at 0x00001000 in 0.6 seconds (effective 363.5 kbit/s)...
+Hash of data verified.
+Compressed 856416 bytes to 540208...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cd63... (6 %)
+Writing at 0x00024d57... (9 %)
+Writing at 0x00029a34... (12 %)
+Writing at 0x00033d02... (15 %)
+Writing at 0x0003b570... (18 %)
+Writing at 0x00041066... (21 %)
+Writing at 0x000468ed... (24 %)
+Writing at 0x0004c92e... (27 %)
+Writing at 0x0005265a... (30 %)
+Writing at 0x0005856d... (33 %)
+Writing at 0x0005df8f... (36 %)
+Writing at 0x000643b0... (39 %)
+Writing at 0x000694e7... (42 %)
+Writing at 0x0006eae1... (45 %)
+Writing at 0x00073ddd... (48 %)
+Writing at 0x0007941c... (51 %)
+Writing at 0x0007e9d8... (54 %)
+Writing at 0x0008419d... (57 %)
+Writing at 0x0008a0a4... (60 %)
+Writing at 0x0008f8a8... (63 %)
+Writing at 0x0009557a... (66 %)
+Writing at 0x0009b1c5... (69 %)
+Writing at 0x000a09f9... (72 %)
+Writing at 0x000a67c9... (75 %)
+Writing at 0x000ac9a8... (78 %)
+Writing at 0x000b275d... (81 %)
+Writing at 0x000b8263... (84 %)
+Writing at 0x000c18c8... (87 %)
+Writing at 0x000c9fb6... (90 %)
+Writing at 0x000cfda5... (93 %)
+Writing at 0x000d605e... (96 %)
+Writing at 0x000dbbee... (100 %)
+Wrote 856416 bytes (540208 compressed) at 0x00010000 in 14.0 seconds (effective 490.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 291.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/esp/MOTOR/build -P C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"
