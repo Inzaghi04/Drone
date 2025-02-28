@@ -1,0 +1,989 @@
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0x�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 22 2025 15:40:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23df0h (146928) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033e18 vaddr=3ffb0000 size=04010h ( 16400) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00037e30 vaddr=40080000 size=081e8h ( 33256) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=96908h (616712) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d6930 vaddr=400881e8 size=108c8h ( 67784) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (426) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     main[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (458) app_init: Compile time:     Feb 22 2025 15:40:05[0m
+[0;32mI (464) app_init: ELF file SHA256:  01d497eab...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8380 len 00027C80 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+I (611) wifi:wifi driver task: 3ffc01a8, prio:23, stack:6656, core=0
+I (621) wifi:wifi firmware version: ccaebfa
+I (621) wifi:wifi certification version: v7.0
+I (621) wifi:config NVS flash: enabled
+I (621) wifi:config nano formating: disabled
+I (631) wifi:Init data frame dynamic rx buffer num: 32
+I (631) wifi:Init static rx mgmt buffer num: 5
+I (641) wifi:Init management short buffer num: 32
+I (641) wifi:Init dynamic tx buffer num: 32
+I (641) wifi:Init static rx buffer size: 1600
+I (651) wifi:Init static rx buffer num: 10
+I (651) wifi:Init dynamic rx buffer num: 32
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (661) wifi_init: accept mbox: 6[0m
+[0;32mI (661) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+W (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (711) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (791) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (821) wifi:mode : sta (c8:f0:9e:f2:90:78)
+I (821) wifi:enable tsf
+[0;32mI (831) NETWORK: Connecting to WiFi...[0m
+[0;32mI (831) NETWORK: Waiting for IP address...[0m
+I (841) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (841) wifi:state: init -> auth (0xb0)
+I (851) wifi:state: auth -> assoc (0x0)
+I (861) wifi:state: assoc -> run (0x10)
+I (881) wifi:connected with MSWifi, aid = 1, channel 1, BW20, bssid = 50:88:11:e0:2d:c6
+I (881) wifi:security: WPA2-PSK, phy: bgn, rssi: -33
+I (891) wifi:pm start, type: 1
+
+I (891) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (911) wifi:<ba-add>idx:0 (ifx:0, 50:88:11:e0:2d:c6), tid:0, ssn:0, winSize:64
+I (991) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1901) esp_netif_handlers: sta ip: 192.168.5.33, mask: 255.255.255.0, gw: 192.168.5.1[0m
+[0;32mI (1901) NETWORK: ESP32 IP Address: 8.95.252.63[0m
+[0;32mI (5831) ESP_NOW_RECEIVER: Web Server started, ready to receive joystick data.[0m
+[0;32mI (5831) main_task: Returned from app_main()[0m
+[0;32mI (5841) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5841) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5841) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5851) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5861) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5861) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5861) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5861) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5871) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5881) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5881) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5881) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5901) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5901) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5901) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5901) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5911) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5911) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5921) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5921) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5931) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5931) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5941) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5941) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5951) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5951) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5961) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5961) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5971) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5971) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (5981) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (5981) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (5991) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (5991) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6001) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6001) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6011) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6011) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6011) TAG: InputThrottle 0.000000
+[0m
+I (6021) wifi:<ba-add>idx:1 (ifx:0, 50:88:11:e0:2d:c6), tid:6, ssn:2, winSize:64
+[0;32mI (6031) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6041) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6041) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6041) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6051) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6061) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6061) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6061) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6061) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6071) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6071) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6081) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6081) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6091) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6091) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6101) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6101) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6111) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6111) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6121) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6121) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6131) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6131) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6141) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6141) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6151) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6151) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6161) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6161) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6171) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6171) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6181) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6181) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6191) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6191) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6201) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6201) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6211) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6211) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6211) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6221) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6231) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6231) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6231) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6241) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6251) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6251) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6251) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6261) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6271) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6271) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6271) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6281) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6291) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6291) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6291) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6301) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6311) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6311) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6311) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6321) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6331) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6331) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6331) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6331) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6341) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6341) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6351) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6351) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6361) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6361) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6371) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6371) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6381) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6381) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6391) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6391) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6401) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6401) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6411) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6411) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6421) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6421) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6431) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6431) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6441) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6441) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6451) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6451) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6461) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6461) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6471) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6471) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6481) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6481) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6481) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6491) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6501) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6501) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6501) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6511) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6521) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6521) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6521) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6531) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6541) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6541) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6541) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6551) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6561) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6561) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6561) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6571) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6581) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6581) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6581) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6591) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6591) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6601) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6601) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6601) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6621) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6621) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6621) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6621) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6631) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6631) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6641) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6641) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6651) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6651) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6661) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6661) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6671) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6671) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6681) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6681) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6691) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6691) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6701) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6701) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6711) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6711) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6721) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6721) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6731) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6731) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6731) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6741) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6751) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6751) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6751) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6761) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6771) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6771) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6771) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6781) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6791) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6791) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6791) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6801) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6811) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6811) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6811) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6821) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6831) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6831) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6831) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6841) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6851) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6851) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6851) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6851) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6861) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6871) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6871) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6871) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6881) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6881) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6891) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6891) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6901) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6901) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6911) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6911) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6921) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6921) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6931) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6931) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6941) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6941) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6951) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6951) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6961) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6961) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6971) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6971) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (6981) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (6981) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (6991) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (6991) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7001) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7001) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7001) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7011) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7021) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7021) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7021) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7031) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7041) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7041) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7041) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7051) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7061) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7061) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7061) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7071) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7081) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7081) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7081) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7091) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7101) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7101) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7101) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7111) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7121) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7121) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7121) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7121) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7141) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7141) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7141) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7141) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7151) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7151) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7161) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7161) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7171) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7171) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7181) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7181) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7191) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7191) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7201) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7201) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7211) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7211) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7221) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7221) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7231) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7231) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7241) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7241) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7251) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7251) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7261) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7261) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7271) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7271) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7271) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7281) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7291) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7291) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7291) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7301) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7311) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7311) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7311) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7321) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7331) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7331) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7331) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7341) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7351) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7351) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7351) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7361) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7371) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7371) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7371) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7381) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7381) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7391) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7391) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7391) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7401) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7401) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7411) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7411) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7421) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7421) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7431) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7431) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7441) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7441) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7451) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7451) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7461) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7461) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7471) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7471) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7481) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7481) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7491) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7491) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7501) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7501) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7511) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7511) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7521) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7521) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7521) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7531) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7541) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7541) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7541) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7551) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7561) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7561) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7561) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7571) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7581) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7581) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7581) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7591) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7601) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7601) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7601) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7611) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7621) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7621) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7621) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7631) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7641) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7641) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7641) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7641) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7661) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7661) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7661) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7661) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7671) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7671) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7681) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7681) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7691) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7691) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7701) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7701) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7711) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7711) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7721) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7721) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7731) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7731) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7741) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7741) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7751) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7751) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7761) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7761) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7771) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7771) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7781) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7781) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7791) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7791) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7791) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7801) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7811) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7811) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7811) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7821) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7831) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7831) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7831) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7841) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7851) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7851) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7851) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7861) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7871) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7871) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7871) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7881) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7891) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7891) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7891) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7901) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7911) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7911) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7911) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7911) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7921) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7931) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7931) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7931) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7951) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7951) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7951) TAG: InputThrottle 0.000000
+[0m
+[0;32mI (7951) TAG: DesireddRateYaw -225.000000
+[0m
+[0;32mI (7961) TAG: DesiredAngleRoll -150.000000
+[0m
+[0;32mI (7961) TAG: DesiredAnglePitch -150.000000
+[0m
+[0;32mI (7971) TAG: InputThrottle 0.000000
+[0m

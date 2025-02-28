@@ -1,0 +1,79 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b9e: panic_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a7cd: esp_system_abort at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092a75: __assert_func at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008d55a: xTaskDelayUntil at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:1476 (discriminator 1)
+0x400d8b75: control_task at C:/esp/Main_project/main/main.c:542
+0x4008b319: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

@@ -1,0 +1,672 @@
+2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 22 2025 15:40:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23d70h (146800) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033d98 vaddr=3ffb0000 size=04010h ( 16400) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00037db0 vaddr=40080000 size=08268h ( 33384) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=967c8h (616392) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d67f0 vaddr=40088268 size=10848h ( 67656) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (425) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     main[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (458) app_init: Compile time:     Feb 22 2025 15:40:05[0m
+[0;32mI (464) app_init: ELF file SHA256:  a04b1e0cd...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8380 len 00027C80 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (560) main_task: Started on CPU0[0m
+[0;32mI (570) main_task: Calling app_main()[0m
+I (600) wifi:wifi driver task: 3ffc0104, prio:23, stack:6656, core=0
+I (610) wifi:wifi firmware version: ccaebfa
+I (610) wifi:wifi certification version: v7.0
+I (610) wifi:config NVS flash: enabled
+I (610) wifi:config nano formating: disabled
+I (610) wifi:Init data frame dynamic rx buffer num: 32
+I (620) wifi:Init static rx mgmt buffer num: 5
+I (620) wifi:Init management short buffer num: 32
+I (630) wifi:Init dynamic tx buffer num: 32
+I (630) wifi:Init static rx buffer size: 1600
+I (640) wifi:Init static rx buffer num: 10
+I (640) wifi:Init dynamic rx buffer num: 32
+[0;32mI (640) wifi_init: rx ba win: 6[0m
+[0;32mI (650) wifi_init: accept mbox: 6[0m
+[0;32mI (650) wifi_init: tcpip mbox: 32[0m
+[0;32mI (660) wifi_init: udp mbox: 6[0m
+[0;32mI (660) wifi_init: tcp mbox: 6[0m
+[0;32mI (660) wifi_init: tcp tx win: 5760[0m
+[0;32mI (670) wifi_init: tcp rx win: 5760[0m
+[0;32mI (670) wifi_init: tcp mss: 1440[0m
+[0;32mI (670) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (680) wifi_init: WiFi RX IRAM OP enabled[0m
+W (690) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (690) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (770) wifi:mode : sta (3c:8a:1f:09:66:00)
+I (770) wifi:enable tsf
+[0;32mI (770) NETWORK: Connecting to WiFi...[0m
+[0;32mI (780) NETWORK: Waiting for IP address...[0m
+I (790) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (790) wifi:state: init -> auth (0xb0)
+I (790) wifi:state: auth -> assoc (0x0)
+I (800) wifi:state: assoc -> run (0x10)
+I (810) wifi:<ba-add>idx:0 (ifx:0, a0:65:18:c4:b3:8d), tid:0, ssn:0, winSize:64
+I (820) wifi:connected with Van Vuong, aid = 7, channel 11, BW20, bssid = a0:65:18:c4:b3:8d
+I (820) wifi:security: WPA2-PSK, phy: bgn, rssi: -79
+I (830) wifi:pm start, type: 1
+
+I (830) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (900) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1840) esp_netif_handlers: sta ip: 192.168.1.7, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1840) NETWORK: ESP32 IP Address: 100.94.252.63[0m
+[0;32mI (5780) ESP_NOW_RECEIVER: Web Server started, ready to receive joystick data.[0m
+[0;32mI (5780) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (5780) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (5790) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (5800) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (5900) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (5900) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (5900) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (5910) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6020) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6020) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6020) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6030) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6140) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6140) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6140) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6150) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6260) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6260) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6260) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6270) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6380) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6380) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6380) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6390) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6500) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6500) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6500) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6510) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6620) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6620) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6620) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6630) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6740) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6740) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6740) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6750) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6860) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6860) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6860) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6870) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (6980) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (6980) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (6980) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (6990) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7100) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7100) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7100) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7110) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7220) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7220) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7220) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7230) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7340) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7340) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7340) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7350) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7460) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7460) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7460) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7470) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7580) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7580) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7580) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7590) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7700) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7700) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7700) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7710) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7820) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7820) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7820) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7830) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (7940) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (7940) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (7940) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (7950) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8060) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8060) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8060) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8070) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8180) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8180) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8180) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8190) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8300) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8300) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8300) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8310) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8420) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8420) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8420) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8430) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8540) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8540) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8540) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8550) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8660) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8660) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8660) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8670) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8780) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8780) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8780) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8790) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (8900) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (8900) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (8900) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (8910) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9020) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9020) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9020) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9030) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9140) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9140) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9140) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9150) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9260) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9260) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9260) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9270) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9380) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9380) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9380) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9390) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9500) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9500) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9500) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9510) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9620) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9620) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9620) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9630) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9740) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9740) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9740) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9750) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9860) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9860) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9860) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9870) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (9980) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (9980) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (9980) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (9990) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10100) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10100) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10100) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10110) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10220) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10220) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10220) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10230) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10340) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10340) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10340) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10350) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10460) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10460) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10460) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10470) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10580) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10580) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10580) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10590) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10700) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10700) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10700) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10710) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10820) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10820) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10820) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10830) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (10940) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (10940) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (10940) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (10950) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11060) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11060) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11060) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11070) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11180) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11180) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11180) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11190) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11300) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11300) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11300) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11310) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11420) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11420) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11420) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11430) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11540) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11540) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11540) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11550) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11660) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11660) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11660) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11670) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11780) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11780) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11780) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11790) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (11900) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (11900) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (11900) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (11910) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12020) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12020) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12020) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12030) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12140) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12140) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12140) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12150) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12260) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12260) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12260) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12270) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12380) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12380) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12380) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12390) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12500) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12500) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12500) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12510) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12620) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12620) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12620) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12630) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12740) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12740) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12740) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12750) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12860) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12860) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12860) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12870) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (12980) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (12980) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (12980) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (12990) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13100) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13100) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13100) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13110) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13220) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13220) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13220) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13230) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13340) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13340) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13340) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13350) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13460) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13460) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13460) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13470) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13580) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13580) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13580) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13590) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13700) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13700) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13720) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13720) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13840) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13840) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13850) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13850) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (13960) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (13960) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (13960) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (13970) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14080) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14080) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14080) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14090) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14200) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14200) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14210) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14210) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14320) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14320) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14320) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14330) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14440) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14440) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14440) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14450) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14560) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14560) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14560) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14570) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14680) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14680) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14680) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14690) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14800) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14800) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14800) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14810) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (14920) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (14920) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (14920) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (14930) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15040) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15040) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15040) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15050) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15160) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15160) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15160) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15170) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15280) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15280) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15280) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15290) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15400) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15400) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15400) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15410) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15520) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15520) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15520) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15530) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15640) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15640) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15640) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15650) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15760) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15760) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15760) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15770) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (15880) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (15880) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (15880) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (15890) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16000) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16000) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16000) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16010) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16120) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16120) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16120) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16130) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16240) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16240) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16240) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16250) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16360) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16360) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16360) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16370) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16480) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16480) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16480) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16490) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16600) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16600) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16600) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16610) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16720) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16720) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16720) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16730) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16840) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16840) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16840) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16850) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (16960) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (16960) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (16960) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (16970) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17080) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17080) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17080) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17090) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17200) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17200) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17200) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17210) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17320) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17320) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17320) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17330) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17440) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17440) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17440) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17450) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17560) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17560) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17560) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17570) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17680) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17680) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17680) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17690) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17800) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17800) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17800) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17810) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (17920) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (17920) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (17920) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (17930) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18040) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18040) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18040) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18050) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18160) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18160) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18160) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18170) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18280) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18280) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18280) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18290) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18400) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18400) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18400) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18410) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18520) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18520) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18520) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18530) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18640) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18640) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18640) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18650) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18760) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18760) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18770) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18780) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (18880) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (18880) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (18880) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (18890) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19000) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19000) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19000) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19010) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19120) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19120) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19130) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19130) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19250) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19250) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19250) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19260) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19370) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19370) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19370) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19380) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19490) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19490) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19490) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19500) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19610) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19610) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19610) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19620) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19730) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19730) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19730) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19740) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19850) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19850) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19850) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19870) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (19970) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (19970) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (19970) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (19980) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20090) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20090) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20100) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20100) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20210) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20210) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20210) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20220) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20330) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20330) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20330) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20340) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20450) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20450) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20450) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20470) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20570) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20570) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20570) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20580) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20690) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20690) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20690) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20700) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20810) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20810) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20810) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20820) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (20930) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (20930) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (20930) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (20940) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21050) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21050) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21050) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21060) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21170) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21170) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21170) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21180) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21290) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21290) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21290) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21300) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21410) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21410) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21410) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21420) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21530) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21530) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21530) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21540) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21650) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21650) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21650) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21660) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21770) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21770) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21770) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21780) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (21890) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (21890) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (21890) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (21900) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (22010) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (22010) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (22010) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (22020) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (22130) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (22130) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (22130) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (22140) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (22250) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (22250) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (22250) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (22260) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (22370) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (22370) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (22370) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (22380) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (22490) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (22490) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (22490) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (22500) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (22610) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (22610) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m
+[0;32mI (22610) ESP_NOW_RECEIVER: Channel 2: mapped_input=2000µs, duty=102[0m
+[0;32mI (22620) ESP_NOW_RECEIVER: Channel 3: mapped_input=2000µs, duty=102[0m
+[0;32mI (22730) ESP_NOW_RECEIVER: Channel 0: mapped_input=2000µs, duty=102[0m
+[0;32mI (22730) ESP_NOW_RECEIVER: Channel 1: mapped_input=2000µs, duty=102[0m

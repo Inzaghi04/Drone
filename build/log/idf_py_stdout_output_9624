@@ -1,0 +1,349 @@
+ESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 22 2025 15:40:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23da0h (146848) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033dc8 vaddr=3ffb0000 size=04010h ( 16400) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00037de0 vaddr=40080000 size=08238h ( 33336) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=96a14h (616980) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d6a3c vaddr=40088238 size=10878h ( 67704) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (426) boot: Disabling RNG early entropy source...[0m
+[0;32mI (438) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     main[0m
+[0;32mI (454) app_init: App version:      1[0m
+[0;32mI (458) app_init: Compile time:     Feb 22 2025 15:40:05[0m
+[0;32mI (464) app_init: ELF file SHA256:  20b4f1bfb...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8380 len 00027C80 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+I (601) wifi:wifi driver task: 3ffc0104, prio:23, stack:6656, core=0
+I (611) wifi:wifi firmware version: ccaebfa
+I (611) wifi:wifi certification version: v7.0
+I (611) wifi:config NVS flash: enabled
+I (611) wifi:config nano formating: disabled
+I (611) wifi:Init data frame dynamic rx buffer num: 32
+I (621) wifi:Init static rx mgmt buffer num: 5
+I (621) wifi:Init management short buffer num: 32
+I (631) wifi:Init dynamic tx buffer num: 32
+I (631) wifi:Init static rx buffer size: 1600
+I (641) wifi:Init static rx buffer num: 10
+I (641) wifi:Init dynamic rx buffer num: 32
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (661) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (671) wifi_init: tcp rx win: 5760[0m
+[0;32mI (671) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (681) wifi_init: WiFi RX IRAM OP enabled[0m
+W (691) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (691) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (771) wifi:mode : sta (3c:8a:1f:09:66:00)
+I (771) wifi:enable tsf
+[0;32mI (771) NETWORK: Connecting to WiFi...[0m
+[0;32mI (781) NETWORK: Waiting for IP address...[0m
+I (791) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (791) wifi:state: init -> auth (0xb0)
+I (801) wifi:state: auth -> assoc (0x0)
+I (801) wifi:state: assoc -> run (0x10)
+I (811) wifi:<ba-add>idx:0 (ifx:0, a0:65:18:c4:b3:8d), tid:0, ssn:0, winSize:64
+I (821) wifi:connected with Van Vuong, aid = 7, channel 11, BW20, bssid = a0:65:18:c4:b3:8d
+I (821) wifi:security: WPA2-PSK, phy: bgn, rssi: -74
+I (831) wifi:pm start, type: 1
+
+I (831) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (911) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1841) esp_netif_handlers: sta ip: 192.168.1.7, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1841) NETWORK: ESP32 IP Address: 100.94.252.63[0m
+[0;32mI (5781) ESP_NOW_RECEIVER: Web Server started, ready to receive joystick data.[0m
+[0;32mI (6451) ESP_NOW_RECEIVER: Web Control: Roll=34.00, Pitch=238.00, Yaw=157.00, Throttle=254.00, AUX1=1.00[0m
+[0;32mI (6461) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=221.00, AUX1=1.00[0m
+[0;32mI (7161) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=190.00, Throttle=218.00, AUX1=1.00[0m
+[0;32mI (7181) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=211.00, AUX1=1.00[0m
+[0;32mI (7611) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=201.00, Throttle=38.00, AUX1=1.00[0m
+[0;32mI (7621) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=154.00, Throttle=11.00, AUX1=1.00[0m
+[0;32mI (7631) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=114.00, Throttle=255.00, AUX1=1.00[0m
+[0;32mI (7711) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=27.00, Throttle=89.00, AUX1=1.00[0m
+[0;32mI (7721) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=102.00, Throttle=168.00, AUX1=1.00[0m
+[0;32mI (8021) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=149.00, Throttle=242.00, AUX1=1.00[0m
+[0;32mI (8041) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=204.00, Throttle=151.00, AUX1=1.00[0m
+[0;32mI (8121) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=180.00, Throttle=57.00, AUX1=1.00[0m
+[0;32mI (8131) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=196.00, Throttle=79.00, AUX1=1.00[0m
+[0;32mI (8401) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=145.00, Throttle=205.00, AUX1=1.00[0m
+[0;32mI (8481) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=58.00, Throttle=62.00, AUX1=1.00[0m
+[0;32mI (8501) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=158.00, Throttle=168.00, AUX1=1.00[0m
+[0;32mI (8511) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=106.00, Throttle=11.00, AUX1=1.00[0m
+[0;32mI (8631) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=208.00, AUX1=1.00[0m
+[0;32mI (8891) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=29.00, Throttle=168.00, AUX1=1.00[0m
+[0;32mI (8911) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=140.00, Throttle=78.00, AUX1=1.00[0m
+[0;32mI (8931) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=93.00, Throttle=27.00, AUX1=1.00[0m
+[0;32mI (9031) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=109.00, Throttle=47.00, AUX1=1.00[0m
+[0;32mI (9111) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=29.00, Throttle=172.00, AUX1=1.00[0m
+[0;32mI (9411) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=51.00, Throttle=74.00, AUX1=1.00[0m
+[0;32mI (9431) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=83.00, Throttle=192.00, AUX1=1.00[0m
+[0;32mI (9441) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=204.00, Throttle=20.00, AUX1=1.00[0m
+[0;32mI (9541) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=168.00, Throttle=29.00, AUX1=1.00[0m
+[0;32mI (9631) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=106.00, Throttle=172.00, AUX1=1.00[0m
+[0;32mI (9951) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=78.00, Throttle=140.00, AUX1=1.00[0m
+[0;32mI (9971) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=74.00, Throttle=136.00, AUX1=1.00[0m
+[0;32mI (9981) ESP_NOW_RECEIVER: Web Control: Roll=178.00, Pitch=172.00, Yaw=74.00, Throttle=136.00, AUX1=1.00[0m
+[0;32mI (10061) ESP_NOW_RECEIVER: Web Control: Roll=105.00, Pitch=183.00, Yaw=74.00, Throttle=136.00, AUX1=1.00[0m
+[0;32mI (10161) ESP_NOW_RECEIVER: Web Control: Roll=38.00, Pitch=234.00, Yaw=74.00, Throttle=136.00, AUX1=1.00[0m
+[0;32mI (10781) ESP_NOW_RECEIVER: Web Control: Roll=235.00, Pitch=24.00, Yaw=74.00, Throttle=136.00, AUX1=1.00[0m
+[0;32mI (10801) ESP_NOW_RECEIVER: Web Control: Roll=7.00, Pitch=45.00, Yaw=74.00, Throttle=136.00, AUX1=1.00[0m
+[0;32mI (11001) ESP_NOW_RECEIVER: Web Control: Roll=74.00, Pitch=8.00, Yaw=86.00, Throttle=148.00, AUX1=1.00[0m
+[0;32mI (11021) ESP_NOW_RECEIVER: Web Control: Roll=234.00, Pitch=145.00, Yaw=86.00, Throttle=152.00, AUX1=1.00[0m
+[0;32mI (11091) ESP_NOW_RECEIVER: Web Control: Roll=182.00, Pitch=208.00, Yaw=90.00, Throttle=152.00, AUX1=1.00[0m
+[0;32mI (11131) ESP_NOW_RECEIVER: Web Control: Roll=162.00, Pitch=143.00, Yaw=98.00, Throttle=164.00, AUX1=1.00[0m
+[0;32mI (11171) ESP_NOW_RECEIVER: Web Control: Roll=111.00, Pitch=184.00, Yaw=94.00, Throttle=160.00, AUX1=1.00[0m
+[0;32mI (11181) ESP_NOW_RECEIVER: Web Control: Roll=41.00, Pitch=11.00, Yaw=109.00, Throttle=176.00, AUX1=1.00[0m
+[0;32mI (11201) ESP_NOW_RECEIVER: Web Control: Roll=152.00, Pitch=93.00, Yaw=113.00, Throttle=179.00, AUX1=1.00[0m
+[0;32mI (11221) ESP_NOW_RECEIVER: Web Control: Roll=58.00, Pitch=203.00, Yaw=113.00, Throttle=179.00, AUX1=1.00[0m
+[0;32mI (11321) ESP_NOW_RECEIVER: Web Control: Roll=232.00, Pitch=178.00, Yaw=109.00, Throttle=179.00, AUX1=1.00[0m
+[0;32mI (11421) ESP_NOW_RECEIVER: Web Control: Roll=195.00, Pitch=121.00, Yaw=109.00, Throttle=179.00, AUX1=1.00[0m
+[0;32mI (11461) ESP_NOW_RECEIVER: Web Control: Roll=28.00, Pitch=204.00, Yaw=109.00, Throttle=179.00, AUX1=1.00[0m
+[0;32mI (11661) ESP_NOW_RECEIVER: Web Control: Roll=19.00, Pitch=98.00, Yaw=113.00, Throttle=187.00, AUX1=1.00[0m
+[0;32mI (11681) ESP_NOW_RECEIVER: Web Control: Roll=208.00, Pitch=5.00, Yaw=121.00, Throttle=195.00, AUX1=1.00[0m
+[0;32mI (11771) ESP_NOW_RECEIVER: Web Control: Roll=252.00, Pitch=66.00, Yaw=137.00, Throttle=219.00, AUX1=1.00[0m
+[0;32mI (11961) ESP_NOW_RECEIVER: Web Control: Roll=202.00, Pitch=232.00, Yaw=141.00, Throttle=226.00, AUX1=1.00[0m
+[0;32mI (11981) ESP_NOW_RECEIVER: Web Control: Roll=195.00, Pitch=62.00, Yaw=141.00, Throttle=226.00, AUX1=1.00[0m
+[0;32mI (12081) ESP_NOW_RECEIVER: Web Control: Roll=77.00, Pitch=176.00, Yaw=133.00, Throttle=211.00, AUX1=1.00[0m
+[0;32mI (12171) ESP_NOW_RECEIVER: Web Control: Roll=38.00, Pitch=234.00, Yaw=125.00, Throttle=199.00, AUX1=1.00[0m
+[0;32mI (12371) ESP_NOW_RECEIVER: Web Control: Roll=7.00, Pitch=45.00, Yaw=102.00, Throttle=168.00, AUX1=1.00[0m
+[0;32mI (12391) ESP_NOW_RECEIVER: Web Control: Roll=232.00, Pitch=241.00, Yaw=78.00, Throttle=140.00, AUX1=1.00[0m
+[0;32mI (12481) ESP_NOW_RECEIVER: Web Control: Roll=93.00, Pitch=31.00, Yaw=47.00, Throttle=105.00, AUX1=1.00[0m
+[0;32mI (12571) ESP_NOW_RECEIVER: Web Control: Roll=187.00, Pitch=113.00, Yaw=23.00, Throttle=85.00, AUX1=1.00[0m
+[0;32mI (12711) ESP_NOW_RECEIVER: Web Control: Roll=226.00, Pitch=141.00, Yaw=4.00, Throttle=74.00, AUX1=1.00[0m
+[0;32mI (12811) ESP_NOW_RECEIVER: Web Control: Roll=65.00, Pitch=184.00, Yaw=197.00, Throttle=34.00, AUX1=1.00[0m
+[0;32mI (12921) ESP_NOW_RECEIVER: Web Control: Roll=202.00, Pitch=208.00, Yaw=182.00, Throttle=232.00, AUX1=1.00[0m
+[0;32mI (13021) ESP_NOW_RECEIVER: Web Control: Roll=32.00, Pitch=204.00, Yaw=117.00, Throttle=125.00, AUX1=1.00[0m
+[0;32mI (13121) ESP_NOW_RECEIVER: Web Control: Roll=122.00, Pitch=184.00, Yaw=232.00, Throttle=241.00, AUX1=1.00[0m
+[0;32mI (13271) ESP_NOW_RECEIVER: Web Control: Roll=8.00, Pitch=106.00, Yaw=50.00, Throttle=224.00, AUX1=1.00[0m
+[0;32mI (13581) ESP_NOW_RECEIVER: Web Control: Roll=184.00, Pitch=52.00, Yaw=144.00, Throttle=82.00, AUX1=1.00[0m
+[0;32mI (13611) ESP_NOW_RECEIVER: Web Control: Roll=213.00, Pitch=132.00, Yaw=219.00, Throttle=137.00, AUX1=1.00[0m
+[0;32mI (13631) ESP_NOW_RECEIVER: Web Control: Roll=134.00, Pitch=66.00, Yaw=215.00, Throttle=133.00, AUX1=1.00[0m
+[0;32mI (13641) ESP_NOW_RECEIVER: Web Control: Roll=244.00, Pitch=242.00, Yaw=97.00, Throttle=35.00, AUX1=1.00[0m
+[0;32mI (13701) ESP_NOW_RECEIVER: Web Control: Roll=82.00, Pitch=100.00, Yaw=235.00, Throttle=40.00, AUX1=1.00[0m
+[0;32mI (13841) ESP_NOW_RECEIVER: Web Control: Roll=133.00, Pitch=202.00, Yaw=30.00, Throttle=246.00, AUX1=1.00[0m
+[0;32mI (13901) ESP_NOW_RECEIVER: Web Control: Roll=149.00, Pitch=245.00, Yaw=187.00, Throttle=70.00, AUX1=1.00[0m
+[0;32mI (14071) ESP_NOW_RECEIVER: Web Control: Roll=117.00, Pitch=249.00, Yaw=229.00, Throttle=232.00, AUX1=1.00[0m
+[0;32mI (14151) ESP_NOW_RECEIVER: Web Control: Roll=62.00, Pitch=233.00, Yaw=216.00, Throttle=42.00, AUX1=1.00[0m
+[0;32mI (14201) ESP_NOW_RECEIVER: Web Control: Roll=248.00, Pitch=182.00, Yaw=98.00, Throttle=164.00, AUX1=1.00[0m
+[0;32mI (14381) ESP_NOW_RECEIVER: Web Control: Roll=201.00, Pitch=120.00, Yaw=196.00, Throttle=116.00, AUX1=1.00[0m
+[0;32mI (14401) ESP_NOW_RECEIVER: Web Control: Roll=193.00, Pitch=104.00, Yaw=149.00, Throttle=197.00, AUX1=1.00[0m
+[0;32mI (14491) ESP_NOW_RECEIVER: Web Control: Roll=197.00, Pitch=100.00, Yaw=19.00, Throttle=98.00, AUX1=1.00[0m
+[0;32mI (14691) ESP_NOW_RECEIVER: Web Control: Roll=47.00, Pitch=72.00, Yaw=151.00, Throttle=204.00, AUX1=1.00[0m
+[0;32mI (14701) ESP_NOW_RECEIVER: Web Control: Roll=121.00, Pitch=76.00, Yaw=156.00, Throttle=90.00, AUX1=1.00[0m
+[0;32mI (14791) ESP_NOW_RECEIVER: Web Control: Roll=153.00, Pitch=104.00, Yaw=34.00, Throttle=197.00, AUX1=1.00[0m
+[0;32mI (15001) ESP_NOW_RECEIVER: Web Control: Roll=153.00, Pitch=104.00, Yaw=38.00, Throttle=209.00, AUX1=1.00[0m
+[0;32mI (15011) ESP_NOW_RECEIVER: Web Control: Roll=153.00, Pitch=104.00, Yaw=207.00, Throttle=129.00, AUX1=1.00[0m
+[0;32mI (15091) ESP_NOW_RECEIVER: Web Control: Roll=153.00, Pitch=104.00, Yaw=60.00, Throttle=200.00, AUX1=1.00[0m
+[0;32mI (15301) ESP_NOW_RECEIVER: Web Control: Roll=153.00, Pitch=104.00, Yaw=204.00, Throttle=24.00, AUX1=1.00[0m
+[0;32mI (15381) ESP_NOW_RECEIVER: Web Control: Roll=149.00, Pitch=112.00, Yaw=129.00, Throttle=207.00, AUX1=1.00[0m
+[0;32mI (15431) ESP_NOW_RECEIVER: Web Control: Roll=141.00, Pitch=127.00, Yaw=23.00, Throttle=89.00, AUX1=1.00[0m
+[0;32mI (15741) ESP_NOW_RECEIVER: Web Control: Roll=109.00, Pitch=163.00, Yaw=24.00, Throttle=235.00, AUX1=1.00[0m
+[0;32mI (15761) ESP_NOW_RECEIVER: Web Control: Roll=98.00, Pitch=178.00, Yaw=254.00, Throttle=26.00, AUX1=1.00[0m
+[0;32mI (15781) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=221.00, AUX1=1.00[0m
+[0;32mI (16611) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=221.00, AUX1=1.00[0m
+[0;32mI (16651) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=218.00, Throttle=249.00, AUX1=0.00[0m
+[0;32mI (16671) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=173.00, Throttle=23.00, AUX1=0.00[0m
+[0;32mI (16731) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=11.00, Throttle=77.00, AUX1=0.00[0m
+[0;32mI (17131) ESP_NOW_RECEIVER: Web Control: Roll=148.00, Pitch=117.00, Yaw=27.00, Throttle=93.00, AUX1=0.00[0m
+[0;32mI (17161) ESP_NOW_RECEIVER: Web Control: Roll=226.00, Pitch=1.00, Yaw=23.00, Throttle=89.00, AUX1=0.00[0m
+[0;32mI (17181) ESP_NOW_RECEIVER: Web Control: Roll=183.00, Pitch=70.00, Yaw=98.00, Throttle=164.00, AUX1=0.00[0m
+[0;32mI (17191) ESP_NOW_RECEIVER: Web Control: Roll=168.00, Pitch=81.00, Yaw=176.00, Throttle=41.00, AUX1=0.00[0m
+[0;32mI (17251) ESP_NOW_RECEIVER: Web Control: Roll=125.00, Pitch=121.00, Yaw=204.00, Throttle=13.00, AUX1=0.00[0m
+[0;32mI (17331) ESP_NOW_RECEIVER: Web Control: Roll=11.00, Pitch=37.00, Yaw=102.00, Throttle=15.00, AUX1=0.00[0m
+[0;32mI (17481) ESP_NOW_RECEIVER: Web Control: Roll=50.00, Pitch=228.00, Yaw=138.00, Throttle=176.00, AUX1=0.00[0m
+[0;32mI (17531) ESP_NOW_RECEIVER: Web Control: Roll=152.00, Pitch=90.00, Yaw=221.00, Throttle=208.00, AUX1=0.00[0m
+[0;32mI (17621) ESP_NOW_RECEIVER: Web Control: Roll=242.00, Pitch=149.00, Yaw=143.00, Throttle=200.00, AUX1=0.00[0m
+[0;32mI (17841) ESP_NOW_RECEIVER: Web Control: Roll=65.00, Pitch=184.00, Yaw=139.00, Throttle=200.00, AUX1=0.00[0m
+[0;32mI (17861) ESP_NOW_RECEIVER: Web Control: Roll=104.00, Pitch=196.00, Yaw=134.00, Throttle=99.00, AUX1=0.00[0m
+[0;32mI (17931) ESP_NOW_RECEIVER: Web Control: Roll=147.00, Pitch=204.00, Yaw=70.00, Throttle=132.00, AUX1=0.00[0m
+[0;32mI (18251) ESP_NOW_RECEIVER: Web Control: Roll=143.00, Pitch=204.00, Yaw=8.00, Throttle=77.00, AUX1=0.00[0m
+[0;32mI (18331) ESP_NOW_RECEIVER: Web Control: Roll=92.00, Pitch=123.00, Yaw=4.00, Throttle=70.00, AUX1=0.00[0m
+[0;32mI (18351) ESP_NOW_RECEIVER: Web Control: Roll=242.00, Pitch=34.00, Yaw=244.00, Throttle=62.00, AUX1=0.00[0m
+[0;32mI (18371) ESP_NOW_RECEIVER: Web Control: Roll=246.00, Pitch=30.00, Yaw=72.00, Throttle=15.00, AUX1=0.00[0m
+[0;32mI (18481) ESP_NOW_RECEIVER: Web Control: Roll=40.00, Pitch=23.00, Yaw=45.00, Throttle=244.00, AUX1=0.00[0m
+[0;32mI (18531) ESP_NOW_RECEIVER: Web Control: Roll=16.00, Pitch=204.00, Yaw=224.00, Throttle=50.00, AUX1=0.00[0m
+[0;32mI (18631) ESP_NOW_RECEIVER: Web Control: Roll=84.00, Pitch=241.00, Yaw=8.00, Throttle=74.00, AUX1=0.00[0m
+[0;32mI (18781) ESP_NOW_RECEIVER: Web Control: Roll=207.00, Pitch=54.00, Yaw=5.00, Throttle=228.00, AUX1=0.00[0m
+[0;32mI (18891) ESP_NOW_RECEIVER: Web Control: Roll=74.00, Pitch=147.00, Yaw=84.00, Throttle=40.00, AUX1=0.00[0m
+[0;32mI (19131) ESP_NOW_RECEIVER: Web Control: Roll=136.00, Pitch=178.00, Yaw=78.00, Throttle=140.00, AUX1=0.00[0m
+[0;32mI (19141) ESP_NOW_RECEIVER: Web Control: Roll=136.00, Pitch=66.00, Yaw=197.00, Throttle=34.00, AUX1=0.00[0m
+[0;32mI (19161) ESP_NOW_RECEIVER: Web Control: Roll=160.00, Pitch=89.00, Yaw=43.00, Throttle=78.00, AUX1=0.00[0m
+[0;32mI (19271) ESP_NOW_RECEIVER: Web Control: Roll=117.00, Pitch=125.00, Yaw=20.00, Throttle=204.00, AUX1=0.00[0m
+[0;32mI (19361) ESP_NOW_RECEIVER: Web Control: Roll=232.00, Pitch=182.00, Yaw=210.00, Throttle=29.00, AUX1=0.00[0m
+[0;32mI (19481) ESP_NOW_RECEIVER: Web Control: Roll=50.00, Pitch=228.00, Yaw=74.00, Throttle=136.00, AUX1=0.00[0m
+[0;32mI (19611) ESP_NOW_RECEIVER: Web Control: Roll=117.00, Pitch=58.00, Yaw=157.00, Throttle=2.00, AUX1=0.00[0m
+[0;32mI (20501) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=221.00, AUX1=0.00[0m
+[0;32mI (20581) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=52.00, Throttle=151.00, AUX1=0.00[0m
+[0;32mI (20601) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=75.00, Throttle=215.00, AUX1=0.00[0m
+[0;32mI (20681) ESP_NOW_RECEIVER: Web Control: Roll=167.00, Pitch=48.00, Yaw=240.00, Throttle=58.00, AUX1=0.00[0m
+[0;32mI (20971) ESP_NOW_RECEIVER: Web Control: Roll=46.00, Pitch=219.00, Yaw=82.00, Throttle=144.00, AUX1=0.00[0m
+[0;32mI (20991) ESP_NOW_RECEIVER: Web Control: Roll=105.00, Pitch=80.00, Yaw=51.00, Throttle=113.00, AUX1=0.00[0m
+[0;32mI (21841) ESP_NOW_RECEIVER: Web Control: Roll=77.00, Pitch=176.00, Yaw=200.00, Throttle=131.00, AUX1=0.00[0m
+[0;32mI (22001) ESP_NOW_RECEIVER: Web Control: Roll=77.00, Pitch=172.00, Yaw=109.00, Throttle=4.00, AUX1=0.00[0m
+[0;32mI (22021) ESP_NOW_RECEIVER: Web Control: Roll=89.00, Pitch=160.00, Yaw=20.00, Throttle=204.00, AUX1=0.00[0m
+[0;32mI (22031) ESP_NOW_RECEIVER: Web Control: Roll=60.00, Pitch=35.00, Yaw=85.00, Throttle=130.00, AUX1=0.00[0m
+[0;32mI (22071) ESP_NOW_RECEIVER: Web Control: Roll=127.00, Pitch=94.00, Yaw=62.00, Throttle=125.00, AUX1=0.00[0m
+[0;32mI (22091) ESP_NOW_RECEIVER: Web Control: Roll=138.00, Pitch=176.00, Yaw=131.00, Throttle=19.00, AUX1=0.00[0m
+[0;32mI (22111) ESP_NOW_RECEIVER: Web Control: Roll=3.00, Pitch=122.00, Yaw=157.00, Throttle=254.00, AUX1=0.00[0m
+[0;32mI (22131) ESP_NOW_RECEIVER: Web Control: Roll=232.00, Pitch=225.00, Yaw=208.00, Throttle=190.00, AUX1=0.00[0m
+[0;32mI (22151) ESP_NOW_RECEIVER: Web Control: Roll=85.00, Pitch=164.00, Yaw=55.00, Throttle=66.00, AUX1=0.00[0m
+[0;32mI (22161) ESP_NOW_RECEIVER: Web Control: Roll=15.00, Pitch=21.00, Yaw=208.00, Throttle=245.00, AUX1=0.00[0m
+[0;32mI (22211) ESP_NOW_RECEIVER: Web Control: Roll=14.00, Pitch=23.00, Yaw=76.00, Throttle=188.00, AUX1=0.00[0m
+[0;32mI (22281) ESP_NOW_RECEIVER: Web Control: Roll=150.00, Pitch=195.00, Yaw=77.00, Throttle=11.00, AUX1=0.00[0m
+[0;32mI (22331) ESP_NOW_RECEIVER: Web Control: Roll=125.00, Pitch=240.00, Yaw=97.00, Throttle=152.00, AUX1=0.00[0m
+[0;32mI (22381) ESP_NOW_RECEIVER: Web Control: Roll=8.00, Pitch=106.00, Yaw=224.00, Throttle=50.00, AUX1=0.00[0m
+[0;32mI (22431) ESP_NOW_RECEIVER: Web Control: Roll=245.00, Pitch=220.00, Yaw=125.00, Throttle=203.00, AUX1=0.00[0m
+[0;32mI (22521) ESP_NOW_RECEIVER: Web Control: Roll=176.00, Pitch=74.00, Yaw=204.00, Throttle=159.00, AUX1=0.00[0m
+[0;32mI (22591) ESP_NOW_RECEIVER: Web Control: Roll=176.00, Pitch=74.00, Yaw=178.00, Throttle=23.00, AUX1=0.00[0m
+[0;32mI (22791) ESP_NOW_RECEIVER: Web Control: Roll=176.00, Pitch=77.00, Yaw=121.00, Throttle=182.00, AUX1=0.00[0m
+[0;32mI (22801) ESP_NOW_RECEIVER: Web Control: Roll=226.00, Pitch=42.00, Yaw=123.00, Throttle=239.00, AUX1=0.00[0m
+[0;32mI (22901) ESP_NOW_RECEIVER: Web Control: Roll=88.00, Pitch=30.00, Yaw=248.00, Throttle=62.00, AUX1=0.00[0m
+[0;32mI (23001) ESP_NOW_RECEIVER: Web Control: Roll=198.00, Pitch=160.00, Yaw=51.00, Throttle=113.00, AUX1=0.00[0m
+[0;32mI (23101) ESP_NOW_RECEIVER: Web Control: Roll=254.00, Pitch=101.00, Yaw=66.00, Throttle=125.00, AUX1=0.00[0m
+[0;32mI (23301) ESP_NOW_RECEIVER: Web Control: Roll=81.00, Pitch=172.00, Yaw=90.00, Throttle=152.00, AUX1=0.00[0m
+[0;32mI (23321) ESP_NOW_RECEIVER: Web Control: Roll=66.00, Pitch=191.00, Yaw=94.00, Throttle=160.00, AUX1=0.00[0m
+[0;32mI (23401) ESP_NOW_RECEIVER: Web Control: Roll=81.00, Pitch=168.00, Yaw=102.00, Throttle=168.00, AUX1=0.00[0m
+[0;32mI (23601) ESP_NOW_RECEIVER: Web Control: Roll=101.00, Pitch=144.00, Yaw=102.00, Throttle=168.00, AUX1=0.00[0m
+[0;32mI (23661) ESP_NOW_RECEIVER: Web Control: Roll=136.00, Pitch=109.00, Yaw=102.00, Throttle=168.00, AUX1=0.00[0m
+[0;32mI (23701) ESP_NOW_RECEIVER: Web Control: Roll=168.00, Pitch=81.00, Yaw=98.00, Throttle=164.00, AUX1=0.00[0m
+[0;32mI (23791) ESP_NOW_RECEIVER: Web Control: Roll=203.00, Pitch=58.00, Yaw=94.00, Throttle=160.00, AUX1=0.00[0m
+[0;32mI (24371) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=221.00, AUX1=0.00[0m
+[0;32mI (24591) ESP_NOW_RECEIVER: Web Control: Roll=221.00, Pitch=221.00, Yaw=221.00, Throttle=221.00, AUX1=0.00[0m
+[0;32mI (24701) ESP_NOW_RECEIVER: Web Control: Roll=89.00, Pitch=32.00, Yaw=221.00, Throttle=221.00, AUX1=1.00[0m
+[0;32mI (24731) ESP_NOW_RECEIVER: Web Control: Roll=143.00, Pitch=65.00, Yaw=107.00, Throttle=83.00, AUX1=1.00[0m
+[0;32mI (24801) ESP_NOW_RECEIVER: Web Control: Roll=103.00, Pitch=251.00, Yaw=86.00, Throttle=152.00, AUX1=1.00[0m
+[0;32mI (24901) ESP_NOW_RECEIVER: Web Control: Roll=83.00, Pitch=247.00, Yaw=55.00, Throttle=117.00, AUX1=1.00[0m
+[0;32mI (25001) ESP_NOW_RECEIVER: Web Control: Roll=75.00, Pitch=243.00, Yaw=51.00, Throttle=113.00, AUX1=1.00[0m
+[0;32mI (25311) ESP_NOW_RECEIVER: Web Control: Roll=75.00, Pitch=243.00, Yaw=51.00, Throttle=109.00, AUX1=1.00[0m
+[0;32mI (25411) ESP_NOW_RECEIVER: Web Control: Roll=111.00, Pitch=255.00, Yaw=51.00, Throttle=109.00, AUX1=1.00[0m
+[0;32mI (25451) ESP_NOW_RECEIVER: Web Control: Roll=103.00, Pitch=251.00, Yaw=51.00, Throttle=109.00, AUX1=1.00[0m
+[0;32mI (25481) ESP_NOW_RECEIVER: Web Control: Roll=108.00, Pitch=243.00, Yaw=23.00, Throttle=89.00, AUX1=1.00[0m
+[0;32mI (25741) ESP_NOW_RECEIVER: Web Control: Roll=168.00, Pitch=81.00, Yaw=142.00, Throttle=7.00, AUX1=1.00[0m
+[0;32mI (25761) ESP_NOW_RECEIVER: Web Control: Roll=93.00, Pitch=156.00, Yaw=135.00, Throttle=239.00, AUX1=1.00[0m
+[0;32mI (25771) ESP_NOW_RECEIVER: Web Control: Roll=247.00, Pitch=96.00, Yaw=93.00, Throttle=152.00, AUX1=1.00[0m
+[0;32mI (25841) ESP_NOW_RECEIVER: Web Control: Roll=42.00, Pitch=213.00, Yaw=235.00, Throttle=20.00, AUX1=1.00[0m
+[0;32mI (25941) ESP_NOW_RECEIVER: Web Control: Roll=199.00, Pitch=125.00, Yaw=58.00, Throttle=236.00, AUX1=1.00[0m
+[0;32mI (25991) ESP_NOW_RECEIVER: Web Control: Roll=112.00, Pitch=196.00, Yaw=199.00, Throttle=121.00, AUX1=1.00[0m
+[0;32mI (26301) ESP_NOW_RECEIVER: Web Control: Roll=224.00, Pitch=52.00, Yaw=66.00, Throttle=55.00, AUX1=1.00[0m
+[0;32mI (26311) ESP_NOW_RECEIVER: Web Control: Roll=91.00, Pitch=192.00, Yaw=233.00, Throttle=208.00, AUX1=1.00[0m
+[0;32mI (26321) ESP_NOW_RECEIVER: Web Control: Roll=120.00, Pitch=243.00, Yaw=208.00, Throttle=218.00, AUX1=1.00[0m
+[0;32mI (26391) ESP_NOW_RECEIVER: Web Control: Roll=179.00, Pitch=74.00, Yaw=157.00, Throttle=254.00, AUX1=1.00[0m
+[0;32mI (26591) ESP_NOW_RECEIVER: Web Control: Roll=66.00, Pitch=187.00, Yaw=51.00, Throttle=113.00, AUX1=1.00[0m
+[0;32mI (26611) ESP_NOW_RECEIVER: Web Control: Roll=232.00, Pitch=194.00, Yaw=71.00, Throttle=243.00, AUX1=1.00[0m
+[0;32mI (26701) ESP_NOW_RECEIVER: Web Control: Roll=125.00, Pitch=62.00, Yaw=168.00, Throttle=81.00, AUX1=1.00[0m
+[0;32mI (26901) ESP_NOW_RECEIVER: Web Control: Roll=41.00, Pitch=172.00, Yaw=235.00, Throttle=40.00, AUX1=1.00[0m
+[0;32mI (26911) ESP_NOW_RECEIVER: Web Control: Roll=233.00, Pitch=208.00, Yaw=66.00, Throttle=252.00, AUX1=1.00[0m
+[0;32mI (27111) ESP_NOW_RECEIVER: Web Control: Roll=103.00, Pitch=58.00, Yaw=92.00, Throttle=192.00, AUX1=1.00[0m
+[0;32mI (27131) ESP_NOW_RECEIVER: Web Control: Roll=107.00, Pitch=116.00, Yaw=8.00, Throttle=109.00, AUX1=1.00[0m
+[0;32mI (27401) ESP_NOW_RECEIVER: Web Control: Roll=167.00, Pitch=235.00, Yaw=200.00, Throttle=48.00, AUX1=1.00[0m
+[0;32mI (27411) ESP_NOW_RECEIVER: Web Control: Roll=183.00, Pitch=70.00, Yaw=153.00, Throttle=250.00, AUX1=1.00[0m
+[0;32mI (27431) ESP_NOW_RECEIVER: Web Control: Roll=46.00, Pitch=223.00, Yaw=39.00, Throttle=101.00, AUX1=1.00[0m
+[0;32mI (27501) ESP_NOW_RECEIVER: Web Control: Roll=232.00, Pitch=214.00, Yaw=75.00, Throttle=243.00, AUX1=1.00[0m
+[0;32mI (27851) ESP_NOW_RECEIVER: Web Control: Roll=89.00, Pitch=27.00, Yaw=230.00, Throttle=42.00, AUX1=1.00[0m
+[0;32mI (27891) ESP_NOW_RECEIVER: Web Control: Roll=57.00, Pitch=180.00, Yaw=235.00, Throttle=151.00, AUX1=1.00[0m
+[0;32mI (27921) ESP_NOW_RECEIVER: Web Control: Roll=237.00, Pitch=208.00, Yaw=62.00, Throttle=244.00, AUX1=1.00[0m
+[0;32mI (28001) ESP_NOW_RECEIVER: Web Control: Roll=67.00, Pitch=60.00, Yaw=234.00, Throttle=145.00, AUX1=1.00[0m
+[0;32mI (28011) ESP_NOW_RECEIVER: Web Control: Roll=40.00, Pitch=127.00, Yaw=250.00, Throttle=153.00, AUX1=1.00[0m
+[0;32mI (28101) ESP_NOW_RECEIVER: Web Control: Roll=83.00, Pitch=5.00, Yaw=105.00, Throttle=43.00, AUX1=1.00[0m
+[0;32mI (28301) ESP_NOW_RECEIVER: Web Control: Roll=201.00, Pitch=106.00, Yaw=247.00, Throttle=92.00, AUX1=1.00[0m
+[0;32mI (28331) ESP_NOW_RECEIVER: Web Control: Roll=99.00, Pitch=188.00, Yaw=160.00, Throttle=89.00, AUX1=1.00[0m
+[0;32mI (28601) ESP_NOW_RECEIVER: Web Control: Roll=174.00, Pitch=208.00, Yaw=186.00, Throttle=232.00, AUX1=1.00[0m
+[0;32mI (28631) ESP_NOW_RECEIVER: Web Control: Roll=21.00, Pitch=168.00, Yaw=173.00, Throttle=23.00, AUX1=1.00[0m
+[0;32mI (28651) ESP_NOW_RECEIVER: Web Control: Roll=179.00, Pitch=109.00, Yaw=62.00, Throttle=125.00, AUX1=1.00[0m
+[0;32mI (28701) ESP_NOW_RECEIVER: Web Control: Roll=160.00, Pitch=94.00, Yaw=133.00, Throttle=215.00, AUX1=1.00[0m
+[0;32mI (28801) ESP_NOW_RECEIVER: Web Control: Roll=3.00, Pitch=126.00, Yaw=200.00, Throttle=123.00, AUX1=1.00[0m
+[0;32mI (28911) ESP_NOW_RECEIVER: Web Control: Roll=247.00, Pitch=92.00, Yaw=180.00, Throttle=122.00, AUX1=1.00[0m
+[0;32mI (30251) ESP_NOW_RECEIVER: Web Control: Roll=46.00, Pitch=223.00, Yaw=121.00, Throttle=244.00, AUX1=1.00[0m
+[0;32mI (30391) ESP_NOW_RECEIVER: Web Control: Roll=152.00, Pitch=93.00, Yaw=232.00, Throttle=129.00, AUX1=1.00[0m
+[0;32mI (30401) ESP_NOW_RECEIVER: Web Control: Roll=57.00, Pitch=3.00, Yaw=237.00, Throttle=208.00, AUX1=1.00[0m
+[0;32mI (30421) ESP_NOW_RECEIVER: Web Control: Roll=39.00, Pitch=41.00, Yaw=254.00, Throttle=157.00, AUX1=1.00[0m
+[0;32mI (30441) ESP_NOW_RECEIVER: Web Control: Roll=160.00, Pitch=173.00, Yaw=125.00, Throttle=62.00, AUX1=1.00[0m
+[0;32mI (30481) ESP_NOW_RECEIVER: Web Control: Roll=220.00, Pitch=137.00, Yaw=243.00, Throttle=79.00, AUX1=1.00[0m
+[0;32mI (30521) ESP_NOW_RECEIVER: Web Control: Roll=35.00, Pitch=86.00, Yaw=3.00, Throttle=130.00, AUX1=1.00[0m
+[0;32mI (30531) ESP_NOW_RECEIVER: Web Control: Roll=69.00, Pitch=184.00, Yaw=155.00, Throttle=23.00, AUX1=1.00[0m
+[0;32mI (30551) ESP_NOW_RECEIVER: Web Control: Roll=52.00, Pitch=200.00, Yaw=247.00, Throttle=83.00, AUX1=1.00[0m
+[0;32mI (30571) ESP_NOW_RECEIVER: Web Control: Roll=151.00, Pitch=204.00, Yaw=235.00, Throttle=249.00, AUX1=1.00[0m
+[0;32mI (30591) ESP_NOW_RECEIVER: Web Control: Roll=6.00, Pitch=160.00, Yaw=189.00, Throttle=30.00, AUX1=1.00[0m
+[0;32mI (30611) ESP_NOW_RECEIVER: Web Control: Roll=230.00, Pitch=145.00, Yaw=252.00, Throttle=66.00, AUX1=1.00[0m
+[0;32mI (30631) ESP_NOW_RECEIVER: Web Control: Roll=219.00, Pitch=137.00, Yaw=27.00, Throttle=89.00, AUX1=1.00[0m
+[0;32mI (30661) ESP_NOW_RECEIVER: Web Control: Roll=211.00, Pitch=133.00, Yaw=47.00, Throttle=105.00, AUX1=1.00[0m
+[0;32mI (30701) ESP_NOW_RECEIVER: Web Control: Roll=238.00, Pitch=149.00, Yaw=82.00, Throttle=144.00, AUX1=1.00[0m
+[0;32mI (30741) ESP_NOW_RECEIVER: Web Control: Roll=143.00, Pitch=200.00, Yaw=240.00, Throttle=58.00, AUX1=1.00[0m
+[0;32mI (30771) ESP_NOW_RECEIVER: Web Control: Roll=173.00, Pitch=160.00, Yaw=160.00, Throttle=85.00, AUX1=1.00[0m
+[0;32mI (30821) ESP_NOW_RECEIVER: Web Control: Roll=160.00, Pitch=177.00, Yaw=232.00, Throttle=186.00, AUX1=1.00[0m
+[0;32mI (31011) ESP_NOW_RECEIVER: Web Control: Roll=137.00, Pitch=219.00, Yaw=93.00, Throttle=31.00, AUX1=1.00[0m
+[0;32mI (31031) ESP_NOW_RECEIVER: Web Control: Roll=14.00, Pitch=19.00, Yaw=120.00, Throttle=196.00, AUX1=1.00[0m
+[0;32mI (31041) ESP_NOW_RECEIVER: Web Control: Roll=253.00, Pitch=232.00, Yaw=219.00, Throttle=137.00, AUX1=1.00[0m
+[0;32mI (31141) ESP_NOW_RECEIVER: Web Control: Roll=172.00, Pitch=77.00, Yaw=138.00, Throttle=176.00, AUX1=1.00[0m
+[0;32mI (31241) ESP_NOW_RECEIVER: Web Control: Roll=125.00, Pitch=121.00, Yaw=121.00, Throttle=248.00, AUX1=1.00[0m
+[0;32mI (31341) ESP_NOW_RECEIVER: Web Control: Roll=77.00, Pitch=172.00, Yaw=204.00, Throttle=170.00, AUX1=1.00[0m
+[0;32mI (31441) ESP_NOW_RECEIVER: Web Control: Roll=3.00, Pitch=61.00, Yaw=157.00, Throttle=254.00, AUX1=1.00[0m
+[0;32mI (31551) ESP_NOW_RECEIVER: Web Control: Roll=232.00, Pitch=233.00, Yaw=121.00, Throttle=195.00, AUX1=1.00[0m
+[0;32mI (31971) ESP_NOW_RECEIVER: Web Control: Roll=3.00, Pitch=122.00, Yaw=106.00, Throttle=172.00, AUX1=1.00[0m
+[0;32mI (31991) ESP_NOW_RECEIVER: Web Control: Roll=121.00, Pitch=58.00, Yaw=66.00, Throttle=128.00, AUX1=1.00[0m
+[0;32mI (32021) ESP_NOW_RECEIVER: Web Control: Roll=45.00, Pitch=176.00, Yaw=39.00, Throttle=101.00, AUX1=1.00[0m
+[0;32mI (32081) ESP_NOW_RECEIVER: Web Control: Roll=159.00, Pitch=204.00, Yaw=240.00, Throttle=58.00, AUX1=1.00[0m
+[0;32mI (32101) ESP_NOW_RECEIVER: Web Control: Roll=151.00, Pitch=204.00, Yaw=118.00, Throttle=255.00, AUX1=1.00[0m
+[0;32mI (32241) ESP_NOW_RECEIVER: Web Control: Roll=29.00, Pitch=111.00, Yaw=87.00, Throttle=247.00, AUX1=1.00[0m
+[0;32mI (32291) ESP_NOW_RECEIVER: Web Control: Roll=97.00, Pitch=148.00, Yaw=111.00, Throttle=255.00, AUX1=1.00[0m
+[0;32mI (32531) ESP_NOW_RECEIVER: Web Control: Roll=113.00, Pitch=132.00, Yaw=220.00, Throttle=46.00, AUX1=1.00[0m
+[0;32mI (32551) ESP_NOW_RECEIVER: Web Control: Roll=121.00, Pitch=125.00, Yaw=47.00, Throttle=109.00, AUX1=1.00[0m
+[0;32mI (32561) ESP_NOW_RECEIVER: Web Control: Roll=136.00, Pitch=105.00, Yaw=125.00, Throttle=199.00, AUX1=1.00[0m
+[0;32mI (32741) ESP_NOW_RECEIVER: Web Control: Roll=226.00, Pitch=42.00, Yaw=184.00, Throttle=72.00, AUX1=1.00[0m
+[0;32mI (32821) ESP_NOW_RECEIVER: Web Control: Roll=139.00, Pitch=239.00, Yaw=196.00, Throttle=71.00, AUX1=1.00[0m
+[0;32mI (32931) ESP_NOW_RECEIVER: Web Control: Roll=216.00, Pitch=42.00, Yaw=185.00, Throttle=157.00, AUX1=1.00[0m
+[0;32mI (33191) ESP_NOW_RECEIVER: Web Control: Roll=164.00, Pitch=21.00, Yaw=18.00, Throttle=164.00, AUX1=1.00[0m
+[0;32mI (33221) ESP_NOW_RECEIVER: Web Control: Roll=168.00, Pitch=158.00, Yaw=15.00, Throttle=154.00, AUX1=1.00[0m
+[0;32mI (33241) ESP_NOW_RECEIVER: Web Control: Roll=43.00, Pitch=78.00, Yaw=243.00, Throttle=120.00, AUX1=1.00[0m
+[0;32mI (33261) ESP_NOW_RECEIVER: Web Control: Roll=158.00, Pitch=168.00, Yaw=50.00, Throttle=215.00, AUX1=1.00[0m
+[0;32mI (33351) ESP_NOW_RECEIVER: Web Control: Roll=246.00, Pitch=153.00, Yaw=114.00, Throttle=255.00, AUX1=1.00[0m

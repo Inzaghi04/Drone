@@ -1,0 +1,1451 @@
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0x�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Feb 22 2025 15:40:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23e00h (146944) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033e28 vaddr=3ffb0000 size=04010h ( 16400) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00037e40 vaddr=40080000 size=081d8h ( 33240) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=96928h (616744) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d6950 vaddr=400881d8 size=108d8h ( 67800) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (425) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     main[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (458) app_init: Compile time:     Feb 22 2025 15:40:05[0m
+[0;32mI (464) app_init: ELF file SHA256:  09fc6552f...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8380 len 00027C80 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+I (611) wifi:wifi driver task: 3ffc0124, prio:23, stack:6656, core=0
+I (621) wifi:wifi firmware version: ccaebfa
+I (621) wifi:wifi certification version: v7.0
+I (621) wifi:config NVS flash: enabled
+I (621) wifi:config nano formating: disabled
+I (631) wifi:Init data frame dynamic rx buffer num: 32
+I (631) wifi:Init static rx mgmt buffer num: 5
+I (641) wifi:Init management short buffer num: 32
+I (641) wifi:Init dynamic tx buffer num: 32
+I (651) wifi:Init static rx buffer size: 1600
+I (651) wifi:Init static rx buffer num: 10
+I (651) wifi:Init dynamic rx buffer num: 32
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (661) wifi_init: accept mbox: 6[0m
+[0;32mI (661) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+W (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (711) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (801) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (821) wifi:mode : sta (c8:f0:9e:f2:90:78)
+I (821) wifi:enable tsf
+[0;32mI (831) NETWORK: Connecting to WiFi...[0m
+[0;32mI (831) NETWORK: Waiting for IP address...[0m
+I (841) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (841) wifi:state: init -> auth (0xb0)
+I (851) wifi:state: auth -> assoc (0x0)
+I (861) wifi:state: assoc -> run (0x10)
+I (881) wifi:connected with MSWifi, aid = 1, channel 1, BW20, bssid = 50:88:11:e0:2d:c6
+I (881) wifi:security: WPA2-PSK, phy: bgn, rssi: -35
+I (891) wifi:pm start, type: 1
+
+I (891) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (891) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (921) wifi:<ba-add>idx:0 (ifx:0, 50:88:11:e0:2d:c6), tid:0, ssn:0, winSize:64
+[0;32mI (1901) esp_netif_handlers: sta ip: 192.168.5.33, mask: 255.255.255.0, gw: 192.168.5.1[0m
+[0;32mI (1901) NETWORK: ESP32 IP Address: 132.94.252.63[0m
+[0;32mI (5831) ESP_NOW_RECEIVER: Web Server started, ready to receive joystick data.[0m
+[0;32mI (5831) main_task: Returned from app_main()[0m
+[0;32mI (5841) TAG: AccX = 0.052314
+[0m
+[0;32mI (5841) TAG: AccY = 0.339346
+[0m
+[0;32mI (5841) TAG: AccZ = 0.625293
+[0m
+[0;32mI (5841) TAG: AngleRoll = 28.404934
+[0m
+[0;32mI (5851) TAG: AnglePitch = -4.205568
+[0m
+[0;32mI (5861) TAG: AccX = -0.054863
+[0m
+[0;32mI (5861) TAG: AccY = 0.301504
+[0m
+[0;32mI (5861) TAG: AccZ = 0.487109
+[0m
+[0;32mI (5861) TAG: AngleRoll = 31.594696
+[0m
+[0;32mI (5871) TAG: AnglePitch = 5.470490
+[0m
+[0;32mI (5881) TAG: AccX = -0.092461
+[0m
+[0;32mI (5881) TAG: AccY = 0.263906
+[0m
+[0;32mI (5881) TAG: AccZ = 0.470508
+[0m
+[0;32mI (5881) TAG: AngleRoll = 28.827082
+[0m
+[0;32mI (5891) TAG: AnglePitch = 9.725620
+[0m
+[0;32mI (5901) TAG: AccX = -0.094658
+[0m
+[0;32mI (5901) TAG: AccY = 0.265615
+[0m
+[0;32mI (5901) TAG: AccZ = 0.464648
+[0m
+[0;32mI (5901) TAG: AngleRoll = 29.255037
+[0m
+[0;32mI (5911) TAG: AnglePitch = 10.029724
+[0m
+[0;32mI (5921) TAG: AccX = -0.039482
+[0m
+[0;32mI (5921) TAG: AccY = 0.185537
+[0m
+[0;32mI (5921) TAG: AccZ = 0.506396
+[0m
+[0;32mI (5921) TAG: AngleRoll = 20.066160
+[0m
+[0;32mI (5931) TAG: AnglePitch = 4.187067
+[0m
+[0;32mI (5941) TAG: AccX = -0.015068
+[0m
+[0;32mI (5941) TAG: AccY = 0.038809
+[0m
+[0;32mI (5941) TAG: AccZ = 0.430469
+[0m
+[0;32mI (5941) TAG: AngleRoll = 5.148396
+[0m
+[0;32mI (5951) TAG: AnglePitch = 1.996709
+[0m
+[0;32mI (5961) TAG: AccX = 0.019600
+[0m
+[0;32mI (5961) TAG: AccY = -0.206553
+[0m
+[0;32mI (5961) TAG: AccZ = 0.365771
+[0m
+[0;32mI (5961) TAG: AngleRoll = -29.418449
+[0m
+[0;32mI (5971) TAG: AnglePitch = -2.671405
+[0m
+[0;32mI (5981) TAG: AccX = 0.050361
+[0m
+[0;32mI (5981) TAG: AccY = -0.179941
+[0m
+[0;32mI (5981) TAG: AccZ = 0.344775
+[0m
+[0;32mI (5981) TAG: AngleRoll = -27.313133
+[0m
+[0;32mI (5991) TAG: AnglePitch = -7.378415
+[0m
+[0;32mI (6001) TAG: AccX = 0.037666
+[0m
+[0;32mI (6001) TAG: AccY = 0.007314
+[0m
+[0;32mI (6001) TAG: AccZ = 0.358936
+[0m
+[0;32mI (6001) TAG: AngleRoll = 1.161049
+[0m
+[0;32mI (6011) TAG: AnglePitch = -5.989343
+[0m
+[0;32mI (6021) TAG: AccX = -0.079766
+[0m
+[0;32mI (6021) TAG: AccY = 0.147939
+[0m
+[0;32mI (6021) TAG: AccZ = 0.476367
+[0m
+[0;32mI (6031) TAG: AngleRoll = 17.029480
+[0m
+[0;32mI (6031) TAG: AnglePitch = 9.085351
+[0m
+I (6041) wifi:<ba-add>idx:1 (ifx:0, 50:88:11:e0:2d:c6), tid:6, ssn:2, winSize:64
+[0;32mI (6051) TAG: AccX = -0.229668
+[0m
+[0;32mI (6051) TAG: AccY = 0.126699
+[0m
+[0;32mI (6051) TAG: AccZ = 0.492480
+[0m
+[0;32mI (6051) TAG: AngleRoll = 13.124594
+[0m
+[0;32mI (6061) TAG: AnglePitch = 24.305964
+[0m
+[0;32mI (6071) TAG: AccX = -0.208184
+[0m
+[0;32mI (6071) TAG: AccY = 0.175771
+[0m
+[0;32mI (6071) TAG: AccZ = 0.541064
+[0m
+[0;32mI (6071) TAG: AngleRoll = 16.866962
+[0m
+[0;32mI (6081) TAG: AnglePitch = 20.099653
+[0m
+[0;32mI (6091) TAG: AccX = -0.173516
+[0m
+[0;32mI (6091) TAG: AccY = 0.287832
+[0m
+[0;32mI (6091) TAG: AccZ = 0.595752
+[0m
+[0;32mI (6091) TAG: AngleRoll = 24.885000
+[0m
+[0;32mI (6101) TAG: AnglePitch = 14.694947
+[0m
+[0;32mI (6111) TAG: AccX = -0.193047
+[0m
+[0;32mI (6111) TAG: AccY = 0.328848
+[0m
+[0;32mI (6111) TAG: AccZ = 0.586230
+[0m
+[0;32mI (6111) TAG: AngleRoll = 28.049025
+[0m
+[0;32mI (6121) TAG: AnglePitch = 16.024137
+[0m
+[0;32mI (6131) TAG: AccX = -0.304619
+[0m
+[0;32mI (6131) TAG: AccY = 0.291982
+[0m
+[0;32mI (6131) TAG: AccZ = 0.565479
+[0m
+[0;32mI (6131) TAG: AngleRoll = 24.445766
+[0m
+[0;32mI (6141) TAG: AnglePitch = 25.578167
+[0m
+[0;32mI (6151) TAG: AccX = -0.303154
+[0m
+[0;32mI (6151) TAG: AccY = 0.325674
+[0m
+[0;32mI (6151) TAG: AccZ = 0.596484
+[0m
+[0;32mI (6151) TAG: AngleRoll = 25.953735
+[0m
+[0;32mI (6161) TAG: AnglePitch = 24.040562
+[0m
+[0;32mI (6171) TAG: AccX = -0.310967
+[0m
+[0;32mI (6171) TAG: AccY = 0.355947
+[0m
+[0;32mI (6171) TAG: AccZ = 0.638232
+[0m
+[0;32mI (6171) TAG: AngleRoll = 26.627516
+[0m
+[0;32mI (6181) TAG: AnglePitch = 23.051085
+[0m
+[0;32mI (6191) TAG: AccX = -0.295830
+[0m
+[0;32mI (6191) TAG: AccY = 0.397451
+[0m
+[0;32mI (6191) TAG: AccZ = 0.680713
+[0m
+[0;32mI (6191) TAG: AngleRoll = 28.168699
+[0m
+[0;32mI (6201) TAG: AnglePitch = 20.571115
+[0m
+[0;32mI (6211) TAG: AccX = -0.268486
+[0m
+[0;32mI (6211) TAG: AccY = 0.431387
+[0m
+[0;32mI (6211) TAG: AccZ = 0.706592
+[0m
+[0;32mI (6211) TAG: AngleRoll = 29.713696
+[0m
+[0;32mI (6221) TAG: AnglePitch = 17.968416
+[0m
+[0;32mI (6231) TAG: AccX = -0.214043
+[0m
+[0;32mI (6231) TAG: AccY = 0.419180
+[0m
+[0;32mI (6231) TAG: AccZ = 0.721973
+[0m
+[0;32mI (6241) TAG: AngleRoll = 29.102718
+[0m
+[0;32mI (6241) TAG: AnglePitch = 14.380219
+[0m
+[0;32mI (6251) TAG: AccX = -0.117607
+[0m
+[0;32mI (6251) TAG: AccY = 0.369619
+[0m
+[0;32mI (6251) TAG: AccZ = 0.718311
+[0m
+[0;32mI (6261) TAG: AngleRoll = 26.921734
+[0m
+[0;32mI (6261) TAG: AnglePitch = 8.283187
+[0m
+[0;32mI (6271) TAG: AccX = -0.056328
+[0m
+[0;32mI (6271) TAG: AccY = 0.302969
+[0m
+[0;32mI (6271) TAG: AccZ = 0.689502
+[0m
+[0;32mI (6281) TAG: AngleRoll = 23.650694
+[0m
+[0;32mI (6281) TAG: AnglePitch = 4.277315
+[0m
+[0;32mI (6291) TAG: AccX = -0.031670
+[0m
+[0;32mI (6291) TAG: AccY = 0.280752
+[0m
+[0;32mI (6291) TAG: AccZ = 0.662402
+[0m
+[0;32mI (6301) TAG: AngleRoll = 22.945633
+[0m
+[0;32mI (6301) TAG: AnglePitch = 2.520540
+[0m
+[0;32mI (6311) TAG: AccX = 0.063057
+[0m
+[0;32mI (6311) TAG: AccY = 0.247305
+[0m
+[0;32mI (6311) TAG: AccZ = 0.703174
+[0m
+[0;32mI (6321) TAG: AngleRoll = 19.304960
+[0m
+[0;32mI (6321) TAG: AnglePitch = -4.835419
+[0m
+[0;32mI (6331) TAG: AccX = 0.134834
+[0m
+[0;32mI (6331) TAG: AccY = 0.285391
+[0m
+[0;32mI (6331) TAG: AccZ = 0.745410
+[0m
+[0;32mI (6341) TAG: AngleRoll = 20.643896
+[0m
+[0;32mI (6341) TAG: AnglePitch = -9.588322
+[0m
+[0;32mI (6351) TAG: AccX = 0.049629
+[0m
+[0;32mI (6351) TAG: AccY = 0.283193
+[0m
+[0;32mI (6351) TAG: AccZ = 0.768359
+[0m
+[0;32mI (6361) TAG: AngleRoll = 20.193645
+[0m
+[0;32mI (6361) TAG: AnglePitch = -3.468187
+[0m
+[0;32mI (6371) TAG: AccX = 0.000068
+[0m
+[0;32mI (6371) TAG: AccY = 0.255117
+[0m
+[0;32mI (6371) TAG: AccZ = 0.838184
+[0m
+[0;32mI (6381) TAG: AngleRoll = 16.928629
+[0m
+[0;32mI (6381) TAG: AnglePitch = -0.004467
+[0m
+[0;32mI (6391) TAG: AccX = 0.067207
+[0m
+[0;32mI (6391) TAG: AccY = 0.323721
+[0m
+[0;32mI (6391) TAG: AccZ = 0.946094
+[0m
+[0;32mI (6401) TAG: AngleRoll = 18.845055
+[0m
+[0;32mI (6401) TAG: AnglePitch = -3.845108
+[0m
+[0;32mI (6411) TAG: AccX = -0.003838
+[0m
+[0;32mI (6411) TAG: AccY = 0.381094
+[0m
+[0;32mI (6411) TAG: AccZ = 0.959766
+[0m
+[0;32mI (6421) TAG: AngleRoll = 21.656364
+[0m
+[0;32mI (6421) TAG: AnglePitch = 0.212943
+[0m
+[0;32mI (6431) TAG: AccX = -0.117607
+[0m
+[0;32mI (6431) TAG: AccY = 0.404287
+[0m
+[0;32mI (6431) TAG: AccZ = 0.919727
+[0m
+[0;32mI (6441) TAG: AngleRoll = 23.558302
+[0m
+[0;32mI (6441) TAG: AnglePitch = 6.676758
+[0m
+[0;32mI (6451) TAG: AccX = -0.163262
+[0m
+[0;32mI (6451) TAG: AccY = 0.430654
+[0m
+[0;32mI (6451) TAG: AccZ = 0.910205
+[0m
+[0;32mI (6461) TAG: AngleRoll = 24.971752
+[0m
+[0;32mI (6461) TAG: AnglePitch = 9.209559
+[0m
+[0;32mI (6471) TAG: AccX = -0.172051
+[0m
+[0;32mI (6471) TAG: AccY = 0.387930
+[0m
+[0;32mI (6471) TAG: AccZ = 0.919238
+[0m
+[0;32mI (6481) TAG: AngleRoll = 22.529112
+[0m
+[0;32mI (6481) TAG: AnglePitch = 9.783879
+[0m
+[0;32mI (6491) TAG: AccX = -0.259209
+[0m
+[0;32mI (6491) TAG: AccY = 0.418691
+[0m
+[0;32mI (6491) TAG: AccZ = 0.903613
+[0m
+[0;32mI (6501) TAG: AngleRoll = 24.007694
+[0m
+[0;32mI (6501) TAG: AnglePitch = 14.589018
+[0m
+[0;32mI (6511) TAG: AccX = -0.321221
+[0m
+[0;32mI (6511) TAG: AccY = 0.526113
+[0m
+[0;32mI (6511) TAG: AccZ = 0.880664
+[0m
+[0;32mI (6521) TAG: AngleRoll = 29.302742
+[0m
+[0;32mI (6521) TAG: AnglePitch = 17.386747
+[0m
+[0;32mI (6531) TAG: AccX = -0.418633
+[0m
+[0;32mI (6531) TAG: AccY = 0.656729
+[0m
+[0;32mI (6541) TAG: AccZ = 0.853809
+[0m
+[0;32mI (6541) TAG: AngleRoll = 34.629997
+[0m
+[0;32mI (6541) TAG: AnglePitch = 21.238302
+[0m
+[0;32mI (6551) TAG: AccX = -0.458184
+[0m
+[0;32mI (6551) TAG: AccY = 0.759512
+[0m
+[0;32mI (6561) TAG: AccZ = 0.886768
+[0m
+[0;32mI (6561) TAG: AngleRoll = 37.268410
+[0m
+[0;32mI (6561) TAG: AnglePitch = 21.426319
+[0m
+[0;32mI (6571) TAG: AccX = -0.475029
+[0m
+[0;32mI (6571) TAG: AccY = 0.851797
+[0m
+[0;32mI (6581) TAG: AccZ = 0.865039
+[0m
+[0;32mI (6581) TAG: AngleRoll = 40.797974
+[0m
+[0;32mI (6581) TAG: AnglePitch = 21.369684
+[0m
+[0;32mI (6591) TAG: AccX = -0.573662
+[0m
+[0;32mI (6591) TAG: AccY = 0.869131
+[0m
+[0;32mI (6601) TAG: AccZ = 0.746875
+[0m
+[0;32mI (6601) TAG: AngleRoll = 42.703300
+[0m
+[0;32mI (6601) TAG: AnglePitch = 26.592449
+[0m
+[0;32mI (6611) TAG: AccX = -0.641289
+[0m
+[0;32mI (6611) TAG: AccY = 0.845205
+[0m
+[0;32mI (6621) TAG: AccZ = 0.700244
+[0m
+[0;32mI (6621) TAG: AngleRoll = 41.673450
+[0m
+[0;32mI (6621) TAG: AnglePitch = 30.296371
+[0m
+[0;32mI (6641) TAG: AccX = -0.680596
+[0m
+[0;32mI (6641) TAG: AccY = 0.846182
+[0m
+[0;32mI (6641) TAG: AccZ = 0.681201
+[0m
+[0;32mI (6641) TAG: AngleRoll = 41.307446
+[0m
+[0;32mI (6641) TAG: AnglePitch = 32.068119
+[0m
+[0;32mI (6651) TAG: AccX = -0.710869
+[0m
+[0;32mI (6651) TAG: AccY = 0.972646
+[0m
+[0;32mI (6661) TAG: AccZ = 0.601123
+[0m
+[0;32mI (6661) TAG: AngleRoll = 46.254543
+[0m
+[0;32mI (6671) TAG: AnglePitch = 31.869585
+[0m
+[0;32mI (6671) TAG: AccX = -0.776055
+[0m
+[0;32mI (6671) TAG: AccY = 1.104727
+[0m
+[0;32mI (6681) TAG: AccZ = 0.502002
+[0m
+[0;32mI (6681) TAG: AngleRoll = 50.082581
+[0m
+[0;32mI (6691) TAG: AnglePitch = 32.601009
+[0m
+[0;32mI (6691) TAG: AccX = -0.828057
+[0m
+[0;32mI (6701) TAG: AccY = 1.101553
+[0m
+[0;32mI (6701) TAG: AccZ = 0.440479
+[0m
+[0;32mI (6701) TAG: AngleRoll = 49.587093
+[0m
+[0;32mI (6711) TAG: AnglePitch = 34.914406
+[0m
+[0;32mI (6711) TAG: AccX = -0.879326
+[0m
+[0;32mI (6721) TAG: AccY = 1.034414
+[0m
+[0;32mI (6721) TAG: AccZ = 0.450977
+[0m
+[0;32mI (6721) TAG: AngleRoll = 46.308094
+[0m
+[0;32mI (6731) TAG: AnglePitch = 37.926998
+[0m
+[0;32mI (6741) TAG: AccX = -0.849785
+[0m
+[0;32mI (6741) TAG: AccY = 0.991445
+[0m
+[0;32mI (6741) TAG: AccZ = 0.419971
+[0m
+[0;32mI (6741) TAG: AngleRoll = 46.286346
+[0m
+[0;32mI (6751) TAG: AnglePitch = 38.281582
+[0m
+[0;32mI (6761) TAG: AccX = -0.783623
+[0m
+[0;32mI (6761) TAG: AccY = 0.961172
+[0m
+[0;32mI (6761) TAG: AccZ = 0.401660
+[0m
+[0;32mI (6761) TAG: AngleRoll = 47.506027
+[0m
+[0;32mI (6771) TAG: AnglePitch = 36.951916
+[0m
+[0;32mI (6781) TAG: AccX = -0.725762
+[0m
+[0;32mI (6781) TAG: AccY = 0.807852
+[0m
+[0;32mI (6781) TAG: AccZ = 0.381641
+[0m
+[0;32mI (6781) TAG: AngleRoll = 44.572849
+[0m
+[0;32mI (6791) TAG: AnglePitch = 39.087067
+[0m
+[0;32mI (6801) TAG: AccX = -0.663018
+[0m
+[0;32mI (6801) TAG: AccY = 0.426260
+[0m
+[0;32mI (6801) TAG: AccZ = 0.396289
+[0m
+[0;32mI (6801) TAG: AngleRoll = 28.892002
+[0m
+[0;32mI (6811) TAG: AnglePitch = 48.722416
+[0m
+[0;32mI (6821) TAG: AccX = -0.646904
+[0m
+[0;32mI (6821) TAG: AccY = 0.174551
+[0m
+[0;32mI (6821) TAG: AccZ = 0.254687
+[0m
+[0;32mI (6821) TAG: AngleRoll = 14.093796
+[0m
+[0;32mI (6831) TAG: AnglePitch = 64.485283
+[0m
+[0;32mI (6841) TAG: AccX = -0.579766
+[0m
+[0;32mI (6841) TAG: AccY = 0.089346
+[0m
+[0;32mI (6841) TAG: AccZ = 0.130908
+[0m
+[0;32mI (6841) TAG: AngleRoll = 8.548821
+[0m
+[0;32mI (6851) TAG: AnglePitch = 74.710510
+[0m
+[0;32mI (6861) TAG: AccX = -0.425957
+[0m
+[0;32mI (6861) TAG: AccY = 0.010732
+[0m
+[0;32mI (6861) TAG: AccZ = 0.113574
+[0m
+[0;32mI (6861) TAG: AngleRoll = 1.394617
+[0m
+[0;32mI (6871) TAG: AnglePitch = 75.006866
+[0m
+[0;32mI (6881) TAG: AccX = -0.341240
+[0m
+[0;32mI (6881) TAG: AccY = 0.038076
+[0m
+[0;32mI (6881) TAG: AccZ = 0.062793
+[0m
+[0;32mI (6881) TAG: AngleRoll = 6.262535
+[0m
+[0;32mI (6891) TAG: AnglePitch = 77.855095
+[0m
+[0;32mI (6901) TAG: AccX = -0.460625
+[0m
+[0;32mI (6901) TAG: AccY = 0.201650
+[0m
+[0;32mI (6901) TAG: AccZ = -0.061475
+[0m
+[0;32mI (6901) TAG: AngleRoll = 23.457382
+[0m
+[0;32mI (6911) TAG: AnglePitch = 65.408012
+[0m
+[0;32mI (6921) TAG: AccX = -0.676934
+[0m
+[0;32mI (6921) TAG: AccY = 0.202627
+[0m
+[0;32mI (6921) TAG: AccZ = -0.167188
+[0m
+[0;32mI (6921) TAG: AngleRoll = 16.203802
+[0m
+[0;32mI (6931) TAG: AnglePitch = 68.790359
+[0m
+[0;32mI (6941) TAG: AccX = -0.795342
+[0m
+[0;32mI (6941) TAG: AccY = 0.210439
+[0m
+[0;32mI (6941) TAG: AccZ = -0.253857
+[0m
+[0;32mI (6951) TAG: AngleRoll = 14.147371
+[0m
+[0;32mI (6951) TAG: AnglePitch = 67.481651
+[0m
+[0;32mI (6961) TAG: AccX = -0.812188
+[0m
+[0;32mI (6961) TAG: AccY = 0.252676
+[0m
+[0;32mI (6961) TAG: AccZ = -0.305127
+[0m
+[0;32mI (6971) TAG: AngleRoll = 16.237207
+[0m
+[0;32mI (6971) TAG: AnglePitch = 63.997967
+[0m
+[0;32mI (6981) TAG: AccX = -0.908135
+[0m
+[0;32mI (6981) TAG: AccY = 0.194082
+[0m
+[0;32mI (6981) TAG: AccZ = -0.402783
+[0m
+[0;32mI (6991) TAG: AngleRoll = 11.054169
+[0m
+[0;32mI (6991) TAG: AnglePitch = 63.787483
+[0m
+[0;32mI (7001) TAG: AccX = -0.986260
+[0m
+[0;32mI (7001) TAG: AccY = 0.165029
+[0m
+[0;32mI (7001) TAG: AccZ = -0.432568
+[0m
+[0;32mI (7011) TAG: AngleRoll = 8.712092
+[0m
+[0;32mI (7011) TAG: AnglePitch = 64.853249
+[0m
+[0;32mI (7021) TAG: AccX = -0.936943
+[0m
+[0;32mI (7021) TAG: AccY = 0.206533
+[0m
+[0;32mI (7021) TAG: AccZ = -0.328320
+[0m
+[0;32mI (7031) TAG: AngleRoll = 11.751657
+[0m
+[0;32mI (7031) TAG: AnglePitch = 67.511253
+[0m
+[0;32mI (7041) TAG: AccX = -0.923516
+[0m
+[0;32mI (7041) TAG: AccY = 0.222646
+[0m
+[0;32mI (7041) TAG: AccZ = -0.177197
+[0m
+[0;32mI (7051) TAG: AngleRoll = 13.320450
+[0m
+[0;32mI (7051) TAG: AnglePitch = 72.874931
+[0m
+[0;32mI (7061) TAG: AccX = -0.943047
+[0m
+[0;32mI (7061) TAG: AccY = 0.202627
+[0m
+[0;32mI (7061) TAG: AccZ = 0.026904
+[0m
+[0;32mI (7071) TAG: AngleRoll = 12.121654
+[0m
+[0;32mI (7071) TAG: AnglePitch = 77.770325
+[0m
+[0;32mI (7081) TAG: AccX = -0.961602
+[0m
+[0;32mI (7081) TAG: AccY = 0.213857
+[0m
+[0;32mI (7081) TAG: AccZ = 0.274219
+[0m
+[0;32mI (7091) TAG: AngleRoll = 12.072034
+[0m
+[0;32mI (7091) TAG: AnglePitch = 70.118111
+[0m
+[0;32mI (7101) TAG: AccX = -0.893242
+[0m
+[0;32mI (7101) TAG: AccY = 0.276846
+[0m
+[0;32mI (7101) TAG: AccZ = 0.547900
+[0m
+[0;32mI (7111) TAG: AngleRoll = 14.799020
+[0m
+[0;32mI (7111) TAG: AnglePitch = 55.501602
+[0m
+[0;32mI (7121) TAG: AccX = -0.819268
+[0m
+[0;32mI (7121) TAG: AccY = 0.420156
+[0m
+[0;32mI (7121) TAG: AccZ = 0.783984
+[0m
+[0;32mI (7131) TAG: AngleRoll = 20.330986
+[0m
+[0;32mI (7131) TAG: AnglePitch = 42.647259
+[0m
+[0;32mI (7141) TAG: AccX = -0.758965
+[0m
+[0;32mI (7141) TAG: AccY = 0.545645
+[0m
+[0;32mI (7141) TAG: AccZ = 0.969287
+[0m
+[0;32mI (7151) TAG: AngleRoll = 23.904173
+[0m
+[0;32mI (7151) TAG: AnglePitch = 34.306847
+[0m
+[0;32mI (7161) TAG: AccX = -0.733086
+[0m
+[0;32mI (7161) TAG: AccY = 0.622793
+[0m
+[0;32mI (7171) TAG: AccZ = 1.157275
+[0m
+[0;32mI (7171) TAG: AngleRoll = 24.447372
+[0m
+[0;32mI (7171) TAG: AnglePitch = 29.153364
+[0m
+[0;32mI (7181) TAG: AccX = -0.788018
+[0m
+[0;32mI (7181) TAG: AccY = 0.499502
+[0m
+[0;32mI (7191) TAG: AccZ = 1.277637
+[0m
+[0;32mI (7191) TAG: AngleRoll = 18.405138
+[0m
+[0;32mI (7191) TAG: AnglePitch = 29.874660
+[0m
+[0;32mI (7201) TAG: AccX = -0.799981
+[0m
+[0;32mI (7201) TAG: AccY = 0.503896
+[0m
+[0;32mI (7211) TAG: AccZ = 1.432666
+[0m
+[0;32mI (7211) TAG: AngleRoll = 17.071114
+[0m
+[0;32mI (7211) TAG: AnglePitch = 27.778206
+[0m
+[0;32mI (7221) TAG: AccX = -0.732598
+[0m
+[0;32mI (7221) TAG: AccY = 0.638174
+[0m
+[0;32mI (7231) TAG: AccZ = 1.543994
+[0m
+[0;32mI (7231) TAG: AngleRoll = 20.476812
+[0m
+[0;32mI (7231) TAG: AnglePitch = 23.677534
+[0m
+[0;32mI (7251) TAG: AccX = -0.676445
+[0m
+[0;32mI (7251) TAG: AccY = 0.664053
+[0m
+[0;32mI (7251) TAG: AccZ = 1.674121
+[0m
+[0;32mI (7251) TAG: AngleRoll = 20.192015
+[0m
+[0;32mI (7251) TAG: AnglePitch = 20.585758
+[0m
+[0;32mI (7261) TAG: AccX = -0.684502
+[0m
+[0;32mI (7261) TAG: AccY = 0.611318
+[0m
+[0;32mI (7271) TAG: AccZ = 1.735400
+[0m
+[0;32mI (7271) TAG: AngleRoll = 18.143639
+[0m
+[0;32mI (7271) TAG: AnglePitch = 20.406563
+[0m
+[0;32mI (7281) TAG: AccX = -0.609307
+[0m
+[0;32mI (7281) TAG: AccY = 0.608389
+[0m
+[0;32mI (7291) TAG: AccZ = 1.835986
+[0m
+[0;32mI (7291) TAG: AngleRoll = 17.458466
+[0m
+[0;32mI (7301) TAG: AnglePitch = 17.485657
+[0m
+[0;32mI (7301) TAG: AccX = -0.485039
+[0m
+[0;32mI (7301) TAG: AccY = 0.610342
+[0m
+[0;32mI (7311) TAG: AccZ = 1.931690
+[0m
+[0;32mI (7311) TAG: AngleRoll = 17.037664
+[0m
+[0;32mI (7321) TAG: AnglePitch = 13.464778
+[0m
+[0;32mI (7321) TAG: AccX = -0.327080
+[0m
+[0;32mI (7331) TAG: AccY = 0.663320
+[0m
+[0;32mI (7331) TAG: AccZ = 2.037402
+[0m
+[0;32mI (7331) TAG: AngleRoll = 17.820292
+[0m
+[0;32mI (7341) TAG: AnglePitch = 8.679271
+[0m
+[0;32mI (7351) TAG: AccX = -0.327080
+[0m
+[0;32mI (7351) TAG: AccY = 0.743887
+[0m
+[0;32mI (7351) TAG: AccZ = 2.083789
+[0m
+[0;32mI (7351) TAG: AngleRoll = 19.426191
+[0m
+[0;32mI (7361) TAG: AnglePitch = 8.408961
+[0m
+[0;32mI (7371) TAG: AccX = -0.261162
+[0m
+[0;32mI (7371) TAG: AccY = 0.666982
+[0m
+[0;32mI (7371) TAG: AccZ = 2.170459
+[0m
+[0;32mI (7371) TAG: AngleRoll = 16.966919
+[0m
+[0;32mI (7381) TAG: AnglePitch = 6.561187
+[0m
+[0;32mI (7391) TAG: AccX = -0.277520
+[0m
+[0;32mI (7391) TAG: AccY = 0.371328
+[0m
+[0;32mI (7391) TAG: AccZ = 2.153857
+[0m
+[0;32mI (7391) TAG: AngleRoll = 9.703051
+[0m
+[0;32mI (7401) TAG: AnglePitch = 7.236381
+[0m
+[0;32mI (7411) TAG: AccX = -0.277520
+[0m
+[0;32mI (7411) TAG: AccY = 0.185537
+[0m
+[0;32mI (7411) TAG: AccZ = 2.026172
+[0m
+[0;32mI (7411) TAG: AngleRoll = 5.183867
+[0m
+[0;32mI (7421) TAG: AnglePitch = 7.767031
+[0m
+[0;32mI (7431) TAG: AccX = -0.413506
+[0m
+[0;32mI (7431) TAG: AccY = 0.176748
+[0m
+[0;32mI (7431) TAG: AccZ = 1.769580
+[0m
+[0;32mI (7431) TAG: AngleRoll = 5.555185
+[0m
+[0;32mI (7441) TAG: AnglePitch = 13.089691
+[0m
+[0;32mI (7451) TAG: AccX = -0.484795
+[0m
+[0;32mI (7451) TAG: AccY = 0.228994
+[0m
+[0;32mI (7451) TAG: AccZ = 1.597949
+[0m
+[0;32mI (7451) TAG: AngleRoll = 7.808431
+[0m
+[0;32mI (7461) TAG: AnglePitch = 16.715942
+[0m
+[0;32mI (7471) TAG: AccX = -0.522148
+[0m
+[0;32mI (7471) TAG: AccY = 0.318105
+[0m
+[0;32mI (7471) TAG: AccZ = 1.512256
+[0m
+[0;32mI (7471) TAG: AngleRoll = 11.245632
+[0m
+[0;32mI (7481) TAG: AnglePitch = 18.669262
+[0m
+[0;32mI (7491) TAG: AccX = -0.586357
+[0m
+[0;32mI (7491) TAG: AccY = 0.413809
+[0m
+[0;32mI (7491) TAG: AccZ = 1.490283
+[0m
+[0;32mI (7491) TAG: AngleRoll = 14.487793
+[0m
+[0;32mI (7501) TAG: AnglePitch = 20.762226
+[0m
+[0;32mI (7511) TAG: AccX = -0.643975
+[0m
+[0;32mI (7511) TAG: AccY = 0.485830
+[0m
+[0;32mI (7511) TAG: AccZ = 1.489551
+[0m
+[0;32mI (7511) TAG: AngleRoll = 16.666569
+[0m
+[0;32mI (7521) TAG: AnglePitch = 22.343571
+[0m
+[0;32mI (7531) TAG: AccX = -0.658379
+[0m
+[0;32mI (7531) TAG: AccY = 0.539541
+[0m
+[0;32mI (7531) TAG: AccZ = 1.420459
+[0m
+[0;32mI (7531) TAG: AngleRoll = 19.014877
+[0m
+[0;32mI (7541) TAG: AnglePitch = 23.426764
+[0m
+[0;32mI (7551) TAG: AccX = -0.739434
+[0m
+[0;32mI (7551) TAG: AccY = 0.533926
+[0m
+[0;32mI (7551) TAG: AccZ = 1.266650
+[0m
+[0;32mI (7551) TAG: AngleRoll = 20.003311
+[0m
+[0;32mI (7561) TAG: AnglePitch = 28.277266
+[0m
+[0;32mI (7571) TAG: AccX = -0.803154
+[0m
+[0;32mI (7571) TAG: AccY = 0.474600
+[0m
+[0;32mI (7571) TAG: AccZ = 1.105273
+[0m
+[0;32mI (7571) TAG: AngleRoll = 19.155668
+[0m
+[0;32mI (7581) TAG: AnglePitch = 33.731174
+[0m
+[0;32mI (7591) TAG: AccX = -0.822441
+[0m
+[0;32mI (7591) TAG: AccY = 0.334219
+[0m
+[0;32mI (7591) TAG: AccZ = 0.986377
+[0m
+[0;32mI (7591) TAG: AngleRoll = 14.587109
+[0m
+[0;32mI (7601) TAG: AnglePitch = 38.298130
+[0m
+[0;32mI (7611) TAG: AccX = -0.765313
+[0m
+[0;32mI (7611) TAG: AccY = 0.255361
+[0m
+[0;32mI (7611) TAG: AccZ = 0.937061
+[0m
+[0;32mI (7611) TAG: AngleRoll = 11.918213
+[0m
+[0;32mI (7621) TAG: AnglePitch = 38.237442
+[0m
+[0;32mI (7631) TAG: AccX = -0.563408
+[0m
+[0;32mI (7631) TAG: AccY = 0.342031
+[0m
+[0;32mI (7631) TAG: AccZ = 0.957812
+[0m
+[0;32mI (7641) TAG: AngleRoll = 17.108103
+[0m
+[0;32mI (7641) TAG: AnglePitch = 28.984846
+[0m
+[0;32mI (7651) TAG: AccX = -0.385918
+[0m
+[0;32mI (7651) TAG: AccY = 0.569326
+[0m
+[0;32mI (7651) TAG: AccZ = 0.869922
+[0m
+[0;32mI (7661) TAG: AngleRoll = 30.889219
+[0m
+[0;32mI (7661) TAG: AnglePitch = 20.364714
+[0m
+[0;32mI (7671) TAG: AccX = -0.272148
+[0m
+[0;32mI (7671) TAG: AccY = 0.677725
+[0m
+[0;32mI (7671) TAG: AccZ = 0.729785
+[0m
+[0;32mI (7681) TAG: AngleRoll = 41.027481
+[0m
+[0;32mI (7681) TAG: AnglePitch = 15.283410
+[0m
+[0;32mI (7691) TAG: AccX = -0.436699
+[0m
+[0;32mI (7691) TAG: AccY = 0.471914
+[0m
+[0;32mI (7691) TAG: AccZ = 0.537158
+[0m
+[0;32mI (7701) TAG: AngleRoll = 34.281685
+[0m
+[0;32mI (7701) TAG: AnglePitch = 31.414841
+[0m
+[0;32mI (7711) TAG: AccX = -0.348076
+[0m
+[0;32mI (7711) TAG: AccY = 0.114248
+[0m
+[0;32mI (7711) TAG: AccZ = 0.679736
+[0m
+[0;32mI (7721) TAG: AngleRoll = 8.508523
+[0m
+[0;32mI (7721) TAG: AnglePitch = 26.793413
+[0m
+[0;32mI (7731) TAG: AccX = -0.143731
+[0m
+[0;32mI (7731) TAG: AccY = -0.087412
+[0m
+[0;32mI (7731) TAG: AccZ = 0.556934
+[0m
+[0;32mI (7741) TAG: AngleRoll = -8.641299
+[0m
+[0;32mI (7741) TAG: AnglePitch = 14.303058
+[0m
+[0;32mI (7751) TAG: AccX = -0.005303
+[0m
+[0;32mI (7751) TAG: AccY = 0.059072
+[0m
+[0;32mI (7751) TAG: AccZ = 0.473437
+[0m
+[0;32mI (7761) TAG: AngleRoll = 7.111774
+[0m
+[0;32mI (7761) TAG: AnglePitch = 0.636783
+[0m
+[0;32mI (7771) TAG: AccX = 0.008125
+[0m
+[0;32mI (7771) TAG: AccY = 0.279287
+[0m
+[0;32mI (7771) TAG: AccZ = 0.621631
+[0m
+[0;32mI (7781) TAG: AngleRoll = 24.191662
+[0m
+[0;32mI (7781) TAG: AnglePitch = -0.683069
+[0m
+[0;32mI (7791) TAG: AccX = 0.027900
+[0m
+[0;32mI (7791) TAG: AccY = 0.407705
+[0m
+[0;32mI (7791) TAG: AccZ = 0.696094
+[0m
+[0;32mI (7801) TAG: AngleRoll = 30.337637
+[0m
+[0;32mI (7801) TAG: AnglePitch = -1.980821
+[0m
+[0;32mI (7811) TAG: AccX = -0.013848
+[0m
+[0;32mI (7811) TAG: AccY = 0.361074
+[0m
+[0;32mI (7811) TAG: AccZ = 0.687305
+[0m
+[0;32mI (7821) TAG: AngleRoll = 27.710320
+[0m
+[0;32mI (7821) TAG: AnglePitch = 1.021837
+[0m
+[0;32mI (7831) TAG: AccX = 0.080146
+[0m
+[0;32mI (7831) TAG: AccY = 0.148916
+[0m
+[0;32mI (7831) TAG: AccZ = 0.715869
+[0m
+[0;32mI (7841) TAG: AngleRoll = 11.680202
+[0m
+[0;32mI (7841) TAG: AnglePitch = -6.255239
+[0m
+[0;32mI (7851) TAG: AccX = 0.087471
+[0m
+[0;32mI (7851) TAG: AccY = -0.069346
+[0m
+[0;32mI (7851) TAG: AccZ = 0.770801
+[0m
+[0;32mI (7861) TAG: AngleRoll = -5.108210
+[0m
+[0;32mI (7861) TAG: AnglePitch = -6.448419
+[0m
+[0;32mI (7871) TAG: AccX = 0.091865
+[0m
+[0;32mI (7871) TAG: AccY = -0.331797
+[0m
+[0;32mI (7871) TAG: AccZ = 0.745166
+[0m
+[0;32mI (7881) TAG: AngleRoll = -23.841602
+[0m
+[0;32mI (7881) TAG: AnglePitch = -6.425673
+[0m
+[0;32mI (7891) TAG: AccX = 0.083076
+[0m
+[0;32mI (7891) TAG: AccY = -0.350840
+[0m
+[0;32mI (7901) TAG: AccZ = 0.781543
+[0m
+[0;32mI (7901) TAG: AngleRoll = -24.055595
+[0m
+[0;32mI (7901) TAG: AnglePitch = -5.538920
+[0m
+[0;32mI (7911) TAG: AccX = -0.028252
+[0m
+[0;32mI (7911) TAG: AccY = -0.315439
+[0m
+[0;32mI (7921) TAG: AccZ = 0.767383
+[0m
+[0;32mI (7921) TAG: AngleRoll = -22.331903
+[0m
+[0;32mI (7921) TAG: AnglePitch = 1.950251
+[0m
+[0;32mI (7931) TAG: AccX = -0.144951
+[0m
+[0;32mI (7931) TAG: AccY = 0.041738
+[0m
+[0;32mI (7941) TAG: AccZ = -0.458691
+[0m
+[0;32mI (7941) TAG: AngleRoll = 4.958851
+[0m
+[0;32mI (7941) TAG: AnglePitch = 17.469316
+[0m
+[0;32mI (7951) TAG: AccX = 1.501045
+[0m
+[0;32mI (7961) TAG: AccY = -0.225596
+[0m
+[0;32mI (7961) TAG: AccZ = 0.075977
+[0m
+[0;32mI (7961) TAG: AngleRoll = -8.536386
+[0m
+[0;32mI (7961) TAG: AnglePitch = -80.988693
+[0m
+[0;32mI (7971) TAG: AccX = 0.256172
+[0m
+[0;32mI (7971) TAG: AccY = -0.300547
+[0m
+[0;32mI (7981) TAG: AccZ = 0.206104
+[0m
+[0;32mI (7981) TAG: AngleRoll = -42.430454
+[0m
+[0;32mI (7981) TAG: AnglePitch = -35.105072
+[0m
+[0;32mI (7991) TAG: AccX = 0.106514
+[0m
+[0;32mI (7991) TAG: AccY = -0.382090
+[0m
+[0;32mI (8001) TAG: AccZ = 0.667529
+[0m
+[0;32mI (8001) TAG: AngleRoll = -29.477028
+[0m
+[0;32mI (8011) TAG: AnglePitch = -7.884328
+[0m
+[0;32mI (8011) TAG: AccX = -0.088311
+[0m
+[0;32mI (8021) TAG: AccY = -0.330088
+[0m
+[0;32mI (8021) TAG: AccZ = 0.799365
+[0m
+[0;32mI (8021) TAG: AngleRoll = -22.315229
+[0m
+[0;32mI (8031) TAG: AnglePitch = 5.830403
+[0m
+[0;32mI (8031) TAG: AccX = -0.516777
+[0m
+[0;32mI (8041) TAG: AccY = -0.179209
+[0m
+[0;32mI (8041) TAG: AccZ = 0.723437
+[0m
+[0;32mI (8041) TAG: AngleRoll = -11.396522
+[0m
+[0;32mI (8051) TAG: AnglePitch = 34.736595
+[0m
+[0;32mI (8061) TAG: AccX = -0.427910
+[0m
+[0;32mI (8061) TAG: AccY = -0.127451
+[0m
+[0;32mI (8061) TAG: AccZ = 0.754932
+[0m
+[0;32mI (8061) TAG: AngleRoll = -8.355389
+[0m
+[0;32mI (8071) TAG: AnglePitch = 29.201296
+[0m
+[0;32mI (8081) TAG: AccX = -0.132988
+[0m
+[0;32mI (8081) TAG: AccY = -0.117686
+[0m
+[0;32mI (8081) TAG: AccZ = 0.919482
+[0m
+[0;32mI (8081) TAG: AngleRoll = -7.219378
+[0m
+[0;32mI (8091) TAG: AnglePitch = 8.164151
+[0m
+[0;32mI (8101) TAG: AccX = 0.397773
+[0m
+[0;32mI (8101) TAG: AccY = -0.136729
+[0m
+[0;32mI (8101) TAG: AccZ = 1.186328
+[0m
+[0;32mI (8101) TAG: AngleRoll = -6.236226
+[0m
+[0;32mI (8111) TAG: AnglePitch = -18.422552
+[0m
+[0;32mI (8121) TAG: AccX = 0.700752
+[0m
+[0;32mI (8121) TAG: AccY = -0.219492
+[0m
+[0;32mI (8121) TAG: AccZ = 1.438037
+[0m
+[0;32mI (8121) TAG: AngleRoll = -7.812729
+[0m
+[0;32mI (8131) TAG: AnglePitch = -25.720978
+[0m
+[0;32mI (8141) TAG: AccX = 0.396797
+[0m
+[0;32mI (8141) TAG: AccY = -0.274424
+[0m
+[0;32mI (8141) TAG: AccZ = 1.373828
+[0m
+[0;32mI (8141) TAG: AngleRoll = -10.863389
+[0m
+[0;32mI (8151) TAG: AnglePitch = -15.813734
+[0m
+[0;32mI (8161) TAG: AccX = 0.009102
+[0m
+[0;32mI (8161) TAG: AccY = -0.254160
+[0m
+[0;32mI (8161) TAG: AccZ = 1.130908
+[0m
+[0;32mI (8171) TAG: AngleRoll = -12.665799
+[0m
+[0;32mI (8171) TAG: AnglePitch = -0.449884
+[0m
+[0;32mI (8181) TAG: AccX = -0.272637
+[0m
+[0;32mI (8181) TAG: AccY = -0.198252
+[0m
+[0;32mI (8181) TAG: AccZ = 0.898975
+[0m
+[0;32mI (8181) TAG: AngleRoll = -11.916804
+[0m
+[0;32mI (8191) TAG: AnglePitch = 16.497133
+[0m
+[0;32mI (8201) TAG: AccX = -0.334160
+[0m
+[0;32mI (8201) TAG: AccY = -0.167490
+[0m
+[0;32mI (8201) TAG: AccZ = 0.837695
+[0m
+[0;32mI (8211) TAG: AngleRoll = -10.520619
+[0m
+[0;32mI (8211) TAG: AnglePitch = 21.363558
+[0m
+[0;32mI (8221) TAG: AccX = -0.199883
+[0m
+[0;32mI (8221) TAG: AccY = -0.159678
+[0m
+[0;32mI (8221) TAG: AccZ = 0.878955
+[0m
+[0;32mI (8231) TAG: AngleRoll = -10.045443
+[0m
+[0;32mI (8231) TAG: AnglePitch = 12.612057
+[0m
+[0;32mI (8241) TAG: AccX = 0.010322
+[0m
+[0;32mI (8241) TAG: AccY = -0.166514
+[0m
+[0;32mI (8241) TAG: AccZ = 0.978320
+[0m
+[0;32mI (8251) TAG: AngleRoll = -9.658857
+[0m
+[0;32mI (8251) TAG: AnglePitch = -0.595933
+[0m
+[0;32mI (8261) TAG: AccX = 0.144111
+[0m
+[0;32mI (8261) TAG: AccY = -0.170908
+[0m
+[0;32mI (8261) TAG: AccZ = 1.087207
+[0m
+[0;32mI (8271) TAG: AngleRoll = -8.857516
+[0m
+[0;32mI (8271) TAG: AnglePitch = -7.460082
+[0m
+[0;32mI (8281) TAG: AccX = 0.119453
+[0m
+[0;32mI (8281) TAG: AccY = -0.169687
+[0m
+[0;32mI (8281) TAG: AccZ = 1.125049
+[0m
+[0;32mI (8291) TAG: AngleRoll = -8.529855
+[0m
+[0;32mI (8291) TAG: AnglePitch = -5.993437
+[0m
+[0;32mI (8301) TAG: AccX = 0.021064
+[0m
+[0;32mI (8301) TAG: AccY = -0.140879
+[0m
+[0;32mI (8301) TAG: AccZ = 1.079150
+[0m
+[0;32mI (8311) TAG: AngleRoll = -7.436280
+[0m
+[0;32mI (8311) TAG: AnglePitch = -1.108833
+[0m
+[0;32mI (8321) TAG: AccX = -0.051690
+[0m
+[0;32mI (8321) TAG: AccY = -0.116709
+[0m
+[0;32mI (8321) TAG: AccZ = 1.019580
+[0m
+[0;32mI (8331) TAG: AngleRoll = -6.521791
+[0m
+[0;32mI (8331) TAG: AnglePitch = 2.883434
+[0m
+[0;32mI (8341) TAG: AccX = -0.066582
+[0m
+[0;32mI (8341) TAG: AccY = -0.116709
+[0m
+[0;32mI (8341) TAG: AccZ = 1.005908
+[0m
+[0;32mI (8351) TAG: AngleRoll = -6.603744
+[0m
+[0;32mI (8351) TAG: AnglePitch = 3.761780
+[0m
+[0;32mI (8361) TAG: AccX = -0.043877
+[0m
+[0;32mI (8361) TAG: AccY = -0.136973
+[0m
+[0;32mI (8361) TAG: AccZ = 1.028125
+[0m
+[0;32mI (8371) TAG: AngleRoll = -7.581761
+[0m
+[0;32mI (8371) TAG: AnglePitch = 2.422336
+[0m
+[0;32mI (8381) TAG: AccX = -0.011406
+[0m
+[0;32mI (8381) TAG: AccY = -0.158701
+[0m
+[0;32mI (8381) TAG: AccZ = 1.053027
+[0m
+[0;32mI (8391) TAG: AngleRoll = -8.570020
+[0m
+[0;32mI (8391) TAG: AnglePitch = 0.613669
+[0m
+[0;32mI (8401) TAG: AccX = 0.013984
+[0m
+[0;32mI (8401) TAG: AccY = -0.178721
+[0m
+[0;32mI (8401) TAG: AccZ = 1.060596
+[0m
+[0;32mI (8411) TAG: AngleRoll = -9.564220
+[0m
+[0;32mI (8411) TAG: AnglePitch = -0.744920
+[0m
+[0;32mI (8421) TAG: AccX = 0.016426
+[0m
+[0;32mI (8421) TAG: AccY = -0.192393
+[0m
+[0;32mI (8431) TAG: AccZ = 1.058887
+[0m
+[0;32mI (8431) TAG: AngleRoll = -10.296705
+[0m
+[0;32mI (8431) TAG: AnglePitch = -0.874402
+[0m
+[0;32mI (8441) TAG: AccX = -0.009453
+[0m
+[0;32mI (8441) TAG: AccY = -0.191416
+[0m
+[0;32mI (8451) TAG: AccZ = 1.049121
+[0m
+[0;32mI (8451) TAG: AngleRoll = -10.339678
+[0m
+[0;32mI (8451) TAG: AnglePitch = 0.507870
+[0m
+[0;32mI (8461) TAG: AccX = -0.040947
+[0m
+[0;32mI (8461) TAG: AccY = -0.178232
+[0m
+[0;32mI (8471) TAG: AccZ = 1.027148
+[0m
+[0;32mI (8471) TAG: AngleRoll = -9.836374
+[0m
+[0;32mI (8471) TAG: AnglePitch = 2.249313
+[0m
+[0;32mI (8481) TAG: AccX = -0.055107
+[0m
+[0;32mI (8481) TAG: AccY = -0.161875
+[0m
+[0;32mI (8491) TAG: AccZ = 1.010303
+[0m
+[0;32mI (8491) TAG: AngleRoll = -9.089519
+[0m
+[0;32mI (8491) TAG: AnglePitch = 3.082890
+[0m
+[0;32mI (8501) TAG: AccX = -0.047783
+[0m
+[0;32mI (8501) TAG: AccY = -0.157969
+[0m
+[0;32mI (8511) TAG: AccZ = 1.019580
+[0m
+[0;32mI (8511) TAG: AngleRoll = -8.797597
+[0m
+[0;32mI (8511) TAG: AnglePitch = 2.651648
+[0m
+[0;32mI (8521) TAG: AccX = -0.019463
+[0m
+[0;32mI (8521) TAG: AccY = -0.178965
+[0m
+[0;32mI (8531) TAG: AccZ = 1.057422
+[0m
+[0;32mI (8531) TAG: AngleRoll = -9.604477
+[0m
+[0;32mI (8531) TAG: AnglePitch = 1.039687
+[0m
+[0;32mI (8541) TAG: AccX = 0.009590
+[0m
+[0;32mI (8541) TAG: AccY = -0.208262
+[0m
+[0;32mI (8551) TAG: AccZ = 1.101856
+[0m
+[0;32mI (8551) TAG: AngleRoll = -10.702815
+[0m
+[0;32mI (8561) TAG: AnglePitch = -0.489975
+[0m
+[0;32mI (8561) TAG: AccX = 0.012764
+[0m
+[0;32mI (8571) TAG: AccY = -0.223398
+[0m
+[0;32mI (8571) TAG: AccZ = 1.105518
+[0m
+[0;32mI (8571) TAG: AngleRoll = -11.423509
+[0m
