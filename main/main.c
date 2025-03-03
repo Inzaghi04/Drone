@@ -27,32 +27,32 @@ joystick_data_t web_control_data = {0};
 SemaphoreHandle_t data_mutex = NULL;
 
 // Định nghĩa chân PWM cho ESC điều khiển động cơ
-#define ESC_MOTOR_1 25
-#define ESC_MOTOR_2 19
-#define ESC_MOTOR_3 21
-#define ESC_MOTOR_4 22
+#define ESC_MOTOR_1 14
+#define ESC_MOTOR_2 15
+#define ESC_MOTOR_3 19
+#define ESC_MOTOR_4 25
 
 #define LEDC_TIMER      LEDC_TIMER_0
 #define LEDC_MODE       LEDC_HIGH_SPEED_MODE
 
-#define LEDC_FREQ       50  // Sửa tần số từ 400Hz → 50Hz (chuẩn cho ESC)
+#define LEDC_FREQ       50   
 #define LEDC_RESOLUTION LEDC_TIMER_10_BIT  // Giữ nguyên 10-bit
 #define PWM_MIN_DUTY   (1023 * 5 / 100)    // 51 (~1000µs)
 #define PWM_MAX_DUTY   (1023 * 10 / 100)   // 102 (~2000µs)
 
-#define I2C_MASTER_SCL_IO 17    // GPIO number for I2C master clock
-#define I2C_MASTER_SDA_IO 16    // GPIO number for I2C master data
+#define I2C_MASTER_SCL_IO 22    // GPIO number for I2C master clock
+#define I2C_MASTER_SDA_IO 21    // GPIO number for I2C master data
 #define I2C_MASTER_NUM I2C_NUM_0 // I2C port number for master dev
 #define I2C_MASTER_FREQ_HZ 100000 // I2C master clock frequency
 #define MPU6050_SENSOR_ADDR 0x68 // Slave address of the MPU6050 sensor
 
 volatile float RatePitch, RateRoll, RateYaw;
-float RateCalibrationPitch = - 1.28;
-float RateCalibrationRoll = - 0.17;
-float RateCalibrationYaw = - 0.54;
-float AccXCalibration = 1.07;
-float AccYCalibration = - 0.01;
-float AccZCalibration = - 0.95;
+float RateCalibrationPitch = - 1.32;
+float RateCalibrationRoll = 0.01;
+float RateCalibrationYaw = - 0.27;
+float AccXCalibration = - 0.18;
+float AccYCalibration = - 0.19;
+float AccZCalibration = - 0.02;
 
 // Dòng 57-59 (PID góc)
 float PAngleRoll = 2.0; 
@@ -126,20 +126,26 @@ float complementaryAnglePitch = 0.0f;
 
 volatile float MotorInput1, MotorInput2, MotorInput3, MotorInput4;
 
+uint32_t map_puslse_width(uint32_t input) {
+    const uint32_t maxduty = (1 << LEDC_RESOLUTION) - 1;
+    const uint32_t period_us = 1000000 / LEDC_FREQ;
+    input = (input < 1000) ? 1000 : ((input > 2000) ? 2000 : input);
+    return (input * maxduty) / period_us;
+}
 
-void setMotorSpeed(ledc_channel_t channel, float input) {
-    float mapped_input = 1000 + (input * 1000 / 255); 
-    if (mapped_input > 2000) mapped_input = 2000;
-    if (mapped_input < 1000) mapped_input = 1000;
-    // Tính duty cycle cho 10-bit (0-1023)
-    uint32_t duty = (uint32_t)(
-        (input - 1000) * (PWM_MAX_DUTY - PWM_MIN_DUTY) / 1000 + PWM_MIN_DUTY
-    );
-    //ESP_LOGI(TAG, "Channel %d: mapped_input=%dµs, duty=%"PRIu32, channel, (int)input, duty);
+float getMotorSpeed(float intput) {
+    float mapIp = 1000 + (intput * 1000 / 255);
+    if (mapIp > 2000) mapIp = 2000;
+    if (mapIp < 1000) mapIp = 1000;
+    return mapIp;
+}
+
+void setMotorSpeed(ledc_channel_t channel, uint32_t input) {
+    uint32_t duty = map_puslse_width(input);
     ledc_set_duty(LEDC_MODE, channel, duty);
     ledc_update_duty(LEDC_MODE, channel);
-    
 }
+
 void configureMotor(int gpio, ledc_channel_t channel) {
     ledc_timer_config_t timer_conf = {
         .speed_mode = LEDC_HIGH_SPEED_MODE,
@@ -179,10 +185,6 @@ static esp_err_t control_post_handler(httpd_req_t *req) {
     // setMotorSpeed(LEDC_CHANNEL_2, MotorInput2);   
     // setMotorSpeed(LEDC_CHANNEL_3, MotorInput3);
     // setMotorSpeed(LEDC_CHANNEL_4, MotorInput4);
-    web_control_data.throttle = (web_control_data.throttle > 255) ? 255 : web_control_data.throttle;
-    web_control_data.roll = (web_control_data.roll > 255) ? 255 : web_control_data.roll;
-    web_control_data.pitch = (web_control_data.pitch > 255) ? 255 : web_control_data.pitch;
-    web_control_data.yaw = (web_control_data.yaw > 255) ? 255 : web_control_data.yaw;
     // ESP_LOGI(TAG, "Web Control: Roll=%.2f, Pitch=%.2f, Yaw=%.2f, Throttle=%.2f, AUX1=%.2f",
     //      (double)web_control_data.roll, (double)web_control_data.pitch, 
     //      (double)web_control_data.yaw, (double)web_control_data.throttle, (double)web_control_data.AUX1);
@@ -242,8 +244,8 @@ void init_wifi() {
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = "MSWifi",
-            .password = "m12345678"
+            .ssid = "Van Vuong",
+            .password = "n06111977"
         },
     };
 
@@ -426,9 +428,9 @@ void update_motor() {
         RatePitch -= RateCalibrationPitch;
         RateYaw -= RateCalibrationYaw;
     
-        AccX -= AccXCalibration ;
-        AccY -= AccYCalibration ;
-        AccZ -= AccZCalibration;
+        AccX = AccX - AccXCalibration ;
+        AccY = AccY - AccYCalibration ;
+        AccZ = AccZ - AccZCalibration;
         AngleRoll = atan(AccY / sqrt(AccX * AccX + AccZ * AccZ)) * (180 / M_PI);
         AnglePitch = -atan(AccX / sqrt(AccY * AccY + AccZ * AccZ)) * (180 / M_PI);
         // ESP_LOGI("TAG", "AccX = %f\n",AccX);
@@ -441,11 +443,11 @@ void update_motor() {
         // Clamping complementary filter roll angle to ±20 degrees
         complementaryAngleRoll = (complementaryAngleRoll > 20) ? 20 : ((complementaryAngleRoll < -20) ? -20 : complementaryAngleRoll);
         complementaryAnglePitch = (complementaryAnglePitch > 20) ? 20 : ((complementaryAnglePitch < -20) ? -20 : complementaryAnglePitch);
-    
-        DesiredAngleRoll = 0.1*(web_control_data.roll - 1500);
-        DesiredAnglePitch = 0.1*(web_control_data.pitch -1500);
-        InputThrottle = web_control_data.throttle;
-        DesiredRateYaw = 0.15*(web_control_data.yaw - 1500);
+
+        DesiredAngleRoll = 0.1*(getMotorSpeed(web_control_data.roll) - 1500);
+        DesiredAnglePitch = 0.1*(getMotorSpeed(web_control_data.pitch) -1500);
+        InputThrottle = getMotorSpeed(web_control_data.throttle);
+        DesiredRateYaw = 0.15*(getMotorSpeed(web_control_data.yaw) - 1500);
 
         // ESP_LOGI("TAG","DesiredAngleRoll %f\n",DesiredAngleRoll);
         // ESP_LOGI("TAG","DesiredAnglePitch %f\n",DesiredAnglePitch);
@@ -521,19 +523,17 @@ void update_motor() {
         {
             InputThrottle = 1800;
         }
-    
       
         MotorInput1 =  (InputThrottle - InputRoll - InputPitch - InputYaw); // front right - counter clockwise
         MotorInput2 =  (InputThrottle - InputRoll + InputPitch + InputYaw); // rear right - clockwise
         MotorInput3 =  (InputThrottle + InputRoll + InputPitch - InputYaw); // rear left  - counter clockwise
         MotorInput4 =  (InputThrottle + InputRoll - InputPitch + InputYaw); //front left - clockwise
-    
-    
+   
         if (MotorInput1 > 2000)
         {
             MotorInput1 = 1999;
         }
-    
+        
         if (MotorInput2 > 2000)
         {
             MotorInput2 = 1999;
@@ -575,25 +575,39 @@ void update_motor() {
         //     MotorInput4 = ThrottleCutOff;
         //     return;
         // }
-        if (web_control_data.AUX1 != 0 ) // dont Arm the motors
+        if (web_control_data.AUX1 == 1 ) 
         {
         
             setMotorSpeed(LEDC_CHANNEL_0, MotorInput1);
             setMotorSpeed(LEDC_CHANNEL_1, MotorInput2);
             setMotorSpeed(LEDC_CHANNEL_2, MotorInput3);
             setMotorSpeed(LEDC_CHANNEL_3, MotorInput4);
-            // ESP_LOGI(TAG, "Simplified Motor Inputs:");
-            // ESP_LOGI(TAG, "M1=%.2f", MotorInput1);
-            // ESP_LOGI(TAG, "M2=%.2f", MotorInput2);
-            // ESP_LOGI(TAG, "M3=%.2f", MotorInput3);
-            // ESP_LOGI(TAG, "M4=%.2f", MotorInput4);
+            ESP_LOGI(TAG, "Simplified Motor Inputs:");
+            ESP_LOGI(TAG, "M1=%.2f", MotorInput1);
+            ESP_LOGI(TAG, "M2=%.2f", MotorInput2);
+            ESP_LOGI(TAG, "M3=%.2f", MotorInput3);
+            ESP_LOGI(TAG, "M4=%.2f", MotorInput4);
         }
-        else {
+        if (web_control_data.AUX1 == 0 ) {
             MotorInput1 = ThrottleCutOff;
             MotorInput2 = ThrottleCutOff;
             MotorInput3 = ThrottleCutOff;
             MotorInput4 = ThrottleCutOff;
     
+            PrevErrorRateRoll=0; PrevErrorRatePitch=0; PrevErrorRateYaw=0;
+            PrevItermRateRoll=0; PrevItermRatePitch=0; PrevItermRateYaw=0;
+            PrevErrorAngleRoll=0; PrevErrorAnglePitch=0;    
+            PrevItermAngleRoll=0; PrevItermAnglePitch=0;
+            setMotorSpeed(LEDC_CHANNEL_0, MotorInput1 );
+            setMotorSpeed(LEDC_CHANNEL_1, MotorInput2);
+            setMotorSpeed(LEDC_CHANNEL_2, MotorInput3);
+            setMotorSpeed(LEDC_CHANNEL_3, MotorInput4);
+        }
+        if (web_control_data.throttle <= 5) {
+            MotorInput1 = ThrottleCutOff;
+            MotorInput2 = ThrottleCutOff;
+            MotorInput3 = ThrottleCutOff;
+            MotorInput4 = ThrottleCutOff;
             PrevErrorRateRoll=0; PrevErrorRatePitch=0; PrevErrorRateYaw=0;
             PrevItermRateRoll=0; PrevItermRatePitch=0; PrevItermRateYaw=0;
             PrevErrorAngleRoll=0; PrevErrorAnglePitch=0;    
@@ -610,7 +624,7 @@ void control_task(void *pvParam) {
         update_motor(); 
         // int64_t duration = esp_timer_get_time() - start;
         // ESP_LOGI(TAG, "Execution time: %lldµs", duration);
-        while(esp_timer_get_time() - start < 4000);
+        while(esp_timer_get_time() - start < 1000000); //4000
     }
 }
 
