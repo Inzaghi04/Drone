@@ -603,7 +603,7 @@ void update_motor() {
             setMotorSpeed(LEDC_CHANNEL_2, MotorInput3);
             setMotorSpeed(LEDC_CHANNEL_3, MotorInput4);
         }
-        if (web_control_data.throttle <= 5) {
+        if (getMotorSpeed(web_control_data.throttle) < 1030) {
             MotorInput1 = ThrottleCutOff;
             MotorInput2 = ThrottleCutOff;
             MotorInput3 = ThrottleCutOff;
@@ -624,7 +624,7 @@ void control_task(void *pvParam) {
         update_motor(); 
         // int64_t duration = esp_timer_get_time() - start;
         // ESP_LOGI(TAG, "Execution time: %lldµs", duration);
-        while(esp_timer_get_time() - start < 1000000); //4000
+        while(esp_timer_get_time() - start < 4000);
     }
 }
 
