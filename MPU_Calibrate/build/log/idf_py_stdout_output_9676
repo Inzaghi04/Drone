@@ -1,0 +1,409 @@
+
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00J���� Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type S�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  9 2025 18:44:43[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad70h ( 44400) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ad98 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d134 vaddr=40080000 size=02ee4h ( 12004) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=163c4h ( 91076) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=000363ec vaddr=40082ee4 size=0b110h ( 45328) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     Drone_Tracking_obj[0m
+[0;32mI (220) app_init: App version:      f381822-dirty[0m
+[0;32mI (225) app_init: Compile time:     Mar  9 2025 20:33:10[0m
+[0;32mI (231) app_init: ELF file SHA256:  53848e471...[0m
+[0;32mI (236) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (242) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (251) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2C68 len 0002D398 (180 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008E000 len 00012000 (72 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (316) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (338) MPU6050_EXAMPLE: Accel: X=-0.44g, Y=0.37g, Z=-0.77g[0m
+[0;32mI (338) MPU6050_EXAMPLE: Gyro: X=31.74°/s, Y=-6.69°/s, Z=-9.34°/s[0m
+[0;32mI (348) MPU6050_EXAMPLE: Roll=22.54°, Pitch=26.97°[0m
+[0;32mI (1348) MPU6050_EXAMPLE: Accel: X=-0.49g, Y=0.40g, Z=-0.67g[0m
+[0;32mI (1348) MPU6050_EXAMPLE: Gyro: X=19.34°/s, Y=17.21°/s, Z=-14.92°/s[0m
+[0;32mI (1348) MPU6050_EXAMPLE: Roll=25.84°, Pitch=32.03°[0m
+[0;32mI (2358) MPU6050_EXAMPLE: Accel: X=-0.36g, Y=0.57g, Z=-0.66g[0m
+[0;32mI (2358) MPU6050_EXAMPLE: Gyro: X=34.70°/s, Y=-3.15°/s, Z=-3.45°/s[0m
+[0;32mI (2358) MPU6050_EXAMPLE: Roll=37.17°, Pitch=22.32°[0m
+[0;32mI (3368) MPU6050_EXAMPLE: Accel: X=-0.44g, Y=0.53g, Z=-0.69g[0m
+[0;32mI (3368) MPU6050_EXAMPLE: Gyro: X=62.85°/s, Y=-0.41°/s, Z=45.73°/s[0m
+[0;32mI (3368) MPU6050_EXAMPLE: Roll=32.95°, Pitch=26.62°[0m
+[0;32mI (4378) MPU6050_EXAMPLE: Accel: X=0.12g, Y=0.45g, Z=-0.78g[0m
+[0;32mI (4378) MPU6050_EXAMPLE: Gyro: X=18.29°/s, Y=-5.73°/s, Z=-42.03°/s[0m
+[0;32mI (4378) MPU6050_EXAMPLE: Roll=29.66°, Pitch=-7.35°[0m
+[0;32mI (5388) MPU6050_EXAMPLE: Accel: X=-0.34g, Y=0.47g, Z=-0.73g[0m
+[0;32mI (5388) MPU6050_EXAMPLE: Gyro: X=30.90°/s, Y=6.67°/s, Z=-2.79°/s[0m
+[0;32mI (5388) MPU6050_EXAMPLE: Roll=30.09°, Pitch=21.17°[0m
+[0;32mI (6398) MPU6050_EXAMPLE: Accel: X=-0.15g, Y=0.76g, Z=-0.61g[0m
+[0;32mI (6398) MPU6050_EXAMPLE: Gyro: X=35.50°/s, Y=14.32°/s, Z=-8.41°/s[0m
+[0;32mI (6398) MPU6050_EXAMPLE: Roll=50.27°, Pitch=8.94°[0m
+[0;32mI (7408) MPU6050_EXAMPLE: Accel: X=-0.77g, Y=0.29g, Z=-0.43g[0m
+[0;32mI (7408) MPU6050_EXAMPLE: Gyro: X=16.34°/s, Y=-7.22°/s, Z=-24.50°/s[0m
+[0;32mI (7408) MPU6050_EXAMPLE: Roll=18.21°, Pitch=56.31°[0m
+[0;32mI (8418) MPU6050_EXAMPLE: Accel: X=-0.91g, Y=0.18g, Z=-0.38g[0m
+[0;32mI (8418) MPU6050_EXAMPLE: Gyro: X=25.91°/s, Y=-10.20°/s, Z=-19.31°/s[0m
+[0;32mI (8418) MPU6050_EXAMPLE: Roll=10.28°, Pitch=65.04°[0m
+[0;32mI (9428) MPU6050_EXAMPLE: Accel: X=-1.04g, Y=0.26g, Z=-0.33g[0m
+[0;32mI (9428) MPU6050_EXAMPLE: Gyro: X=31.59°/s, Y=42.20°/s, Z=44.81°/s[0m
+[0;32mI (9428) MPU6050_EXAMPLE: Roll=13.68°, Pitch=67.85°[0m
+[0;32mI (10438) MPU6050_EXAMPLE: Accel: X=-0.83g, Y=0.26g, Z=-0.52g[0m
+[0;32mI (10438) MPU6050_EXAMPLE: Gyro: X=27.51°/s, Y=-9.91°/s, Z=-16.24°/s[0m
+[0;32mI (10438) MPU6050_EXAMPLE: Roll=14.69°, Pitch=55.17°[0m
+[0;32mI (11448) MPU6050_EXAMPLE: Accel: X=-0.95g, Y=0.26g, Z=-0.33g[0m
+[0;32mI (11448) MPU6050_EXAMPLE: Gyro: X=42.75°/s, Y=10.93°/s, Z=18.61°/s[0m
+[0;32mI (11448) MPU6050_EXAMPLE: Roll=14.40°, Pitch=66.22°[0m
+[0;32mI (12458) MPU6050_EXAMPLE: Accel: X=-0.77g, Y=0.28g, Z=-0.51g[0m
+[0;32mI (12458) MPU6050_EXAMPLE: Gyro: X=35.73°/s, Y=2.31°/s, Z=-3.31°/s[0m
+[0;32mI (12458) MPU6050_EXAMPLE: Roll=16.81°, Pitch=52.98°[0m
+[0;32mI (13468) MPU6050_EXAMPLE: Accel: X=-0.31g, Y=0.31g, Z=-0.85g[0m
+[0;32mI (13468) MPU6050_EXAMPLE: Gyro: X=38.40°/s, Y=50.50°/s, Z=50.21°/s[0m
+[0;32mI (13468) MPU6050_EXAMPLE: Roll=18.91°, Pitch=18.97°[0m
+[0;32mI (14478) MPU6050_EXAMPLE: Accel: X=-0.13g, Y=0.49g, Z=-0.78g[0m
+[0;32mI (14478) MPU6050_EXAMPLE: Gyro: X=32.81°/s, Y=2.11°/s, Z=-3.95°/s[0m
+[0;32mI (14478) MPU6050_EXAMPLE: Roll=31.59°, Pitch=7.90°[0m
+[0;32mI (15488) MPU6050_EXAMPLE: Accel: X=-0.09g, Y=0.43g, Z=-0.78g[0m
+[0;32mI (15488) MPU6050_EXAMPLE: Gyro: X=24.58°/s, Y=2.93°/s, Z=0.76°/s[0m
+[0;32mI (15488) MPU6050_EXAMPLE: Roll=29.04°, Pitch=6.04°[0m
+[0;32mI (16498) MPU6050_EXAMPLE: Accel: X=-0.05g, Y=0.45g, Z=-0.82g[0m
+[0;32mI (16498) MPU6050_EXAMPLE: Gyro: X=33.10°/s, Y=-2.69°/s, Z=-1.31°/s[0m
+[0;32mI (16498) MPU6050_EXAMPLE: Roll=28.71°, Pitch=2.81°[0m
+[0;32mI (17508) MPU6050_EXAMPLE: Accel: X=0.34g, Y=0.53g, Z=-0.69g[0m
+[0;32mI (17508) MPU6050_EXAMPLE: Gyro: X=27.47°/s, Y=10.96°/s, Z=-3.56°/s[0m
+[0;32mI (17508) MPU6050_EXAMPLE: Roll=34.55°, Pitch=-21.48°[0m
+[0;32mI (18518) MPU6050_EXAMPLE: Accel: X=0.38g, Y=0.56g, Z=-0.65g[0m
+[0;32mI (18518) MPU6050_EXAMPLE: Gyro: X=33.48°/s, Y=8.99°/s, Z=-0.32°/s[0m
+[0;32mI (18518) MPU6050_EXAMPLE: Roll=37.00°, Pitch=-23.57°[0m
+[0;32mI (19528) MPU6050_EXAMPLE: Accel: X=1.02g, Y=0.23g, Z=0.01g[0m
+[0;32mI (19528) MPU6050_EXAMPLE: Gyro: X=84.05°/s, Y=22.14°/s, Z=99.39°/s[0m
+[0;32mI (19528) MPU6050_EXAMPLE: Roll=12.58°, Pitch=-77.39°[0m
+[0;32mI (20538) MPU6050_EXAMPLE: Accel: X=0.99g, Y=0.12g, Z=0.34g[0m
+[0;32mI (20538) MPU6050_EXAMPLE: Gyro: X=43.31°/s, Y=13.77°/s, Z=19.24°/s[0m
+[0;32mI (20538) MPU6050_EXAMPLE: Roll=6.36°, Pitch=-69.91°[0m
+[0;32mI (21548) MPU6050_EXAMPLE: Accel: X=0.73g, Y=-0.21g, Z=0.62g[0m
+[0;32mI (21548) MPU6050_EXAMPLE: Gyro: X=0.92°/s, Y=65.73°/s, Z=-38.18°/s[0m
+[0;32mI (21548) MPU6050_EXAMPLE: Roll=-12.58°, Pitch=-48.03°[0m
+[0;32mI (22558) MPU6050_EXAMPLE: Accel: X=0.93g, Y=-0.25g, Z=0.29g[0m
+[0;32mI (22558) MPU6050_EXAMPLE: Gyro: X=44.70°/s, Y=7.27°/s, Z=13.82°/s[0m
+[0;32mI (22558) MPU6050_EXAMPLE: Roll=-14.33°, Pitch=-67.61°[0m
+[0;32mI (23568) MPU6050_EXAMPLE: Accel: X=0.92g, Y=-0.25g, Z=0.24g[0m
+[0;32mI (23568) MPU6050_EXAMPLE: Gyro: X=32.41°/s, Y=4.56°/s, Z=-6.96°/s[0m
+[0;32mI (23568) MPU6050_EXAMPLE: Roll=-14.77°, Pitch=-69.30°[0m
+[0;32mI (24578) MPU6050_EXAMPLE: Accel: X=0.93g, Y=-0.24g, Z=0.29g[0m
+[0;32mI (24578) MPU6050_EXAMPLE: Gyro: X=30.44°/s, Y=13.80°/s, Z=-10.50°/s[0m
+[0;32mI (24578) MPU6050_EXAMPLE: Roll=-14.02°, Pitch=-67.78°[0m
+[0;32mI (25588) MPU6050_EXAMPLE: Accel: X=-0.25g, Y=0.22g, Z=1.11g[0m
+[0;32mI (25588) MPU6050_EXAMPLE: Gyro: X=59.57°/s, Y=39.80°/s, Z=-3.24°/s[0m
+[0;32mI (25588) MPU6050_EXAMPLE: Roll=10.72°, Pitch=12.37°[0m
+[0;32mI (26598) MPU6050_EXAMPLE: Accel: X=-0.19g, Y=0.12g, Z=1.07g[0m
+[0;32mI (26598) MPU6050_EXAMPLE: Gyro: X=31.86°/s, Y=4.43°/s, Z=5.60°/s[0m
+[0;32mI (26598) MPU6050_EXAMPLE: Roll=6.39°, Pitch=10.17°[0m
+[0;32mI (27608) MPU6050_EXAMPLE: Accel: X=-0.22g, Y=0.14g, Z=1.06g[0m
+[0;32mI (27608) MPU6050_EXAMPLE: Gyro: X=33.28°/s, Y=4.76°/s, Z=-1.76°/s[0m
+[0;32mI (27608) MPU6050_EXAMPLE: Roll=7.37°, Pitch=11.55°[0m
+[0;32mI (28618) MPU6050_EXAMPLE: Accel: X=-0.22g, Y=0.16g, Z=1.06g[0m
+[0;32mI (28618) MPU6050_EXAMPLE: Gyro: X=32.99°/s, Y=4.14°/s, Z=-2.49°/s[0m
+[0;32mI (28618) MPU6050_EXAMPLE: Roll=8.43°, Pitch=11.51°[0m
+[0;32mI (29628) MPU6050_EXAMPLE: Accel: X=-0.23g, Y=0.15g, Z=1.06g[0m
+[0;32mI (29628) MPU6050_EXAMPLE: Gyro: X=33.19°/s, Y=5.28°/s, Z=-2.09°/s[0m
+[0;32mI (29628) MPU6050_EXAMPLE: Roll=7.89°, Pitch=11.89°[0m
+[0;32mI (30638) MPU6050_EXAMPLE: Accel: X=-0.22g, Y=0.15g, Z=1.06g[0m
+[0;32mI (30638) MPU6050_EXAMPLE: Gyro: X=35.47°/s, Y=8.76°/s, Z=-1.33°/s[0m
+[0;32mI (30638) MPU6050_EXAMPLE: Roll=7.83°, Pitch=11.50°[0m
+[0;32mI (31648) MPU6050_EXAMPLE: Accel: X=-0.16g, Y=0.16g, Z=1.02g[0m
+[0;32mI (31648) MPU6050_EXAMPLE: Gyro: X=4.03°/s, Y=-40.47°/s, Z=50.66°/s[0m
+[0;32mI (31648) MPU6050_EXAMPLE: Roll=8.66°, Pitch=8.68°[0m
+[0;32mI (32658) MPU6050_EXAMPLE: Accel: X=0.02g, Y=0.45g, Z=1.12g[0m
+[0;32mI (32658) MPU6050_EXAMPLE: Gyro: X=-8.67°/s, Y=29.94°/s, Z=16.84°/s[0m
+[0;32mI (32658) MPU6050_EXAMPLE: Roll=21.78°, Pitch=-0.90°[0m
+[0;32mI (33668) MPU6050_EXAMPLE: Accel: X=-0.11g, Y=-0.52g, Z=0.88g[0m
+[0;32mI (33668) MPU6050_EXAMPLE: Gyro: X=-18.52°/s, Y=13.37°/s, Z=-4.89°/s[0m
+[0;32mI (33668) MPU6050_EXAMPLE: Roll=-30.45°, Pitch=6.28°[0m
+[0;32mI (34678) MPU6050_EXAMPLE: Accel: X=-0.18g, Y=-0.58g, Z=0.82g[0m
+[0;32mI (34678) MPU6050_EXAMPLE: Gyro: X=35.33°/s, Y=-7.11°/s, Z=0.11°/s[0m
+[0;32mI (34678) MPU6050_EXAMPLE: Roll=-34.80°, Pitch=9.93°[0m
+[0;32mI (35688) MPU6050_EXAMPLE: Accel: X=-0.09g, Y=-0.46g, Z=0.87g[0m
+[0;32mI (35688) MPU6050_EXAMPLE: Gyro: X=113.76°/s, Y=-12.29°/s, Z=128.11°/s[0m
+[0;32mI (35688) MPU6050_EXAMPLE: Roll=-27.79°, Pitch=5.35°[0m
+[0;32mI (36698) MPU6050_EXAMPLE: Accel: X=-0.15g, Y=-0.15g, Z=1.06g[0m
+[0;32mI (36698) MPU6050_EXAMPLE: Gyro: X=38.32°/s, Y=-10.89°/s, Z=-5.89°/s[0m
+[0;32mI (36698) MPU6050_EXAMPLE: Roll=-8.15°, Pitch=7.98°[0m
+[0;32mI (37708) MPU6050_EXAMPLE: Accel: X=0.04g, Y=0.13g, Z=0.99g[0m
+[0;32mI (37708) MPU6050_EXAMPLE: Gyro: X=55.92°/s, Y=15.94°/s, Z=-25.27°/s[0m
+[0;32mI (37708) MPU6050_EXAMPLE: Roll=7.24°, Pitch=-2.26°[0m
+[0;32mI (38718) MPU6050_EXAMPLE: Accel: X=-0.04g, Y=0.23g, Z=1.07g[0m
+[0;32mI (38718) MPU6050_EXAMPLE: Gyro: X=25.62°/s, Y=5.31°/s, Z=-0.87°/s[0m
+[0;32mI (38718) MPU6050_EXAMPLE: Roll=12.00°, Pitch=2.16°[0m
+[0;32mI (39728) MPU6050_EXAMPLE: Accel: X=-0.05g, Y=0.21g, Z=1.08g[0m
+[0;32mI (39728) MPU6050_EXAMPLE: Gyro: X=35.76°/s, Y=3.65°/s, Z=-4.34°/s[0m
+[0;32mI (39728) MPU6050_EXAMPLE: Roll=11.02°, Pitch=2.60°[0m
+[0;32mI (40738) MPU6050_EXAMPLE: Accel: X=-0.13g, Y=-0.25g, Z=0.94g[0m
+[0;32mI (40738) MPU6050_EXAMPLE: Gyro: X=21.92°/s, Y=138.20°/s, Z=2.24°/s[0m
+[0;32mI (40738) MPU6050_EXAMPLE: Roll=-14.65°, Pitch=7.57°[0m
+[0;32mI (41748) MPU6050_EXAMPLE: Accel: X=0.06g, Y=-0.13g, Z=1.07g[0m
+[0;32mI (41748) MPU6050_EXAMPLE: Gyro: X=144.98°/s, Y=-40.47°/s, Z=-22.43°/s[0m
+[0;32mI (41748) MPU6050_EXAMPLE: Roll=-6.64°, Pitch=-2.92°[0m
+[0;32mI (42758) MPU6050_EXAMPLE: Accel: X=-0.48g, Y=0.33g, Z=0.81g[0m
+[0;32mI (42758) MPU6050_EXAMPLE: Gyro: X=63.47°/s, Y=116.64°/s, Z=-24.15°/s[0m
+[0;32mI (42758) MPU6050_EXAMPLE: Roll=19.38°, Pitch=28.58°[0m
+[0;32mI (43768) MPU6050_EXAMPLE: Accel: X=0.25g, Y=-0.50g, Z=0.83g[0m
+[0;32mI (43768) MPU6050_EXAMPLE: Gyro: X=-12.85°/s, Y=-61.15°/s, Z=0.46°/s[0m
+[0;32mI (43768) MPU6050_EXAMPLE: Roll=-29.96°, Pitch=-14.26°[0m
+[0;32mI (44778) MPU6050_EXAMPLE: Accel: X=-0.07g, Y=0.21g, Z=0.99g[0m
+[0;32mI (44778) MPU6050_EXAMPLE: Gyro: X=143.74°/s, Y=-1.68°/s, Z=39.01°/s[0m
+[0;32mI (44778) MPU6050_EXAMPLE: Roll=12.12°, Pitch=4.08°[0m
+[0;32mI (45788) MPU6050_EXAMPLE: Accel: X=-0.04g, Y=-0.02g, Z=1.28g[0m
+[0;32mI (45788) MPU6050_EXAMPLE: Gyro: X=108.55°/s, Y=22.99°/s, Z=-64.93°/s[0m
+[0;32mI (45788) MPU6050_EXAMPLE: Roll=-0.78°, Pitch=1.61°[0m
+[0;32mI (46798) MPU6050_EXAMPLE: Accel: X=-0.08g, Y=-0.06g, Z=1.14g[0m
+[0;32mI (46798) MPU6050_EXAMPLE: Gyro: X=69.30°/s, Y=6.06°/s, Z=-8.05°/s[0m
+[0;32mI (46798) MPU6050_EXAMPLE: Roll=-2.79°, Pitch=4.10°[0m
+[0;32mI (47808) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (47808) MPU6050_EXAMPLE: Gyro: X=33.02°/s, Y=4.85°/s, Z=-2.14°/s[0m
+[0;32mI (47808) MPU6050_EXAMPLE: Roll=1.46°, Pitch=1.70°[0m
+[0;32mI (48818) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (48818) MPU6050_EXAMPLE: Gyro: X=33.08°/s, Y=4.85°/s, Z=-2.12°/s[0m
+[0;32mI (48818) MPU6050_EXAMPLE: Roll=1.49°, Pitch=1.78°[0m
+[0;32mI (49828) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (49828) MPU6050_EXAMPLE: Gyro: X=33.04°/s, Y=4.89°/s, Z=-2.12°/s[0m
+[0;32mI (49828) MPU6050_EXAMPLE: Roll=1.46°, Pitch=1.67°[0m
+[0;32mI (50838) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (50838) MPU6050_EXAMPLE: Gyro: X=33.04°/s, Y=4.87°/s, Z=-2.14°/s[0m
+[0;32mI (50838) MPU6050_EXAMPLE: Roll=1.48°, Pitch=1.77°[0m
+[0;32mI (51848) MPU6050_EXAMPLE: Accel: X=-0.01g, Y=0.02g, Z=1.18g[0m
+[0;32mI (51848) MPU6050_EXAMPLE: Gyro: X=26.27°/s, Y=-19.40°/s, Z=10.85°/s[0m
+[0;32mI (51848) MPU6050_EXAMPLE: Roll=0.85°, Pitch=0.71°[0m
+[0;32mI (52858) MPU6050_EXAMPLE: Accel: X=0.86g, Y=0.05g, Z=0.61g[0m
+[0;32mI (52858) MPU6050_EXAMPLE: Gyro: X=23.91°/s, Y=29.66°/s, Z=-1.10°/s[0m
+[0;32mI (52858) MPU6050_EXAMPLE: Roll=2.60°, Pitch=-54.51°[0m
+[0;32mI (53868) MPU6050_EXAMPLE: Accel: X=-0.71g, Y=0.18g, Z=0.73g[0m
+[0;32mI (53868) MPU6050_EXAMPLE: Gyro: X=26.12°/s, Y=80.29°/s, Z=16.82°/s[0m
+[0;32mI (53868) MPU6050_EXAMPLE: Roll=10.29°, Pitch=43.10°[0m
+[0;32mI (54878) MPU6050_EXAMPLE: Accel: X=-0.27g, Y=-0.18g, Z=1.00g[0m
+[0;32mI (54878) MPU6050_EXAMPLE: Gyro: X=15.11°/s, Y=-28.41°/s, Z=-20.66°/s[0m
+[0;32mI (54878) MPU6050_EXAMPLE: Roll=-9.93°, Pitch=15.08°[0m
+[0;32mI (55888) MPU6050_EXAMPLE: Accel: X=-0.31g, Y=0.24g, Z=1.00g[0m
+[0;32mI (55888) MPU6050_EXAMPLE: Gyro: X=56.00°/s, Y=57.53°/s, Z=44.09°/s[0m
+[0;32mI (55888) MPU6050_EXAMPLE: Roll=13.15°, Pitch=16.99°[0m
+[0;32mI (56898) MPU6050_EXAMPLE: Accel: X=0.04g, Y=-0.32g, Z=1.78g[0m
+[0;32mI (56898) MPU6050_EXAMPLE: Gyro: X=100.63°/s, Y=-31.80°/s, Z=-1.34°/s[0m
+[0;32mI (56898) MPU6050_EXAMPLE: Roll=-10.14°, Pitch=-1.42°[0m
+[0;32mI (57908) MPU6050_EXAMPLE: Accel: X=0.10g, Y=0.88g, Z=0.52g[0m
+[0;32mI (57908) MPU6050_EXAMPLE: Gyro: X=31.80°/s, Y=18.92°/s, Z=-16.87°/s[0m
+[0;32mI (57908) MPU6050_EXAMPLE: Roll=59.28°, Pitch=-5.67°[0m
+[0;32mI (58918) MPU6050_EXAMPLE: Accel: X=-0.45g, Y=0.42g, Z=1.08g[0m
+[0;32mI (58918) MPU6050_EXAMPLE: Gyro: X=-14.90°/s, Y=-33.48°/s, Z=-25.91°/s[0m
+[0;32mI (58918) MPU6050_EXAMPLE: Roll=19.95°, Pitch=21.13°[0m
+[0;32mI (59928) MPU6050_EXAMPLE: Accel: X=-0.44g, Y=-0.06g, Z=1.01g[0m
+[0;32mI (59928) MPU6050_EXAMPLE: Gyro: X=3.69°/s, Y=-21.04°/s, Z=-23.28°/s[0m
+[0;32mI (59928) MPU6050_EXAMPLE: Roll=-3.06°, Pitch=23.35°[0m
+[0;32mI (60938) MPU6050_EXAMPLE: Accel: X=0.16g, Y=-0.52g, Z=0.82g[0m
+[0;32mI (60938) MPU6050_EXAMPLE: Gyro: X=78.89°/s, Y=-35.08°/s, Z=-13.31°/s[0m
+[0;32mI (60938) MPU6050_EXAMPLE: Roll=-31.95°, Pitch=-9.25°[0m
+[0;32mI (61948) MPU6050_EXAMPLE: Accel: X=0.80g, Y=-0.01g, Z=0.63g[0m
+[0;32mI (61948) MPU6050_EXAMPLE: Gyro: X=31.28°/s, Y=-21.19°/s, Z=12.53°/s[0m
+[0;32mI (61948) MPU6050_EXAMPLE: Roll=-0.68°, Pitch=-51.67°[0m
+[0;32mI (62958) MPU6050_EXAMPLE: Accel: X=0.76g, Y=0.03g, Z=0.78g[0m
+[0;32mI (62958) MPU6050_EXAMPLE: Gyro: X=26.23°/s, Y=25.02°/s, Z=-7.24°/s[0m
+[0;32mI (62958) MPU6050_EXAMPLE: Roll=1.62°, Pitch=-44.18°[0m
+[0;32mI (63968) MPU6050_EXAMPLE: Accel: X=0.47g, Y=-0.05g, Z=0.98g[0m
+[0;32mI (63968) MPU6050_EXAMPLE: Gyro: X=31.37°/s, Y=15.27°/s, Z=0.05°/s[0m
+[0;32mI (63968) MPU6050_EXAMPLE: Roll=-2.79°, Pitch=-25.38°[0m
+[0;32mI (64978) MPU6050_EXAMPLE: Accel: X=0.21g, Y=-0.05g, Z=1.06g[0m
+[0;32mI (64978) MPU6050_EXAMPLE: Gyro: X=26.69°/s, Y=25.71°/s, Z=-5.13°/s[0m
+[0;32mI (64978) MPU6050_EXAMPLE: Roll=-2.62°, Pitch=-11.15°[0m
+[0;32mI (65988) MPU6050_EXAMPLE: Accel: X=-0.17g, Y=-0.01g, Z=1.06g[0m
+[0;32mI (65988) MPU6050_EXAMPLE: Gyro: X=27.54°/s, Y=24.70°/s, Z=0.44°/s[0m
+[0;32mI (65988) MPU6050_EXAMPLE: Roll=-0.46°, Pitch=9.15°[0m
+[0;32mI (66998) MPU6050_EXAMPLE: Accel: X=-0.36g, Y=-0.13g, Z=1.07g[0m
+[0;32mI (66998) MPU6050_EXAMPLE: Gyro: X=33.77°/s, Y=16.75°/s, Z=-4.09°/s[0m
+[0;32mI (66998) MPU6050_EXAMPLE: Roll=-6.41°, Pitch=18.62°[0m
+[0;32mI (68008) MPU6050_EXAMPLE: Accel: X=-0.42g, Y=-0.18g, Z=0.96g[0m
+[0;32mI (68008) MPU6050_EXAMPLE: Gyro: X=34.11°/s, Y=18.46°/s, Z=-2.35°/s[0m
+[0;32mI (68008) MPU6050_EXAMPLE: Roll=-9.67°, Pitch=22.96°[0m
+[0;32mI (69018) MPU6050_EXAMPLE: Accel: X=-0.19g, Y=0.24g, Z=1.03g[0m
+[0;32mI (69018) MPU6050_EXAMPLE: Gyro: X=85.68°/s, Y=-33.57°/s, Z=35.25°/s[0m
+[0;32mI (69018) MPU6050_EXAMPLE: Roll=13.18°, Pitch=10.35°[0m
+[0;32mI (70028) MPU6050_EXAMPLE: Accel: X=0.52g, Y=0.03g, Z=0.87g[0m
+[0;32mI (70028) MPU6050_EXAMPLE: Gyro: X=-57.69°/s, Y=-36.53°/s, Z=28.81°/s[0m
+[0;32mI (70028) MPU6050_EXAMPLE: Roll=1.57°, Pitch=-31.10°[0m
+[0;32mI (71038) MPU6050_EXAMPLE: Accel: X=0.69g, Y=0.58g, Z=0.57g[0m
+[0;32mI (71038) MPU6050_EXAMPLE: Gyro: X=113.21°/s, Y=-57.91°/s, Z=25.71°/s[0m
+[0;32mI (71038) MPU6050_EXAMPLE: Roll=33.17°, Pitch=-39.95°[0m
+[0;32mI (72048) MPU6050_EXAMPLE: Accel: X=0.17g, Y=-0.07g, Z=1.10g[0m
+[0;32mI (72048) MPU6050_EXAMPLE: Gyro: X=47.69°/s, Y=25.57°/s, Z=4.23°/s[0m
+[0;32mI (72048) MPU6050_EXAMPLE: Roll=-3.81°, Pitch=-8.99°[0m
+[0;32mI (73058) MPU6050_EXAMPLE: Accel: X=0.10g, Y=0.50g, Z=0.93g[0m
+[0;32mI (73058) MPU6050_EXAMPLE: Gyro: X=139.44°/s, Y=-45.44°/s, Z=24.90°/s[0m
+[0;32mI (73058) MPU6050_EXAMPLE: Roll=28.13°, Pitch=-5.53°[0m
+[0;32mI (74068) MPU6050_EXAMPLE: Accel: X=0.30g, Y=0.99g, Z=0.39g[0m
+[0;32mI (74068) MPU6050_EXAMPLE: Gyro: X=57.07°/s, Y=31.77°/s, Z=-12.60°/s[0m
+[0;32mI (74068) MPU6050_EXAMPLE: Roll=63.86°, Pitch=-15.51°[0m
+[0;32mI (75078) MPU6050_EXAMPLE: Accel: X=0.26g, Y=0.93g, Z=0.40g[0m
+[0;32mI (75078) MPU6050_EXAMPLE: Gyro: X=35.18°/s, Y=1.56°/s, Z=-1.36°/s[0m
+[0;32mI (75078) MPU6050_EXAMPLE: Roll=62.73°, Pitch=-14.49°[0m
+[0;32mI (76088) MPU6050_EXAMPLE: Accel: X=0.26g, Y=0.94g, Z=0.37g[0m
+[0;32mI (76088) MPU6050_EXAMPLE: Gyro: X=41.89°/s, Y=7.59°/s, Z=-1.68°/s[0m
+[0;32mI (76088) MPU6050_EXAMPLE: Roll=64.34°, Pitch=-14.67°[0m
+[0;32mI (77098) MPU6050_EXAMPLE: Accel: X=0.26g, Y=0.78g, Z=0.74g[0m
+[0;32mI (77098) MPU6050_EXAMPLE: Gyro: X=16.43°/s, Y=-46.55°/s, Z=-8.99°/s[0m
+[0;32mI (77098) MPU6050_EXAMPLE: Roll=45.01°, Pitch=-13.71°[0m
+[0;32mI (78108) MPU6050_EXAMPLE: Accel: X=0.36g, Y=0.91g, Z=0.36g[0m
+[0;32mI (78108) MPU6050_EXAMPLE: Gyro: X=29.33°/s, Y=28.05°/s, Z=-3.30°/s[0m
+[0;32mI (78108) MPU6050_EXAMPLE: Roll=60.88°, Pitch=-20.12°[0m
+[0;32mI (79118) MPU6050_EXAMPLE: Accel: X=-0.59g, Y=0.26g, Z=0.87g[0m
+[0;32mI (79118) MPU6050_EXAMPLE: Gyro: X=20.73°/s, Y=42.89°/s, Z=-20.50°/s[0m
+[0;32mI (79118) MPU6050_EXAMPLE: Roll=13.75°, Pitch=33.10°[0m
+[0;32mI (80128) MPU6050_EXAMPLE: Accel: X=0.23g, Y=0.77g, Z=0.60g[0m
+[0;32mI (80128) MPU6050_EXAMPLE: Gyro: X=72.92°/s, Y=-14.47°/s, Z=28.24°/s[0m
+[0;32mI (80128) MPU6050_EXAMPLE: Roll=49.99°, Pitch=-13.38°[0m
+[0;32mI (81138) MPU6050_EXAMPLE: Accel: X=0.32g, Y=0.84g, Z=0.54g[0m
+[0;32mI (81138) MPU6050_EXAMPLE: Gyro: X=35.88°/s, Y=-7.44°/s, Z=4.53°/s[0m
+[0;32mI (81138) MPU6050_EXAMPLE: Roll=53.19°, Pitch=-17.89°[0m
+[0;32mI (82148) MPU6050_EXAMPLE: Accel: X=0.26g, Y=0.67g, Z=0.77g[0m
+[0;32mI (82148) MPU6050_EXAMPLE: Gyro: X=10.41°/s, Y=-6.87°/s, Z=1.15°/s[0m
+[0;32mI (82148) MPU6050_EXAMPLE: Roll=39.56°, Pitch=-14.57°[0m
+[0;32mI (83158) MPU6050_EXAMPLE: Accel: X=0.43g, Y=0.77g, Z=0.61g[0m
+[0;32mI (83158) MPU6050_EXAMPLE: Gyro: X=35.02°/s, Y=3.65°/s, Z=3.47°/s[0m
+[0;32mI (83158) MPU6050_EXAMPLE: Roll=45.94°, Pitch=-23.59°[0m
+[0;32mI (84168) MPU6050_EXAMPLE: Accel: X=-0.17g, Y=-0.08g, Z=1.11g[0m
+[0;32mI (84168) MPU6050_EXAMPLE: Gyro: X=-19.22°/s, Y=115.59°/s, Z=-6.61°/s[0m
+[0;32mI (84168) MPU6050_EXAMPLE: Roll=-3.85°, Pitch=8.49°[0m
+[0;32mI (85178) MPU6050_EXAMPLE: Accel: X=0.15g, Y=0.57g, Z=0.69g[0m
+[0;32mI (85178) MPU6050_EXAMPLE: Gyro: X=-109.50°/s, Y=174.43°/s, Z=-58.92°/s[0m
+[0;32mI (85178) MPU6050_EXAMPLE: Roll=38.81°, Pitch=-9.35°[0m
+[0;32mI (86188) MPU6050_EXAMPLE: Accel: X=0.16g, Y=0.23g, Z=1.11g[0m
+[0;32mI (86188) MPU6050_EXAMPLE: Gyro: X=36.32°/s, Y=-0.52°/s, Z=7.31°/s[0m
+[0;32mI (86188) MPU6050_EXAMPLE: Roll=11.61°, Pitch=-8.13°[0m
+[0;32mI (87198) MPU6050_EXAMPLE: Accel: X=0.52g, Y=0.07g, Z=1.21g[0m
+[0;32mI (87198) MPU6050_EXAMPLE: Gyro: X=75.80°/s, Y=-2.75°/s, Z=-90.56°/s[0m
+[0;32mI (87198) MPU6050_EXAMPLE: Roll=2.87°, Pitch=-23.30°[0m
+[0;32mI (88208) MPU6050_EXAMPLE: Accel: X=-0.09g, Y=-0.27g, Z=1.22g[0m
+[0;32mI (88208) MPU6050_EXAMPLE: Gyro: X=54.40°/s, Y=43.69°/s, Z=34.31°/s[0m
+[0;32mI (88208) MPU6050_EXAMPLE: Roll=-12.46°, Pitch=4.33°[0m
+[0;32mI (89218) MPU6050_EXAMPLE: Accel: X=-0.12g, Y=-0.04g, Z=1.06g[0m
+[0;32mI (89218) MPU6050_EXAMPLE: Gyro: X=-2.03°/s, Y=-79.25°/s, Z=19.73°/s[0m
+[0;32mI (89218) MPU6050_EXAMPLE: Roll=-2.11°, Pitch=6.26°[0m
+[0;32mI (90228) MPU6050_EXAMPLE: Accel: X=-0.54g, Y=0.04g, Z=0.85g[0m
+[0;32mI (90228) MPU6050_EXAMPLE: Gyro: X=70.44°/s, Y=-20.00°/s, Z=11.47°/s[0m
+[0;32mI (90228) MPU6050_EXAMPLE: Roll=2.45°, Pitch=32.50°[0m
+[0;32mI (91238) MPU6050_EXAMPLE: Accel: X=-0.12g, Y=-0.09g, Z=1.10g[0m
+[0;32mI (91238) MPU6050_EXAMPLE: Gyro: X=67.66°/s, Y=1.34°/s, Z=77.83°/s[0m
+[0;32mI (91238) MPU6050_EXAMPLE: Roll=-4.82°, Pitch=6.21°[0m
+[0;32mI (92248) MPU6050_EXAMPLE: Accel: X=-0.19g, Y=0.13g, Z=0.99g[0m
+[0;32mI (92248) MPU6050_EXAMPLE: Gyro: X=10.90°/s, Y=44.99°/s, Z=-43.68°/s[0m
+[0;32mI (92248) MPU6050_EXAMPLE: Roll=7.16°, Pitch=11.06°[0m
+[0;32mI (93258) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.04g, Z=1.09g[0m
+[0;32mI (93258) MPU6050_EXAMPLE: Gyro: X=33.22°/s, Y=4.78°/s, Z=-12.11°/s[0m
+[0;32mI (93258) MPU6050_EXAMPLE: Roll=1.88°, Pitch=1.40°[0m
+[0;32mI (94268) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (94268) MPU6050_EXAMPLE: Gyro: X=32.98°/s, Y=4.81°/s, Z=-2.34°/s[0m
+[0;32mI (94268) MPU6050_EXAMPLE: Roll=1.47°, Pitch=1.61°[0m
+[0;32mI (95278) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (95278) MPU6050_EXAMPLE: Gyro: X=33.02°/s, Y=4.81°/s, Z=-2.35°/s[0m
+[0;32mI (95278) MPU6050_EXAMPLE: Roll=1.47°, Pitch=1.76°[0m
+[0;32mI (96288) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (96288) MPU6050_EXAMPLE: Gyro: X=33.01°/s, Y=4.84°/s, Z=-2.34°/s[0m
+[0;32mI (96288) MPU6050_EXAMPLE: Roll=1.40°, Pitch=1.70°[0m
+[0;32mI (97298) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (97298) MPU6050_EXAMPLE: Gyro: X=33.02°/s, Y=4.87°/s, Z=-2.35°/s[0m
+[0;32mI (97298) MPU6050_EXAMPLE: Roll=1.42°, Pitch=1.72°[0m
+[0;32mI (98308) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (98308) MPU6050_EXAMPLE: Gyro: X=33.01°/s, Y=4.89°/s, Z=-2.32°/s[0m
+[0;32mI (98308) MPU6050_EXAMPLE: Roll=1.45°, Pitch=1.69°[0m
+[0;32mI (99318) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (99318) MPU6050_EXAMPLE: Gyro: X=33.01°/s, Y=4.81°/s, Z=-2.40°/s[0m
+[0;32mI (99318) MPU6050_EXAMPLE: Roll=1.51°, Pitch=1.65°[0m
+[0;32mI (100328) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (100328) MPU6050_EXAMPLE: Gyro: X=32.99°/s, Y=4.85°/s, Z=-2.37°/s[0m
+[0;32mI (100328) MPU6050_EXAMPLE: Roll=1.45°, Pitch=1.74°[0m
+[0;32mI (101338) MPU6050_EXAMPLE: Accel: X=-0.03g, Y=0.03g, Z=1.09g[0m
+[0;32mI (101338) MPU6050_EXAMPLE: Gyro: X=32.99°/s, Y=4.78°/s, Z=-2.32°/s[0m
+[0;32mI (101338) MPU6050_EXAMPLE: Roll=1.43°, Pitch=1.75°[0m
+[0;32mI (102348) MPU6050_EXAMPLE: Accel: X=-0.42g, Y=0.02g, Z=1.00g[0m
+[0;32mI (102348) MPU6050_EXAMPLE: Gyro: X=32.23°/s, Y=58.26°/s, Z=-4.31°/s[0m
+[0;32mI (102348) MPU6050_EXAMPLE: Roll=1.25°, Pitch=22.69°[0m
+[0;32mI (103358) MPU6050_EXAMPLE: Accel: X=-0.74g, Y=0.01g, Z=0.77g[0m
+[0;32mI (103358) MPU6050_EXAMPLE: Gyro: X=32.37°/s, Y=15.48°/s, Z=-3.15°/s[0m
+[0;32mI (103358) MPU6050_EXAMPLE: Roll=0.39°, Pitch=43.66°[0m
+[0;32mI (104368) MPU6050_EXAMPLE: Accel: X=-0.79g, Y=0.01g, Z=0.70g[0m
+[0;32mI (104368) MPU6050_EXAMPLE: Gyro: X=32.90°/s, Y=4.05°/s, Z=-2.27°/s[0m
+[0;32mI (104368) MPU6050_EXAMPLE: Roll=0.28°, Pitch=48.50°[0m
+[0;32mI (105378) MPU6050_EXAMPLE: Accel: X=-0.91g, Y=-0.02g, Z=0.60g[0m
+[0;32mI (105378) MPU6050_EXAMPLE: Gyro: X=46.23°/s, Y=97.71°/s, Z=-14.47°/s[0m
+[0;32mI (105378) MPU6050_EXAMPLE: Roll=-1.22°, Pitch=56.53°[0m
+[0;32mI (106388) MPU6050_EXAMPLE: Accel: X=-0.99g, Y=0.03g, Z=0.28g[0m
+[0;32mI (106388) MPU6050_EXAMPLE: Gyro: X=32.84°/s, Y=-10.23°/s, Z=-2.05°/s[0m
+[0;32mI (106388) MPU6050_EXAMPLE: Roll=1.70°, Pitch=74.24°[0m
+[0;32mI (107398) MPU6050_EXAMPLE: Accel: X=-1.00g, Y=0.03g, Z=0.24g[0m
+[0;32mI (107398) MPU6050_EXAMPLE: Gyro: X=32.96°/s, Y=4.87°/s, Z=-2.32°/s[0m
+[0;32mI (107398) MPU6050_EXAMPLE: Roll=1.73°, Pitch=76.35°[0m
+[0;32mI (108408) MPU6050_EXAMPLE: Accel: X=-1.00g, Y=0.03g, Z=0.24g[0m
+[0;32mI (108408) MPU6050_EXAMPLE: Gyro: X=32.96°/s, Y=4.76°/s, Z=-2.35°/s[0m
+[0;32mI (108408) MPU6050_EXAMPLE: Roll=1.65°, Pitch=76.44°[0m
+[0;32mI (109418) MPU6050_EXAMPLE: Accel: X=-1.00g, Y=0.03g, Z=-0.02g[0m
+[0;32mI (109418) MPU6050_EXAMPLE: Gyro: X=32.78°/s, Y=20.99°/s, Z=-2.08°/s[0m
+[0;32mI (109418) MPU6050_EXAMPLE: Roll=1.81°, Pitch=87.92°[0m
+[0;32mI (110428) MPU6050_EXAMPLE: Accel: X=-0.98g, Y=0.03g, Z=-0.13g[0m
+[0;32mI (110428) MPU6050_EXAMPLE: Gyro: X=32.84°/s, Y=9.82°/s, Z=-2.64°/s[0m
+[0;32mI (110428) MPU6050_EXAMPLE: Roll=1.87°, Pitch=82.01°[0m
+[0;32mI (111438) MPU6050_EXAMPLE: Accel: X=-0.98g, Y=0.03g, Z=-0.13g[0m
+[0;32mI (111438) MPU6050_EXAMPLE: Gyro: X=32.96°/s, Y=6.85°/s, Z=-2.34°/s[0m
+[0;32mI (111438) MPU6050_EXAMPLE: Roll=1.82°, Pitch=82.38°[0m
+[0;32mI (112448) MPU6050_EXAMPLE: Accel: X=-0.97g, Y=0.03g, Z=0.34g[0m
+[0;32mI (112448) MPU6050_EXAMPLE: Gyro: X=31.82°/s, Y=-117.47°/s, Z=-0.12°/s[0m
+[0;32mI (112448) MPU6050_EXAMPLE: Roll=1.72°, Pitch=70.56°[0m
+[0;32mI (113458) MPU6050_EXAMPLE: Accel: X=-0.04g, Y=0.02g, Z=1.09g[0m
+[0;32mI (113458) MPU6050_EXAMPLE: Gyro: X=32.98°/s, Y=4.85°/s, Z=-1.71°/s[0m
+[0;32mI (113458) MPU6050_EXAMPLE: Roll=1.08°, Pitch=2.08°[0m
+[0;32mI (114468) MPU6050_EXAMPLE: Accel: X=-0.04g, Y=0.01g, Z=1.09g[0m
+[0;32mI (114468) MPU6050_EXAMPLE: Gyro: X=32.98°/s, Y=4.82°/s, Z=-2.41°/s[0m
+[0;32mI (114468) MPU6050_EXAMPLE: Roll=0.37°, Pitch=2.04°[0m
+[0;32mI (115478) MPU6050_EXAMPLE: Accel: X=-0.12g, Y=-0.07g, Z=1.16g[0m
+[0;32mI (115478) MPU6050_EXAMPLE: Gyro: X=11.56°/s, Y=8.12°/s, Z=-64.63°/s[0m
+[0;32mI (115478) MPU6050_EXAMPLE: Roll=-3.67°, Pitch=5.73°[0m
+[0;32mI (116488) MPU6050_EXAMPLE: Accel: X=0.64g, Y=0.03g, Z=0.90g[0m
+[0;32mI (116488) MPU6050_EXAMPLE: Gyro: X=64.63°/s, Y=-17.85°/s, Z=5.15°/s[0m
+[0;32mI (116488) MPU6050_EXAMPLE: Roll=1.46°, Pitch=-35.66°[0m

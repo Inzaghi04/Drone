@@ -1,0 +1,3 @@
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig 'C:/esp/Drone_Tracking_obj/MPU/sdkconfig'
+-- Found Git: C:/esp/Espressif/tools/idf-git/2.44.0/cmd/git.exe (found version "2.44.0.windows.1") 
+-- Configuring incomplete, errors occurred!

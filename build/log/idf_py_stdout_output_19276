@@ -1,0 +1,1373 @@
+46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  4 2025 21:06:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23e10h (146960) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033e38 vaddr=3ffb0000 size=03ff0h ( 16368) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00037e30 vaddr=40080000 size=081e8h ( 33256) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=965a4h (615844) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d65cc vaddr=400881e8 size=108c8h ( 67784) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (425) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     main[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (457) app_init: Compile time:     Mar  4 2025 21:05:29[0m
+[0;32mI (463) app_init: ELF file SHA256:  946fb814b...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (560) main_task: Started on CPU0[0m
+[0;32mI (570) main_task: Calling app_main()[0m
+I (610) wifi:wifi driver task: 3ffc01b4, prio:23, stack:6656, core=0
+I (620) wifi:wifi firmware version: ccaebfa
+I (620) wifi:wifi certification version: v7.0
+I (620) wifi:config NVS flash: enabled
+I (620) wifi:config nano formating: disabled
+I (630) wifi:Init data frame dynamic rx buffer num: 32
+I (630) wifi:Init static rx mgmt buffer num: 5
+I (640) wifi:Init management short buffer num: 32
+I (640) wifi:Init dynamic tx buffer num: 32
+I (650) wifi:Init static rx buffer size: 1600
+I (650) wifi:Init static rx buffer num: 10
+I (650) wifi:Init dynamic rx buffer num: 32
+[0;32mI (660) wifi_init: rx ba win: 6[0m
+[0;32mI (660) wifi_init: accept mbox: 6[0m
+[0;32mI (660) wifi_init: tcpip mbox: 32[0m
+[0;32mI (670) wifi_init: udp mbox: 6[0m
+[0;32mI (670) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (680) wifi_init: tcp rx win: 5760[0m
+[0;32mI (680) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (690) wifi_init: WiFi RX IRAM OP enabled[0m
+W (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (710) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (800) wifi:mode : sta (30:c6:f7:44:e2:48)
+I (800) wifi:enable tsf
+I (820) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0
+I (820) wifi:state: init -> auth (0xb0)
+I (830) wifi:state: auth -> assoc (0x0)
+I (840) wifi:state: assoc -> run (0x10)
+I (860) wifi:connected with MSWifi, aid = 1, channel 1, BW20, bssid = 50:88:11:e0:2d:c6
+I (860) wifi:security: WPA2-PSK, phy: bgn, rssi: -25
+I (860) wifi:pm start, type: 1
+
+I (860) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (880) wifi:<ba-add>idx:0 (ifx:0, 50:88:11:e0:2d:c6), tid:0, ssn:0, winSize:64
+I (880) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1280) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1280) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1300) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1300) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1310) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1310) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1320) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1320) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1320) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1330) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1330) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1340) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1340) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1350) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1350) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1370) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1370) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1380) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1380) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1400) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1400) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1410) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1410) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1420) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1420) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1420) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1430) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1430) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1440) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1440) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1450) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1450) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1450) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1460) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1460) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1470) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1470) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1480) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1480) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1500) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1500) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1510) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1510) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1530) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1530) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1540) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1540) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1550) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1550) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1550) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1560) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1560) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1570) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1570) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1580) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1580) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1610) ESP32_DRONE: Motors Disarmed[0m
+I (1610) wifi:<ba-add>idx:1 (ifx:0, 50:88:11:e0:2d:c6), tid:6, ssn:2, winSize:64
+[0;32mI (1620) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1630) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1630) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1640) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1640) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1640) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1650) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1650) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1660) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1660) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1670) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1670) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1670) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1680) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1680) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1690) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1690) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1700) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1700) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1710) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1710) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1710) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1720) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1720) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1730) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1730) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1740) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1740) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1740) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1750) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1750) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1760) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1760) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1770) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1770) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1770) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1780) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1780) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1790) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1790) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1800) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1800) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1800) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1810) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1810) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1820) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1820) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1830) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1830) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1840) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1840) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1840) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1850) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1850) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1860) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1860) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1870) esp_netif_handlers: sta ip: 192.168.5.108, mask: 255.255.255.0, gw: 192.168.5.1[0m
+[0;32mI (1870) ESP32_DRONE: ESP32 IP Address: 20.95.252.63[0m
+[0;32mI (1880) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1880) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1890) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1890) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1900) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1900) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1910) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1910) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1910) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1920) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1920) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1930) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1930) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1940) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1940) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1950) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1950) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1950) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1960) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1960) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1970) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1970) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1980) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1980) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1980) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1990) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1990) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2000) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2000) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2010) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2010) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2010) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2020) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2020) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2030) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2030) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2040) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2040) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2040) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2050) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2050) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2060) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2060) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2070) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2070) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2080) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2080) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2080) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2090) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2090) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2100) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2100) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2110) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2110) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2110) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2120) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2120) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2130) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2130) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2140) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2140) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2140) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2150) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2150) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2160) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2160) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2170) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2170) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2180) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2180) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2180) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2190) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2190) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2200) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2200) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2210) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2210) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2210) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2220) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2220) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2230) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2230) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2240) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2240) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2240) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2250) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2250) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2260) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2260) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2280) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2280) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2300) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2300) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2310) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2310) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2310) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2320) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2320) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2330) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2330) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2340) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2340) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2340) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2350) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2350) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2370) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2370) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2370) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2380) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2380) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2400) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2400) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2410) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2410) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2410) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2420) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2420) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2430) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2430) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2440) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2440) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2440) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2450) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2450) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2460) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2460) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2470) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2470) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2470) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2480) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2480) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2500) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2500) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2510) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2510) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2510) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2530) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2530) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2540) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2540) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2540) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2550) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2550) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2560) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2560) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2570) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2570) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2570) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2580) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2580) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2620) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2620) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2630) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2630) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2640) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2640) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2640) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2650) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2650) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2660) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2660) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2670) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2670) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2670) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2680) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2680) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2690) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2690) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2700) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2700) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2700) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2710) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2710) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2720) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2720) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2730) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2730) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2740) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2740) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2740) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2750) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2750) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2760) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2760) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2770) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2770) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2770) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2780) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2780) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2790) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2790) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2800) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2800) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2800) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2810) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2810) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2820) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2820) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2830) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2830) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2830) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2840) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2840) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2850) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2850) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2860) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2860) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2870) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2870) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2870) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2880) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2880) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2890) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2890) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2900) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2900) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2900) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2910) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2910) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2920) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2920) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2930) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2930) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2930) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2940) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2940) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2950) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2950) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2960) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2960) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2970) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2970) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2970) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2980) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2980) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2990) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2990) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3000) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3000) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3000) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3010) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3010) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3020) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3020) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3030) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3030) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3030) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3040) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3040) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3050) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3050) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3060) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3060) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3060) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3070) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3070) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3080) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3080) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3090) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3090) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3100) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3100) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3100) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3110) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3110) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3120) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3120) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3130) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3130) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3130) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3140) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3140) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3150) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3150) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3160) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3160) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3160) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3170) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3170) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3180) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3180) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3190) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3190) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3200) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3200) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3200) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3210) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3210) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3220) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3220) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3230) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3230) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3230) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3240) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3240) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3250) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3250) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3260) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3260) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3260) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3270) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3280) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3280) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3290) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3300) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3300) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3310) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3310) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3320) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3320) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3330) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3330) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3330) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3340) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3340) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3350) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3350) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3360) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3370) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3370) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3380) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3380) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3390) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3400) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3400) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3410) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3410) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3420) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3420) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3430) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3430) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3430) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3440) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3440) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3450) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3450) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3460) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3460) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3460) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3470) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3470) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3480) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3480) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3490) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3500) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3500) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3510) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3510) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3520) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3530) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3530) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3540) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3540) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3550) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3550) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3560) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3560) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3560) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3570) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3570) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3580) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3580) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3610) main_task: Returned from app_main()[0m
+[0;32mI (3610) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3660) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3700) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3780) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3820) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3880) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3900) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3950) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3960) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3970) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (3990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4000) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4000) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4030) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4040) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4060) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4070) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4080) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4080) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4090) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4100) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4110) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4120) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4130) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4140) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4150) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4160) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4180) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4190) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4200) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4210) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4230) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4240) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4260) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4290) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4290) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4300) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4320) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4330) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4340) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4350) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4370) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4390) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4390) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4400) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4420) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4440) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4450) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4460) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4470) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4480) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4490) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4510) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4510) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4520) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4530) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4540) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4550) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4560) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4580) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4580) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4590) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4600) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4610) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4620) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4660) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4700) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4780) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4820) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4880) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4900) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4950) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4960) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4970) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (4990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5000) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5030) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5040) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5060) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5070) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5070) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5080) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5090) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5100) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5110) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5120) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5130) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5140) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5140) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5150) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5160) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5180) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5190) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5200) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5210) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5230) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5240) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5240) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5260) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5290) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5300) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5320) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5330) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5340) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5350) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5350) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5370) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5380) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5390) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5400) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5420) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5440) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5450) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5460) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5470) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5480) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5490) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5510) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5520) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5530) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5540) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5550) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5560) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5580) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5590) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5600) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5610) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5620) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5660) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5700) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5780) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5820) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5880) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5900) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5950) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5960) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5970) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (5990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6030) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6040) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6060) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6070) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6080) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6090) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6100) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6110) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6120) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6130) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6140) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6150) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6150) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6160) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6180) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6190) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6200) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6210) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6230) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6260) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6290) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6320) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6330) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6340) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6350) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6370) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6380) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6390) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6400) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6420) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6440) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6440) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6450) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6460) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6470) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6480) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6490) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6510) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6520) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6540) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6540) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6550) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6560) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6580) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6590) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6600) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6610) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6620) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6660) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6700) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6780) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6820) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6880) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6900) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6950) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6960) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6970) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (6990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7000) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7030) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7040) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7060) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7070) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7080) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7090) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7100) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7100) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7110) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7120) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7130) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7140) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7150) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7160) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7160) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7180) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7190) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7200) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7230) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7240) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7260) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7290) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7300) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7320) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7330) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7330) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7340) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7350) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7370) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7380) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7390) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7400) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7420) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7440) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7450) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7460) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7470) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7470) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7480) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7490) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7510) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7520) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7530) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7540) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7550) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7560) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7560) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7580) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7590) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7600) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7610) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7620) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7620) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7660) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7780) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7820) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7880) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7900) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7950) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7960) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7970) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (7990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8000) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8040) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8060) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8070) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8080) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8090) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8100) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8110) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8120) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8120) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8130) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8140) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8150) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8160) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8180) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8190) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8200) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8210) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8230) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8240) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8260) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8290) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8300) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8320) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8330) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8340) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8350) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8370) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8380) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8380) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8390) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8420) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8440) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8450) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8450) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8460) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8470) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8480) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8490) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8510) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8520) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8520) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8530) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8540) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8550) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8560) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8590) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8590) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8600) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8610) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8620) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8660) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8700) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8780) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8820) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8880) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8900) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8950) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8960) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8970) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (8990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9000) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9030) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9040) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9060) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9060) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9070) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9080) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9090) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9100) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9110) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9120) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9130) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9130) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9140) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9150) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9160) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9170) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9180) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9190) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9200) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9200) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9210) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9220) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9230) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9240) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9250) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9260) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9270) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9280) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9290) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9300) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9310) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9320) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9330) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9340) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9340) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9350) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9360) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9370) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9380) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9390) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9400) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9410) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9420) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9430) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9440) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9450) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9460) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9470) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9480) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9490) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9490) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9500) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9510) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9520) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9530) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9540) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9550) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9550) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9560) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9570) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9580) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9590) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9600) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9610) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9620) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9630) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9640) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9650) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9660) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9670) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9680) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9690) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9700) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9700) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9710) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9720) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9730) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9740) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9750) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9760) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9770) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9780) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9790) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9800) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9810) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9820) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9830) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9840) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9850) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9860) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9870) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9880) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9890) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9900) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9910) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9920) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9930) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9940) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9950) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9960) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9970) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9980) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (9990) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (10000) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (10010) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (10020) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (10030) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (10040) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m
+[0;32mI (10050) ESP32_DRONE: Motor 1: 102.00, Motor 2: 102.00, Motor 3: 102.00, Motor 4: 102.00[0m

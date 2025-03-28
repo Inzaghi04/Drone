@@ -1,0 +1,378 @@
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  4 2025 21:06:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23df0h (146928) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033e18 vaddr=3ffb0000 size=03ff0h ( 16368) load[0m
+[0;32mI (161) esp_image: segment 2: paddr=00037e10 vaddr=40080000 size=08208h ( 33288) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=96530h (615728) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d6558 vaddr=40088208 size=108a8h ( 67752) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (425) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (445) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (448) app_init: Project name:     main[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (457) app_init: Compile time:     Mar  4 2025 21:05:29[0m
+[0;32mI (463) app_init: ELF file SHA256:  e1d00fdf6...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (560) main_task: Started on CPU0[0m
+[0;32mI (570) main_task: Calling app_main()[0m
+I (610) wifi:wifi driver task: 3ffc01b4, prio:23, stack:6656, core=0
+I (620) wifi:wifi firmware version: ccaebfa
+I (620) wifi:wifi certification version: v7.0
+I (620) wifi:config NVS flash: enabled
+I (620) wifi:config nano formating: disabled
+I (630) wifi:Init data frame dynamic rx buffer num: 32
+I (630) wifi:Init static rx mgmt buffer num: 5
+I (640) wifi:Init management short buffer num: 32
+I (640) wifi:Init dynamic tx buffer num: 32
+I (650) wifi:Init static rx buffer size: 1600
+I (650) wifi:Init static rx buffer num: 10
+I (650) wifi:Init dynamic rx buffer num: 32
+[0;32mI (660) wifi_init: rx ba win: 6[0m
+[0;32mI (660) wifi_init: accept mbox: 6[0m
+[0;32mI (660) wifi_init: tcpip mbox: 32[0m
+[0;32mI (670) wifi_init: udp mbox: 6[0m
+[0;32mI (670) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (680) wifi_init: tcp rx win: 5760[0m
+[0;32mI (680) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (690) wifi_init: WiFi RX IRAM OP enabled[0m
+W (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (710) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (800) wifi:mode : sta (c8:f0:9e:f2:90:78)
+I (800) wifi:enable tsf
+I (810) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0
+I (810) wifi:state: init -> auth (0xb0)
+I (820) wifi:state: auth -> assoc (0x0)
+I (820) wifi:state: assoc -> run (0x10)
+I (830) wifi:<ba-add>idx:0 (ifx:0, a0:65:18:c4:b3:8d), tid:0, ssn:0, winSize:64
+I (840) wifi:connected with Van Vuong, aid = 6, channel 11, BW20, bssid = a0:65:18:c4:b3:8d
+I (840) wifi:security: WPA2-PSK, phy: bgn, rssi: -58
+I (850) wifi:pm start, type: 1
+
+I (850) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (940) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (1270) main_task: Returned from app_main()[0m
+[0;32mI (1860) esp_netif_handlers: sta ip: 192.168.1.10, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1860) ESP32_DRONE: ESP32 IP Address: 20.95.252.63[0m
+[0;32mI (15300) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (15570) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (15790) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1146, AUX1=1[0m
+[0;32mI (16110) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (16330) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (16670) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (16740) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (16960) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1146, AUX1=1[0m
+[0;32mI (17020) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (17210) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (17350) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (17770) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (17860) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1146, AUX1=1[0m
+[0;32mI (17880) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1146, AUX1=1[0m
+[0;32mI (18030) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (18150) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (18460) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1146, AUX1=1[0m
+[0;32mI (18520) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (19180) ESP32_DRONE: Received data: roll=1000, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (19700) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (19850) ESP32_DRONE: Received data: roll=2000, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (20220) ESP32_DRONE: Received data: roll=2000, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (20410) ESP32_DRONE: Received data: roll=1854, pitch=1854, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (20470) ESP32_DRONE: Received data: roll=1500, pitch=2000, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (20530) ESP32_DRONE: Received data: roll=1500, pitch=1000, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (20540) ESP32_DRONE: Received data: roll=1000, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (20630) ESP32_DRONE: Received data: roll=1146, pitch=1854, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (23290) ESP32_DRONE: Received data: roll=1500, pitch=2000, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (23290) ESP32_DRONE: Received data: roll=2000, pitch=1500, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (23300) ESP32_DRONE: Received data: roll=1854, pitch=1854, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (23310) ESP32_DRONE: Received data: roll=1000, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (23340) ESP32_DRONE: Received data: roll=1000, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (23360) ESP32_DRONE: Received data: roll=2000, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (23370) ESP32_DRONE: Received data: roll=1500, pitch=2000, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (23380) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (23390) ESP32_DRONE: Received data: roll=1500, pitch=2000, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (23390) ESP32_DRONE: Received data: roll=2000, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (23420) ESP32_DRONE: Received data: roll=1000, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (23500) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (23900) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1146, AUX1=1[0m
+[0;32mI (23950) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (24060) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1854, AUX1=1[0m
+[0;32mI (24300) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1146, AUX1=1[0m
+[0;32mI (24510) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (24630) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (24740) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (24870) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (25080) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1146, AUX1=1[0m
+[0;32mI (25290) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1146, AUX1=1[0m
+[0;32mI (25530) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (25710) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (25900) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (26100) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (26770) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (26780) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (26830) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (26920) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27030) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27140) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27230) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27340) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27450) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27540) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27650) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27800) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27870) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (27970) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (28110) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (28310) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (28400) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (28710) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (28870) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (29330) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (29380) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (29530) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1854, AUX1=1[0m
+[0;32mI (29690) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (29960) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (30340) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1146, AUX1=1[0m
+[0;32mI (30410) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (30520) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1146, AUX1=1[0m
+[0;32mI (30910) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (30930) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (31260) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (31370) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1854, AUX1=1[0m
+[0;32mI (31770) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (31870) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1146, AUX1=1[0m
+[0;32mI (32000) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (32350) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1000, throttle=1500, AUX1=1[0m
+[0;32mI (32430) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1854, AUX1=1[0m
+[0;32mI (32700) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1854, AUX1=1[0m
+[0;32mI (32770) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (32900) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1146, throttle=1146, AUX1=1[0m
+[0;32mI (33510) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1854, throttle=1146, AUX1=1[0m
+[0;32mI (33710) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m
+[0;32mI (34540) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (34670) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (34720) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1626, throttle=1016, AUX1=1[0m
+[0;32mI (34770) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1700, throttle=1042, AUX1=1[0m
+[0;32mI (34880) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1741, throttle=1062, AUX1=1[0m
+[0;32mI (35090) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1778, throttle=1084, AUX1=1[0m
+[0;32mI (35160) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1818, throttle=1114, AUX1=1[0m
+[0;32mI (35220) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1844, throttle=1137, AUX1=1[0m
+[0;32mI (35320) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1864, throttle=1158, AUX1=1[0m
+[0;32mI (35430) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1877, throttle=1172, AUX1=1[0m
+[0;32mI (35530) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1892, throttle=1190, AUX1=1[0m
+[0;32mI (35630) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1912, throttle=1217, AUX1=1[0m
+[0;32mI (35780) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1931, throttle=1246, AUX1=1[0m
+[0;32mI (36030) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1957, throttle=1296, AUX1=1[0m
+[0;32mI (36090) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1974, throttle=1339, AUX1=1[0m
+[0;32mI (36100) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1989, throttle=1394, AUX1=1[0m
+[0;32mI (36710) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (36730) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1983, throttle=1628, AUX1=1[0m
+[0;32mI (37410) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1996, throttle=1564, AUX1=1[0m
+[0;32mI (38040) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1961, throttle=1693, AUX1=1[0m
+[0;32mI (38120) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1996, throttle=1440, AUX1=1[0m
+[0;32mI (38190) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1973, throttle=1661, AUX1=1[0m
+[0;32mI (38870) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1893, throttle=1809, AUX1=1[0m
+[0;32mI (39230) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1916, throttle=1778, AUX1=1[0m
+[0;32mI (39660) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1846, throttle=1861, AUX1=1[0m
+[0;32mI (39680) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1870, throttle=1836, AUX1=1[0m
+[0;32mI (39990) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1818, throttle=1886, AUX1=1[0m
+[0;32mI (40150) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1792, throttle=1906, AUX1=1[0m
+[0;32mI (40160) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1778, throttle=1916, AUX1=1[0m
+[0;32mI (40300) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1761, throttle=1926, AUX1=1[0m
+[0;32mI (40930) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1806, throttle=1896, AUX1=1[0m
+[0;32mI (41020) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1943, throttle=1732, AUX1=1[0m
+[0;32mI (41050) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1746, throttle=1935, AUX1=1[0m
+[0;32mI (41270) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1737, throttle=1940, AUX1=1[0m
+[0;32mI (41330) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1718, throttle=1950, AUX1=1[0m
+[0;32mI (41420) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1701, throttle=1958, AUX1=1[0m
+[0;32mI (41460) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1687, throttle=1964, AUX1=1[0m
+[0;32mI (41510) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1671, throttle=1970, AUX1=1[0m
+[0;32mI (41610) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1656, throttle=1975, AUX1=1[0m
+[0;32mI (41630) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1636, throttle=1981, AUX1=1[0m
+[0;32mI (42420) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1604, throttle=1989, AUX1=1[0m
+[0;32mI (42530) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1572, throttle=1995, AUX1=1[0m
+[0;32mI (42600) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1554, throttle=1997, AUX1=1[0m
+[0;32mI (42740) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (43190) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1998, AUX1=1[0m
+[0;32mI (44160) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (44170) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (44270) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1999, AUX1=1[0m
+[0;32mI (44340) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1998, AUX1=1[0m
+[0;32mI (44390) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1441, throttle=1997, AUX1=1[0m
+[0;32mI (44470) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1428, throttle=1995, AUX1=1[0m
+[0;32mI (44550) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1415, throttle=1993, AUX1=1[0m
+[0;32mI (44600) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1408, throttle=1991, AUX1=1[0m
+[0;32mI (44640) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1394, throttle=1989, AUX1=1[0m
+[0;32mI (44690) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1383, throttle=1986, AUX1=1[0m
+[0;32mI (44740) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1370, throttle=1983, AUX1=1[0m
+[0;32mI (45090) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1357, throttle=1979, AUX1=1[0m
+[0;32mI (45310) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1394, throttle=1989, AUX1=1[0m
+[0;32mI (45700) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1359, throttle=1980, AUX1=1[0m
+[0;32mI (45850) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1391, throttle=1988, AUX1=1[0m
+[0;32mI (45910) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1425, throttle=1994, AUX1=1[0m
+[0;32mI (45940) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1999, AUX1=1[0m
+[0;32mI (46000) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=2000, AUX1=1[0m
+[0;32mI (46040) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1554, throttle=1997, AUX1=1[0m
+[0;32mI (46060) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1574, throttle=1994, AUX1=1[0m
+[0;32mI (46140) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1601, throttle=1990, AUX1=1[0m
+[0;32mI (46210) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1623, throttle=1985, AUX1=1[0m
+[0;32mI (46280) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1644, throttle=1979, AUX1=1[0m
+[0;32mI (46310) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1673, throttle=1969, AUX1=1[0m
+[0;32mI (46380) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1707, throttle=1955, AUX1=1[0m
+[0;32mI (46690) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1730, throttle=1944, AUX1=1[0m
+[0;32mI (47240) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1359, throttle=1980, AUX1=1[0m
+[0;32mI (47340) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1762, throttle=1926, AUX1=1[0m
+[0;32mI (47420) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1789, throttle=1908, AUX1=1[0m
+[0;32mI (47660) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1817, throttle=1886, AUX1=1[0m
+[0;32mI (47750) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1847, throttle=1860, AUX1=1[0m
+[0;32mI (48790) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1871, throttle=1835, AUX1=1[0m
+[0;32mI (49300) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1906, throttle=1792, AUX1=1[0m
+[0;32mI (49390) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1931, throttle=1753, AUX1=1[0m
+[0;32mI (49470) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1621, throttle=1985, AUX1=1[0m
+[0;32mI (49490) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1966, throttle=1682, AUX1=1[0m
+[0;32mI (49560) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1982, throttle=1633, AUX1=1[0m
+[0;32mI (49910) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1891, throttle=1812, AUX1=1[0m
+[0;32mI (49960) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1997, throttle=1557, AUX1=1[0m
+[0;32mI (49970) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=2000, throttle=1500, AUX1=1[0m
+[0;32mI (49990) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1999, throttle=1500, AUX1=1[0m
+[0;32mI (50030) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1975, throttle=1345, AUX1=1[0m
+[0;32mI (50080) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1957, throttle=1296, AUX1=1[0m
+[0;32mI (50090) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1948, throttle=1278, AUX1=1[0m
+[0;32mI (50110) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1938, throttle=1259, AUX1=1[0m
+[0;32mI (50120) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1934, throttle=1252, AUX1=1[0m
+[0;32mI (50160) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1922, throttle=1232, AUX1=1[0m
+[0;32mI (50170) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1910, throttle=1213, AUX1=1[0m
+[0;32mI (50210) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1886, throttle=1182, AUX1=1[0m
+[0;32mI (50210) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1904, throttle=1205, AUX1=1[0m
+[0;32mI (50230) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1856, throttle=1149, AUX1=1[0m
+[0;32mI (50240) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1829, throttle=1124, AUX1=1[0m
+[0;32mI (50280) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1990, throttle=1599, AUX1=1[0m
+[0;32mI (50290) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1800, throttle=1100, AUX1=1[0m
+[0;32mI (50300) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1774, throttle=1082, AUX1=1[0m
+[0;32mI (50310) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1744, throttle=1063, AUX1=1[0m
+[0;32mI (50330) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1711, throttle=1047, AUX1=1[0m
+[0;32mI (50360) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1696, throttle=1040, AUX1=1[0m
+[0;32mI (50370) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1679, throttle=1033, AUX1=1[0m
+[0;32mI (50390) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1660, throttle=1026, AUX1=1[0m
+[0;32mI (50390) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1643, throttle=1021, AUX1=1[0m
+[0;32mI (50410) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1625, throttle=1016, AUX1=1[0m
+[0;32mI (50430) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1604, throttle=1011, AUX1=1[0m
+[0;32mI (50450) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1584, throttle=1007, AUX1=1[0m
+[0;32mI (50460) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1566, throttle=1004, AUX1=1[0m
+[0;32mI (51290) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1993, throttle=1415, AUX1=1[0m
+[0;32mI (54510) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (56080) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1579, throttle=1417, AUX1=1[0m
+[0;32mI (56350) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1569, throttle=1317, AUX1=1[0m
+[0;32mI (56400) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (56410) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (56460) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (56670) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (56970) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (57370) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (57410) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (57490) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (59220) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (59230) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (59260) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (59350) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (59620) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (60030) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (60350) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (60380) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (60440) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (60520) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (60690) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (60700) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (60820) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1560, throttle=1004, AUX1=1[0m
+[0;32mI (60900) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1665, throttle=1028, AUX1=1[0m
+[0;32mI (61000) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1740, throttle=1061, AUX1=1[0m
+[0;32mI (61130) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1807, throttle=1105, AUX1=1[0m
+[0;32mI (61280) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1905, throttle=1207, AUX1=1[0m
+[0;32mI (61340) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1993, throttle=1415, AUX1=1[0m
+[0;32mI (61420) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1969, throttle=1673, AUX1=1[0m
+[0;32mI (61510) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1858, throttle=1849, AUX1=1[0m
+[0;32mI (61620) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1764, throttle=1924, AUX1=1[0m
+[0;32mI (61720) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1589, throttle=1992, AUX1=1[0m
+[0;32mI (61810) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1409, throttle=1992, AUX1=1[0m
+[0;32mI (61940) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1270, throttle=1944, AUX1=1[0m
+[0;32mI (62200) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1191, throttle=1893, AUX1=1[0m
+[0;32mI (62410) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1156, throttle=1863, AUX1=1[0m
+[0;32mI (62420) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1159, throttle=1865, AUX1=1[0m
+[0;32mI (62480) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1171, throttle=1876, AUX1=1[0m
+[0;32mI (62500) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1223, throttle=1916, AUX1=1[0m
+[0;32mI (62580) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1359, throttle=1980, AUX1=1[0m
+[0;32mI (62660) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1564, throttle=1996, AUX1=1[0m
+[0;32mI (62830) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1909, throttle=1617, AUX1=1[0m
+[0;32mI (62890) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1954, throttle=1290, AUX1=1[0m
+[0;32mI (62990) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1847, throttle=1140, AUX1=1[0m
+[0;32mI (63130) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1805, throttle=1104, AUX1=1[0m
+[0;32mI (63230) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1669, throttle=1029, AUX1=1[0m
+[0;32mI (63350) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1001, AUX1=1[0m
+[0;32mI (63420) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (63510) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1448, throttle=1003, AUX1=1[0m
+[0;32mI (63740) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1002, AUX1=1[0m
+[0;32mI (63810) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1000, AUX1=1[0m
+[0;32mI (63820) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1647, throttle=1022, AUX1=1[0m
+[0;32mI (63950) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1782, throttle=1087, AUX1=1[0m
+[0;32mI (64030) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1886, throttle=1183, AUX1=1[0m
+[0;32mI (64130) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1968, throttle=1324, AUX1=1[0m
+[0;32mI (64230) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1999, throttle=1500, AUX1=1[0m
+[0;32mI (64320) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1908, throttle=1788, AUX1=1[0m
+[0;32mI (64420) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1638, throttle=1981, AUX1=1[0m
+[0;32mI (64510) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1336, throttle=1972, AUX1=1[0m
+[0;32mI (64620) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1176, throttle=1881, AUX1=1[0m
+[0;32mI (64760) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1126, throttle=1832, AUX1=1[0m
+[0;32mI (64910) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1109, throttle=1812, AUX1=1[0m
+[0;32mI (65030) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1132, throttle=1839, AUX1=1[0m
+[0;32mI (65130) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1210, throttle=1907, AUX1=1[0m
+[0;32mI (65260) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1585, throttle=1993, AUX1=1[0m
+[0;32mI (65330) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1766, throttle=1924, AUX1=1[0m
+[0;32mI (65450) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1998, throttle=1500, AUX1=1[0m
+[0;32mI (65590) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1903, throttle=1204, AUX1=1[0m
+[0;32mI (65650) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1886, throttle=1182, AUX1=1[0m
+[0;32mI (65940) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1807, throttle=1105, AUX1=1[0m
+[0;32mI (65950) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1691, throttle=1038, AUX1=1[0m
+[0;32mI (65970) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1640, throttle=1020, AUX1=1[0m
+[0;32mI (67610) ESP32_DRONE: Received data: roll=1500, pitch=1500, yaw=1500, throttle=1500, AUX1=1[0m

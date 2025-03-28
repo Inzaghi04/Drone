@@ -1,0 +1,292 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  4 2025 21:06:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23e40h (147008) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033e68 vaddr=3ffb0000 size=04000h ( 16384) load[0m
+[0;32mI (162) esp_image: segment 2: paddr=00037e70 vaddr=40080000 size=081a8h ( 33192) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=967d4h (616404) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d67fc vaddr=400881a8 size=10908h ( 67848) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (425) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     main[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (458) app_init: Compile time:     Mar  4 2025 21:05:29[0m
+[0;32mI (464) app_init: ELF file SHA256:  5bfbad934...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (560) main_task: Started on CPU0[0m
+[0;32mI (570) main_task: Calling app_main()[0m
+[0;32mI (940) ESP32_DRONE: NVS partition erased[0m
+[0;32mI (980) wifi:wifi driver task: 3ffbff50, prio:23, stack:6656, core=0[0m
+[0;32mI (980) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (980) wifi:wifi certification version: v7.0[0m
+[0;32mI (980) wifi:config NVS flash: enabled[0m
+[0;32mI (980) wifi:config nano formating: disabled[0m
+[0;32mI (990) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (990) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1000) wifi:Init management short buffer num: 32[0m
+[0;32mI (1000) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1000) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1010) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1010) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1020) wifi_init: rx ba win: 6[0m
+[0;32mI (1020) wifi_init: accept mbox: 6[0m
+[0;32mI (1020) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1030) wifi_init: udp mbox: 6[0m
+[0;32mI (1030) wifi_init: tcp mbox: 6[0m
+[0;32mI (1040) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1040) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1040) wifi_init: tcp mss: 1440[0m
+[0;32mI (1050) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1050) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (1060) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1090) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1090) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1170) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (1180) wifi:mode : sta (c8:f0:9e:f2:90:78)[0m
+[0;32mI (1190) wifi:enable tsf[0m
+[0;32mI (1610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1610) main_task: Returned from app_main()[0m
+[0;32mI (2570) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2570) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (3580) wifi:state: auth -> init (0x200)[0m
+[0;32mI (3590) wifi:new:<10,0>, old:<10,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (4610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (5610) ESP32_DRONE: Motors Disarmed[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  4 2025 21:06:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23e40h (147008) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=00033e68 vaddr=3ffb0000 size=04000h ( 16384) load[0m
+[0;32mI (162) esp_image: segment 2: paddr=00037e70 vaddr=40080000 size=081a8h ( 33192) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=967d4h (616404) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d67fc vaddr=400881a8 size=10908h ( 67848) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (425) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (449) app_init: Project name:     main[0m
+[0;32mI (453) app_init: App version:      1[0m
+[0;32mI (458) app_init: Compile time:     Mar  4 2025 21:05:29[0m
+[0;32mI (464) app_init: ELF file SHA256:  5bfbad934...[0m
+[0;32mI (469) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (474) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (484) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (489) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (496) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (502) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (529) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;33mW (536) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (549) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (560) main_task: Started on CPU0[0m
+[0;32mI (570) main_task: Calling app_main()[0m
+[0;32mI (920) ESP32_DRONE: NVS partition erased[0m
+[0;32mI (960) wifi:wifi driver task: 3ffbff50, prio:23, stack:6656, core=0[0m
+[0;32mI (960) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (960) wifi:wifi certification version: v7.0[0m
+[0;32mI (960) wifi:config NVS flash: enabled[0m
+[0;32mI (960) wifi:config nano formating: disabled[0m
+[0;32mI (970) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (970) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (980) wifi:Init management short buffer num: 32[0m
+[0;32mI (980) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (980) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (990) wifi:Init static rx buffer num: 10[0m
+[0;32mI (990) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1000) wifi_init: rx ba win: 6[0m
+[0;32mI (1000) wifi_init: accept mbox: 6[0m
+[0;32mI (1000) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1010) wifi_init: udp mbox: 6[0m
+[0;32mI (1010) wifi_init: tcp mbox: 6[0m
+[0;32mI (1010) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1020) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1020) wifi_init: tcp mss: 1440[0m
+[0;32mI (1030) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1030) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (1040) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1070) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1070) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1150) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (1160) wifi:mode : sta (c8:f0:9e:f2:90:78)[0m
+[0;32mI (1170) wifi:enable tsf[0m
+[0;32mI (1590) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (1590) main_task: Returned from app_main()[0m
+[0;32mI (2530) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2530) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2540) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2550) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2550) wifi:<ba-add>idx:0 (ifx:0, a0:65:18:c4:b3:8d), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2580) wifi:connected with Van Vuong, aid = 4, channel 10, BW20, bssid = a0:65:18:c4:b3:8d[0m
+[0;32mI (2580) wifi:security: WPA2-PSK, phy: bgn, rssi: -71[0m
+[0;32mI (2590) wifi:pm start, type: 1[0m
+
+[0;32mI (2590) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (2650) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3600) esp_netif_handlers: sta ip: 192.168.1.8, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3600) ESP32_DRONE: ESP32 IP Address: 208.92.252.63[0m
+[0;32mI (3600) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (4610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (5610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (6610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (7610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (8610) ESP32_DRONE: Motor 1: 1499.57, Motor 2: 1497.18, Motor 3: 1500.43, Motor 4: 1502.82[0m
+[0;32mI (9610) ESP32_DRONE: Motor 1: 1499.92, Motor 2: 1498.40, Motor 3: 1500.08, Motor 4: 1501.60[0m
+[0;32mI (10610) ESP32_DRONE: Motor 1: 1499.74, Motor 2: 1498.33, Motor 3: 1500.26, Motor 4: 1501.67[0m
+[0;32mI (11610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (12610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (13610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (14610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (15610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (16610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (17610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (18610) ESP32_DRONE: Motor 1: 1500.29, Motor 2: 1500.58, Motor 3: 1499.71, Motor 4: 1499.42[0m
+[0;32mI (19610) ESP32_DRONE: Motor 1: 1500.07, Motor 2: 1501.20, Motor 3: 1499.93, Motor 4: 1498.80[0m
+[0;32mI (20610) ESP32_DRONE: Motor 1: 1500.32, Motor 2: 1499.64, Motor 3: 1499.68, Motor 4: 1500.36[0m
+[0;32mI (21610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (22610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (23610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (24610) ESP32_DRONE: Motor 1: 1500.55, Motor 2: 1499.48, Motor 3: 1499.45, Motor 4: 1500.52[0m
+[0;32mI (25610) ESP32_DRONE: Motor 1: 1501.05, Motor 2: 1499.12, Motor 3: 1498.95, Motor 4: 1500.88[0m
+[0;32mI (26610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (27610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (28610) ESP32_DRONE: Motor 1: 1500.03, Motor 2: 1500.98, Motor 3: 1499.97, Motor 4: 1499.02[0m
+[0;32mI (29610) ESP32_DRONE: Motor 1: 1500.75, Motor 2: 1500.94, Motor 3: 1499.25, Motor 4: 1499.06[0m
+[0;32mI (30610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (31610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (32610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (33610) ESP32_DRONE: Motor 1: 1500.98, Motor 2: 1503.37, Motor 3: 1499.02, Motor 4: 1496.63[0m
+[0;32mI (34610) ESP32_DRONE: Motor 1: 1000.91, Motor 2: 1002.37, Motor 3: 1000.00, Motor 4: 1000.00[0m
+[0;32mI (35610) ESP32_DRONE: Motor 1: 1001.21, Motor 2: 1002.04, Motor 3: 1000.00, Motor 4: 1000.00[0m
+[0;32mI (36610) ESP32_DRONE: Motor 1: 1001.11, Motor 2: 1000.83, Motor 3: 1000.00, Motor 4: 1000.00[0m
+[0;32mI (37610) ESP32_DRONE: Motor 1: 1146.93, Motor 2: 1148.40, Motor 3: 1145.07, Motor 4: 1143.60[0m
+[0;32mI (38610) ESP32_DRONE: Motor 1: 1147.10, Motor 2: 1147.42, Motor 3: 1144.90, Motor 4: 1144.58[0m
+[0;32mI (39610) ESP32_DRONE: Motor 1: 1146.69, Motor 2: 1147.48, Motor 3: 1145.31, Motor 4: 1144.52[0m
+[0;32mI (40610) ESP32_DRONE: Motor 1: 1147.13, Motor 2: 1148.62, Motor 3: 1144.87, Motor 4: 1143.38[0m
+[0;32mI (41610) ESP32_DRONE: Motor 1: 1146.39, Motor 2: 1148.64, Motor 3: 1145.61, Motor 4: 1143.36[0m
+[0;32mI (42610) ESP32_DRONE: Motor 1: 1146.58, Motor 2: 1149.25, Motor 3: 1145.42, Motor 4: 1142.75[0m
+[0;32mI (43610) ESP32_DRONE: Motor 1: 1146.47, Motor 2: 1148.31, Motor 3: 1145.53, Motor 4: 1143.69[0m
+[0;32mI (44610) ESP32_DRONE: Motor 1: 1146.62, Motor 2: 1148.77, Motor 3: 1145.38, Motor 4: 1143.23[0m
+[0;32mI (45610) ESP32_DRONE: Motor 1: 1146.18, Motor 2: 1148.52, Motor 3: 1145.82, Motor 4: 1143.48[0m
+[0;32mI (46610) ESP32_DRONE: Motor 1: 1146.48, Motor 2: 1147.46, Motor 3: 1145.52, Motor 4: 1144.54[0m
+[0;32mI (47610) ESP32_DRONE: Motor 1: 1146.20, Motor 2: 1147.93, Motor 3: 1145.80, Motor 4: 1144.07[0m
+[0;32mI (48610) ESP32_DRONE: Motor 1: 1146.44, Motor 2: 1149.09, Motor 3: 1145.56, Motor 4: 1142.91[0m
+[0;32mI (49610) ESP32_DRONE: Motor 1: 1146.69, Motor 2: 1148.43, Motor 3: 1145.31, Motor 4: 1143.57[0m
+[0;32mI (50610) ESP32_DRONE: Motor 1: 1146.93, Motor 2: 1148.88, Motor 3: 1145.07, Motor 4: 1143.12[0m
+[0;32mI (51610) ESP32_DRONE: Motor 1: 1146.50, Motor 2: 1147.29, Motor 3: 1145.50, Motor 4: 1144.71[0m
+[0;32mI (52610) ESP32_DRONE: Motor 1: 1145.98, Motor 2: 1147.78, Motor 3: 1146.02, Motor 4: 1144.22[0m
+[0;32mI (53610) ESP32_DRONE: Motor 1: 1146.57, Motor 2: 1148.45, Motor 3: 1145.43, Motor 4: 1143.55[0m
+[0;32mI (54610) ESP32_DRONE: Motor 1: 1499.99, Motor 2: 1502.44, Motor 3: 1500.01, Motor 4: 1497.56[0m
+[0;32mI (55610) ESP32_DRONE: Motor 1: 1500.65, Motor 2: 1502.43, Motor 3: 1499.35, Motor 4: 1497.57[0m
+[0;32mI (56610) ESP32_DRONE: Motor 1: 1500.33, Motor 2: 1501.56, Motor 3: 1499.67, Motor 4: 1498.44[0m
+[0;32mI (57610) ESP32_DRONE: Motor 1: 1500.04, Motor 2: 1501.64, Motor 3: 1499.96, Motor 4: 1498.36[0m
+[0;32mI (58610) ESP32_DRONE: Motor 1: 1500.89, Motor 2: 1502.13, Motor 3: 1499.11, Motor 4: 1497.87[0m
+[0;32mI (59610) ESP32_DRONE: Motor 1: 1500.68, Motor 2: 1502.09, Motor 3: 1499.32, Motor 4: 1497.91[0m
+[0;32mI (60610) ESP32_DRONE: Motor 1: 1500.33, Motor 2: 1502.75, Motor 3: 1499.67, Motor 4: 1497.25[0m
+[0;32mI (61610) ESP32_DRONE: Motor 1: 1500.42, Motor 2: 1502.86, Motor 3: 1499.58, Motor 4: 1497.14[0m
+[0;32mI (62610) ESP32_DRONE: Motor 1: 1500.36, Motor 2: 1502.43, Motor 3: 1499.64, Motor 4: 1497.57[0m
+[0;32mI (63610) ESP32_DRONE: Motor 1: 1500.21, Motor 2: 1502.17, Motor 3: 1499.79, Motor 4: 1497.83[0m
+[0;32mI (64610) ESP32_DRONE: Motor 1: 1500.35, Motor 2: 1503.44, Motor 3: 1499.65, Motor 4: 1496.56[0m
+[0;32mI (65610) ESP32_DRONE: Motor 1: 1500.07, Motor 2: 1502.97, Motor 3: 1499.93, Motor 4: 1497.03[0m
+[0;32mI (66610) ESP32_DRONE: Motor 1: 1500.43, Motor 2: 1502.24, Motor 3: 1499.57, Motor 4: 1497.76[0m
+[0;32mI (67610) ESP32_DRONE: Motor 1: 1500.39, Motor 2: 1502.59, Motor 3: 1499.61, Motor 4: 1497.41[0m
+[0;32mI (68610) ESP32_DRONE: Motor 1: 1500.37, Motor 2: 1502.42, Motor 3: 1499.63, Motor 4: 1497.58[0m
+[0;32mI (69610) ESP32_DRONE: Motor 1: 1500.14, Motor 2: 1502.36, Motor 3: 1499.86, Motor 4: 1497.64[0m
+[0;32mI (70610) ESP32_DRONE: Motor 1: 1500.13, Motor 2: 1501.89, Motor 3: 1499.87, Motor 4: 1498.11[0m
+[0;32mI (71610) ESP32_DRONE: Motor 1: 1499.40, Motor 2: 1502.05, Motor 3: 1500.60, Motor 4: 1497.95[0m
+[0;32mI (72610) ESP32_DRONE: Motor 1: 1499.69, Motor 2: 1502.70, Motor 3: 1500.31, Motor 4: 1497.30[0m
+[0;32mI (73610) ESP32_DRONE: Motor 1: 1499.77, Motor 2: 1501.61, Motor 3: 1500.23, Motor 4: 1498.39[0m
+[0;32mI (74610) ESP32_DRONE: Motor 1: 1499.51, Motor 2: 1501.48, Motor 3: 1500.49, Motor 4: 1498.52[0m
+[0;32mI (75610) ESP32_DRONE: Motor 1: 1499.23, Motor 2: 1500.74, Motor 3: 1500.77, Motor 4: 1499.26[0m
+[0;32mI (76610) ESP32_DRONE: Motor 1: 1853.91, Motor 2: 1856.10, Motor 3: 1854.09, Motor 4: 1851.90[0m
+[0;32mI (77610) ESP32_DRONE: Motor 1: 1854.00, Motor 2: 1856.38, Motor 3: 1854.00, Motor 4: 1851.62[0m
+[0;32mI (78610) ESP32_DRONE: Motor 1: 1853.35, Motor 2: 1854.45, Motor 3: 1854.65, Motor 4: 1853.55[0m
+[0;32mI (79610) ESP32_DRONE: Motor 1: 1999.28, Motor 2: 2000.00, Motor 3: 2000.00, Motor 4: 1998.92[0m
+[0;32mI (80610) ESP32_DRONE: Motor 1: 1999.43, Motor 2: 2000.00, Motor 3: 2000.00, Motor 4: 1998.86[0m
+[0;32mI (81610) ESP32_DRONE: Motor 1: 1999.57, Motor 2: 2000.00, Motor 3: 2000.00, Motor 4: 1998.64[0m
+[0;32mI (82610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (83610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (84610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (85610) ESP32_DRONE: Motor 1: 1500.15, Motor 2: 1502.03, Motor 3: 1499.85, Motor 4: 1497.97[0m
+[0;32mI (86610) ESP32_DRONE: Motor 1: 1499.67, Motor 2: 1500.77, Motor 3: 1500.33, Motor 4: 1499.23[0m
+[0;32mI (87610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (88610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (89610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (90610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (91610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (92610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (93610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (94610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (95610) ESP32_DRONE: Motors Disarmed[0m
+[0;32mI (96610) ESP32_DRONE: Motors Disarmed[0m

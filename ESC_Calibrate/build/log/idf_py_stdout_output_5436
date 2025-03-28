@@ -1,0 +1,71 @@
+[1/5] cmd.exe /C "cd /D C:\esp\New_Calibrate\build\esp-idf\esptool_py && C:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/esp/New_Calibrate/build/partition_table/partition-table.bin C:/esp/New_Calibrate/build/main.bin"
+main.bin binary size 0xd1230 bytes. Smallest app partition is 0x100000 bytes. 0x2edd0 bytes (18%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\esp\New_Calibrate\build\bootloader\esp-idf\esptool_py && C:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/esp/New_Calibrate/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\esp\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\esp\Espressif\tools\cmake\3.24.0\besptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev5
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:c6:f7:44:e2:48
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e1fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16359...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16359 compressed) at 0x00001000 in 0.6 seconds (effective 356.4 kbit/s)...
+Hash of data verified.
+Compressed 856624 bytes to 540356...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cd3e... (6 %)
+Writing at 0x00024d7b... (9 %)
+Writing at 0x00029a5c... (12 %)
+Writing at 0x00033d0d... (15 %)
+Writing at 0x0003b566... (18 %)
+Writing at 0x00041068... (21 %)
+Writing at 0x000468e9... (24 %)
+Writing at 0x0004c936... (27 %)
+Writing at 0x00052679... (30 %)
+Writing at 0x00058584... (33 %)
+Writing at 0x0005df96... (36 %)
+Writing at 0x000643be... (39 %)
+Writing at 0x000694ed... (42 %)
+Writing at 0x0006ead7... (45 %)
+Writing at 0x00073dd1... (48 %)
+Writing at 0x000793bf... (51 %)
+Writing at 0x0007e9c9... (54 %)
+Writing at 0x0008417d... (57 %)
+Writing at 0x0008a099... (60 %)
+Writing at 0x0008f8ab... (63 %)
+Writing at 0x0009556d... (66 %)
+Writing at 0x0009b1cb... (69 %)
+Writing at 0x000a09fc... (72 %)
+Writing at 0x000a67bf... (75 %)
+Writing at 0x000ac9a6... (78 %)
+Writing at 0x000b272f... (81 %)
+Writing at 0x000b81f7... (84 %)
+Writing at 0x000c1867... (87 %)
+Writing at 0x000c9fca... (90 %)
+Writing at 0x000cfdaf... (93 %)
+Writing at 0x000d6013... (96 %)
+Writing at 0x000dbbfb... (100 %)
+Wrote 856624 bytes (540356 compressed) at 0x00010000 in 13.9 seconds (effective 493.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 275.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+in\cmake.exe -D IDF_PATH=C:/esp/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/esp/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/esp/New_Calibrate/build -P C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"

@@ -1,0 +1,65 @@
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file C:/esp/Drone_Tracking_obj/MPU/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "Drone_Tracking_obj" version: f381822-dirty
+-- Adding linker script C:/esp/Drone_Tracking_obj/MPU/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/esp/Drone_Tracking_obj/MPU/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_vfs_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mpu6050 mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/app_trace C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/app_update C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/bootloader C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/bootloader_support C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/bt C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/cmock C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/console C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/cxx C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/driver C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/efuse C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp-tls C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_adc C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_app_format C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_bootloader_format C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_coex C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_common C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_ana_cmpr C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_cam C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_dac C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gpio C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_gptimer C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_i2c C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_i2s C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_isp C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_jpeg C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_ledc C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_mcpwm C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_parlio C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_pcnt C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_ppa C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_rmt C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_sdio C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_sdm C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_sdmmc C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_sdspi C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_spi C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_touch_sens C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_tsens C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_uart C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_usb_serial_jtag C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_eth C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_event C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_gdbstub C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_hid C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_client C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_http_server C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_https_ota C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_https_server C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_hw_support C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_lcd C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_local_ctrl C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_mm C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_netif C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_netif_stack C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_partition C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_phy C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_pm C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_psram C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_ringbuf C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_rom C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_vfs_console C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/espcoredump C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/fatfs C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/hal C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/http_parser C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/idf_test C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/ieee802154 C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/json C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/log C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip C:/esp/Drone_Tracking_obj/MPU/main C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/mbedtls C:/esp/Drone_Tracking_obj/MPU/components/mpu6050 C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/nvs_flash C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/nvs_sec_provider C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/openthread C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/perfmon C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/protobuf-c C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/protocomm C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/pthread C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/sdmmc C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/soc C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/spi_flash C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/spiffs C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/tcp_transport C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/ulp C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/unity C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/usb C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/vfs C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/wear_levelling C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/wifi_provisioning C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/wpa_supplicant C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/esp/Drone_Tracking_obj/MPU/build
+[0/1] Re-running CMake...
+[1/5] cmd.exe /C "cd /D C:\esp\Drone_Tracking_obj\MPU\build\esp-idf\esptool_py && C:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/esp/Drone_Tracking_obj/MPU/build/partition_table/partition-table.bin C:/esp/Drone_Tracking_obj/MPU/build/Drone_Tracking_obj.bin"
+Drone_Tracking_obj.bin binary size 0x31520 bytes. Smallest app partition is 0x100000 bytes. 0xceae0 bytes (81%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\esp\Drone_Tracking_obj\MPU\build\bootloader\esp-idf\esptool_py && C:\esp\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/esp/Drone_Tracking_obj/MPU/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\esp\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && C:\esp\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/esp/Espressif/frameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=C:/esp/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/esp/Drone_Tracking_obj/MPU/build -P C:/esp/Espressif/framesptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 Drone_Tracking_obj.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM4
+Connecting..........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:8a:1f:ad:97:6c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00041fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16359...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16359 compressed) at 0x00001000 in 0.7 seconds (effective 317.1 kbit/s)...
+Hash of data verified.
+Compressed 202016 bytes to 108003...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001ceae... (28 %)
+Writing at 0x00022aaa... (42 %)
+Writing at 0x0002890d... (57 %)
+Writing at 0x0002fc84... (71 %)
+Writing at 0x00037847... (85 %)
+Writing at 0x0003d954... (100 %)
+Wrote 202016 bytes (108003 compressed) at 0x00010000 in 2.8 seconds (effective 573.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 272.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+eworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"

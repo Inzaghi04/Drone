@@ -1,0 +1,8 @@
+CMake Error at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/tools/cmake/project.cmake:465 (message):
+  Directory specified in EXTRA_COMPONENT_DIRS doesn't exist:
+  C:/esp/Drone_Tracking_obj/MPU/esp/Drone_Tracking_obj/MPU/libraries
+Call Stack (most recent call first):
+  C:/esp/Espressif/frameworks/esp-idf-v5.3.1/tools/cmake/project.cmake:549 (__project_init)
+  CMakeLists.txt:8 (project)
+
+

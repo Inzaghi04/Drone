@@ -1,0 +1,53 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d9697: task_wdt_timeout_handling at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d9a5c: task_wdt_isr at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x4008345d: _xt_lowint1 at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008b6cb: vPortClearInterruptMaskFromISR at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:505
+0x4008fc86: vPortExitCriticalSafe at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:596
+ (inlined by) multi_heap_internal_unlock at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:171
+0x4008fcd2: multi_heap_malloc_impl at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:219
+0x4008233d: aligned_or_unaligned_alloc at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082449: heap_caps_aligned_alloc_base at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082479: heap_caps_malloc_base at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x40082138: heap_caps_malloc at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x4008216d: heap_caps_malloc_default at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x400929d9: malloc at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:24
+0x4011c73c: mem_malloc at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/mem.c:209
+0x4012eef6: esp_pbuf_allocate at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_netif/lwip/netif/esp_pbuf_ref.c:52
+0x4012ee4e: wlanif_input at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_netif/lwip/netif/wlanif.c:151
+0x4015c259: esp_netif_receive at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_netif/lwip/esp_netif_lwip.c:1259
+0x4008a7e9: wifi_sta_receive at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi/src/wifi_netif.c:39
+0x400925e6: sta_input at ??:?
+0x400926a1: sta_rx_cb at ??:?
+0x40096a9d: ppRxPkt at ??:?
+0x40094400: ppTask at ??:?
+0x4008b30d: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x400d9697: task_wdt_timeout_handling at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d9a5c: task_wdt_isr at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x4008345d: _xt_lowint1 at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d79ed: control_task at C:/esp/PID/main/main.c:348 (discriminator 1)
+0x4008b30d: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x400d9697: task_wdt_timeout_handling at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d9a5c: task_wdt_isr at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x4008345d: _xt_lowint1 at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d79ce: control_task at C:/esp/PID/main/main.c:345
+0x4008b30d: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x400d9697: task_wdt_timeout_handling at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400d9a5c: task_wdt_isr at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x4008345d: _xt_lowint1 at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x40082f11: esp_timer_impl_get_counter_reg at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer_impl_lac.c:120 (discriminator 1)
+0x40082f2f: esp_timer_impl_get_time at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer_impl_lac.c:142
+0x400d79d4: control_task at C:/esp/PID/main/main.c:348 (discriminator 1)
+0x4008b30d: vPortTaskWrapper at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

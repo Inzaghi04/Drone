@@ -1,0 +1,129 @@
+PI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  9 2025 18:44:43[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b048h ( 45128) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001b070 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d40c vaddr=40080000 size=02c0ch ( 11276) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1684ch ( 92236) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036874 vaddr=40082c0c size=0b3e8h ( 46056) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (192) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (212) app_init: Application information:[0m
+[0;32mI (215) app_init: Project name:     Drone_Tracking_Obj[0m
+[0;32mI (221) app_init: App version:      f381822-dirty[0m
+[0;32mI (226) app_init: Compile time:     Mar  9 2025 18:44:20[0m
+[0;32mI (232) app_init: ELF file SHA256:  5c43752ff...[0m
+[0;32mI (237) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (243) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (247) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (252) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2C88 len 0002D378 (180 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008E000 len 00012000 (72 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (304) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (317) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (329) main_task: Started on CPU0[0m
+[0;32mI (339) main_task: Calling app_main()[0m
+[0;32mI (339) MPU6050_EXAMPLE: Starting MPU6050 example[0m
+[0;32mI (339) MPU6050_EXAMPLE: I2C initialized successfully[0m
+[0;32mI (339) MPU6050_EXAMPLE: MPU6050 found![0m
+[0;32mI (349) MPU6050_EXAMPLE: MPU6050 is ready![0m
+[0;32mI (359) MPU6050_EXAMPLE: Acceleration X [g]= 0.369, Acceleration Y [g]= -0.070, Acceleration Z [g]= 0.928[0m
+[0;32mI (359) MPU6050_EXAMPLE: Roll Angle=-3.98, Pitch Angle=-21.61[0m
+[0;32mI (1369) MPU6050_EXAMPLE: Acceleration X [g]= -0.347, Acceleration Y [g]= 0.119, Acceleration Z [g]= 1.142[0m
+[0;32mI (1369) MPU6050_EXAMPLE: Roll Angle=5.68, Pitch Angle=16.84[0m
+[0;32mI (2369) MPU6050_EXAMPLE: Acceleration X [g]= 0.789, Acceleration Y [g]= 0.563, Acceleration Z [g]= 0.307[0m
+[0;32mI (2369) MPU6050_EXAMPLE: Roll Angle=33.60, Pitch Angle=-50.92[0m
+[0;32mI (3369) MPU6050_EXAMPLE: Acceleration X [g]= 0.777, Acceleration Y [g]= -0.215, Acceleration Z [g]= 1.128[0m
+[0;32mI (3369) MPU6050_EXAMPLE: Roll Angle=-8.90, Pitch Angle=-34.10[0m
+[0;32mI (4369) MPU6050_EXAMPLE: Acceleration X [g]= 0.589, Acceleration Y [g]= -0.161, Acceleration Z [g]= 0.529[0m
+[0;32mI (4369) MPU6050_EXAMPLE: Roll Angle=-11.52, Pitch Angle=-46.84[0m
+[0;32mI (5369) MPU6050_EXAMPLE: Acceleration X [g]= 0.287, Acceleration Y [g]= -0.048, Acceleration Z [g]= 1.002[0m
+[0;32mI (5369) MPU6050_EXAMPLE: Roll Angle=-2.64, Pitch Angle=-15.99[0m
+[0;32mI (6369) MPU6050_EXAMPLE: Acceleration X [g]= 0.456, Acceleration Y [g]= -0.188, Acceleration Z [g]= 0.953[0m
+[0;32mI (6369) MPU6050_EXAMPLE: Roll Angle=-10.10, Pitch Angle=-25.15[0m
+[0;32mI (7369) MPU6050_EXAMPLE: Acceleration X [g]= 0.268, Acceleration Y [g]= 0.013, Acceleration Z [g]= 1.007[0m
+[0;32mI (7369) MPU6050_EXAMPLE: Roll Angle=0.72, Pitch Angle=-14.89[0m
+[0;32mI (8369) MPU6050_EXAMPLE: Acceleration X [g]= 0.266, Acceleration Y [g]= 0.013, Acceleration Z [g]= 1.008[0m
+[0;32mI (8369) MPU6050_EXAMPLE: Roll Angle=0.72, Pitch Angle=-14.80[0m
+[0;32mI (9369) MPU6050_EXAMPLE: Acceleration X [g]= 0.264, Acceleration Y [g]= 0.017, Acceleration Z [g]= 1.007[0m
+[0;32mI (9369) MPU6050_EXAMPLE: Roll Angle=0.93, Pitch Angle=-14.71[0m
+[0;32mI (10369) MPU6050_EXAMPLE: Acceleration X [g]= 0.265, Acceleration Y [g]= 0.016, Acceleration Z [g]= 1.008[0m
+[0;32mI (10369) MPU6050_EXAMPLE: Roll Angle=0.87, Pitch Angle=-14.75[0m
+[0;32mI (11369) MPU6050_EXAMPLE: Acceleration X [g]= 0.265, Acceleration Y [g]= 0.016, Acceleration Z [g]= 1.008[0m
+[0;32mI (11369) MPU6050_EXAMPLE: Roll Angle=0.86, Pitch Angle=-14.71[0m
+[0;32mI (12369) MPU6050_EXAMPLE: Acceleration X [g]= 0.263, Acceleration Y [g]= 0.017, Acceleration Z [g]= 1.009[0m
+[0;32mI (12369) MPU6050_EXAMPLE: Roll Angle=0.93, Pitch Angle=-14.60[0m
+[0;32mI (13369) MPU6050_EXAMPLE: Acceleration X [g]= 0.264, Acceleration Y [g]= 0.016, Acceleration Z [g]= 1.011[0m
+[0;32mI (13369) MPU6050_EXAMPLE: Roll Angle=0.87, Pitch Angle=-14.63[0m
+[0;32mI (14369) MPU6050_EXAMPLE: Acceleration X [g]= 0.261, Acceleration Y [g]= 0.015, Acceleration Z [g]= 1.009[0m
+[0;32mI (14369) MPU6050_EXAMPLE: Roll Angle=0.83, Pitch Angle=-14.51[0m
+[0;32mI (15369) MPU6050_EXAMPLE: Acceleration X [g]= 0.263, Acceleration Y [g]= 0.016, Acceleration Z [g]= 1.010[0m
+[0;32mI (15369) MPU6050_EXAMPLE: Roll Angle=0.90, Pitch Angle=-14.57[0m
+[0;32mI (16369) MPU6050_EXAMPLE: Acceleration X [g]= 0.261, Acceleration Y [g]= 0.017, Acceleration Z [g]= 1.010[0m
+[0;32mI (16369) MPU6050_EXAMPLE: Roll Angle=0.94, Pitch Angle=-14.49[0m
+[0;32mI (17369) MPU6050_EXAMPLE: Acceleration X [g]= 0.262, Acceleration Y [g]= 0.017, Acceleration Z [g]= 1.010[0m
+[0;32mI (17369) MPU6050_EXAMPLE: Roll Angle=0.93, Pitch Angle=-14.55[0m
+[0;32mI (18369) MPU6050_EXAMPLE: Acceleration X [g]= 0.261, Acceleration Y [g]= 0.015, Acceleration Z [g]= 1.009[0m
+[0;32mI (18369) MPU6050_EXAMPLE: Roll Angle=0.85, Pitch Angle=-14.49[0m
+[0;32mI (19369) MPU6050_EXAMPLE: Acceleration X [g]= 0.261, Acceleration Y [g]= 0.018, Acceleration Z [g]= 1.009[0m
+[0;32mI (19369) MPU6050_EXAMPLE: Roll Angle=0.97, Pitch Angle=-14.51[0m
+[0;32mI (20369) MPU6050_EXAMPLE: Acceleration X [g]= 0.261, Acceleration Y [g]= 0.016, Acceleration Z [g]= 1.011[0m
+[0;32mI (20369) MPU6050_EXAMPLE: Roll Angle=0.88, Pitch Angle=-14.47[0m
+[0;32mI (21369) MPU6050_EXAMPLE: Acceleration X [g]= 0.407, Acceleration Y [g]= -0.019, Acceleration Z [g]= 1.026[0m
+[0;32mI (21369) MPU6050_EXAMPLE: Roll Angle=-0.96, Pitch Angle=-21.62[0m
+[0;32mI (22369) MPU6050_EXAMPLE: Acceleration X [g]= 1.038, Acceleration Y [g]= -0.007, Acceleration Z [g]= 0.210[0m
+[0;32mI (22369) MPU6050_EXAMPLE: Roll Angle=-0.37, Pitch Angle=-78.54[0m
+[0;32mI (23369) MPU6050_EXAMPLE: Acceleration X [g]= 1.063, Acceleration Y [g]= -0.041, Acceleration Z [g]= -0.142[0m
+[0;32mI (23369) MPU6050_EXAMPLE: Roll Angle=-2.16, Pitch Angle=-82.09[0m
+[0;32mI (24379) MPU6050_EXAMPLE: Acceleration X [g]= 1.056, Acceleration Y [g]= -0.071, Acceleration Z [g]= -0.244[0m
+[0;32mI (24379) MPU6050_EXAMPLE: Roll Angle=-3.72, Pitch Angle=-76.46[0m
+[0;32mI (25389) MPU6050_EXAMPLE: Acceleration X [g]= 0.703, Acceleration Y [g]= 0.090, Acceleration Z [g]= -0.796[0m
+[0;32mI (25389) MPU6050_EXAMPLE: Roll Angle=4.86, Pitch Angle=-41.27[0m
+[0;32mI (26389) MPU6050_EXAMPLE: Acceleration X [g]= 0.003, Acceleration Y [g]= 0.066, Acceleration Z [g]= -0.400[0m
+[0;32mI (26389) MPU6050_EXAMPLE: Roll Angle=9.42, Pitch Angle=-0.41[0m
+[0;32mI (27389) MPU6050_EXAMPLE: Acceleration X [g]= 0.364, Acceleration Y [g]= 0.108, Acceleration Z [g]= 0.602[0m
+[0;32mI (27389) MPU6050_EXAMPLE: Roll Angle=8.74, Pitch Angle=-30.75[0m
+[0;32mI (28389) MPU6050_EXAMPLE: Acceleration X [g]= -0.426, Acceleration Y [g]= 0.159, Acceleration Z [g]= 1.289[0m
+[0;32mI (28389) MPU6050_EXAMPLE: Roll Angle=6.70, Pitch Angle=18.16[0m
+[0;32mI (29389) MPU6050_EXAMPLE: Acceleration X [g]= 0.535, Acceleration Y [g]= -0.083, Acceleration Z [g]= 0.797[0m
+[0;32mI (29389) MPU6050_EXAMPLE: Roll Angle=-4.94, Pitch Angle=-33.76[0m
+[0;32mI (30389) MPU6050_EXAMPLE: Acceleration X [g]= 0.396, Acceleration Y [g]= -0.562, Acceleration Z [g]= 0.456[0m
+[0;32mI (30389) MPU6050_EXAMPLE: Roll Angle=-42.98, Pitch Angle=-28.64[0m
+[0;32mI (31399) MPU6050_EXAMPLE: Acceleration X [g]= -0.558, Acceleration Y [g]= -0.040, Acceleration Z [g]= 0.581[0m
+[0;32mI (31399) MPU6050_EXAMPLE: Roll Angle=-2.86, Pitch Angle=43.79[0m
+[0;32mI (32399) MPU6050_EXAMPLE: Acceleration X [g]= 0.245, Acceleration Y [g]= 0.025, Acceleration Z [g]= 1.008[0m
+[0;32mI (32399) MPU6050_EXAMPLE: Roll Angle=1.38, Pitch Angle=-13.67[0m

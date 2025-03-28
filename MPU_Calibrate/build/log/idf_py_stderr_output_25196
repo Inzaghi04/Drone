@@ -1,0 +1,10 @@
+CMake Error at C:/esp/Espressif/frameworks/esp-idf-v5.3.1/tools/cmake/build.cmake:268 (message):
+  Failed to resolve component 'mpu6050'.
+Call Stack (most recent call first):
+  C:/esp/Espressif/frameworks/esp-idf-v5.3.1/tools/cmake/build.cmake:304 (__build_resolve_and_add_req)
+  C:/esp/Espressif/frameworks/esp-idf-v5.3.1/tools/cmake/build.cmake:607 (__build_expand_requirements)
+  C:/esp/Espressif/frameworks/esp-idf-v5.3.1/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

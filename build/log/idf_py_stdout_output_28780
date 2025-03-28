@@ -1,0 +1,1045 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar  4 2025 21:06:48[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24470h (148592) map[0m
+[0;32mI (156) esp_image: segment 1: paddr=00034498 vaddr=3ffb0000 size=04000h ( 16384) load[0m
+[0;32mI (162) esp_image: segment 2: paddr=000384a0 vaddr=40080000 size=07b78h ( 31608) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=96bb0h (617392) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d6bd8 vaddr=40087b78 size=10f38h ( 69432) load[0m
+[0;32mI (426) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (426) boot: Disabling RNG early entropy source...[0m
+[0;32mI (438) cpu_start: Multicore app[0m
+[0;32mI (447) cpu_start: Pro cpu start user code[0m
+[0;32mI (447) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (447) app_init: Application information:[0m
+[0;32mI (450) app_init: Project name:     main[0m
+[0;32mI (454) app_init: App version:      1[0m
+[0;32mI (459) app_init: Compile time:     Mar  4 2025 21:05:29[0m
+[0;32mI (465) app_init: ELF file SHA256:  b747d1211...[0m
+[0;32mI (470) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (475) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (480) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (485) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (490) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (497) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFB8330 len 00027CD0 (159 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (516) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (522) heap_init: At 40098AB0 len 00007550 (29 KiB): IRAM[0m
+[0;32mI (530) spi_flash: detected chip: generic[0m
+[0;32mI (533) spi_flash: flash io: dio[0m
+[0;33mW (537) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (550) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (941) ESP32_DRONE: NVS partition erased[0m
+[0;32mI (951) ESP32_DRONE: App Main Started - PID and Angle variables initialized[0m
+[0;32mI (981) wifi:wifi driver task: 3ffbff50, prio:23, stack:6656, core=0[0m
+[0;32mI (981) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (981) wifi:wifi certification version: v7.0[0m
+[0;32mI (981) wifi:config NVS flash: enabled[0m
+[0;32mI (981) wifi:config nano formating: disabled[0m
+[0;32mI (991) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (991) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1001) wifi:Init management short buffer num: 32[0m
+[0;32mI (1001) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1001) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (1011) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1011) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1021) wifi_init: rx ba win: 6[0m
+[0;32mI (1021) wifi_init: accept mbox: 6[0m
+[0;32mI (1021) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1031) wifi_init: udp mbox: 6[0m
+[0;32mI (1031) wifi_init: tcp mbox: 6[0m
+[0;32mI (1041) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1041) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1041) wifi_init: tcp mss: 1440[0m
+[0;32mI (1051) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1051) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (1061) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1091) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (1091) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1171) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (1191) wifi:mode : sta (c8:f0:9e:f2:90:78)[0m
+[0;32mI (1191) wifi:enable tsf[0m
+[0;32mI (1201) ESP32_DRONE: MPU6050 Initialized[0m
+[0;32mI (1201) ESP32_DRONE: Starting Gyro Calibration[0m
+[0;32mI (1381) ESP32_DRONE: Gyro Calibration Complete - ErrorX: 44.71, ErrorY: 4.40[0m
+[0;32mI (1381) ESP32_DRONE: Starting Accel Calibration[0m
+[0;32mI (1621) ESP32_DRONE: Accel Calibration Complete - ErrorX: -0.41, ErrorY: -0.01[0m
+[0;32mI (1621) ESP32_DRONE: Motor PWM Configured[0m
+[0;32mI (1621) ESP32_DRONE: Control Task Started - PID and Angle variables reset[0m
+[0;32mI (1631) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (1641) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (1641) ESP32_DRONE: Control Task Created[0m
+[0;32mI (1651) ESP32_DRONE: App Main Initialization Complete[0m
+[0;32mI (1651) main_task: Returned from app_main()[0m
+[0;32mI (2551) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2561) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2561) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2571) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2571) wifi:<ba-add>idx:0 (ifx:0, a0:65:18:c4:b3:8d), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2591) wifi:connected with Van Vuong, aid = 4, channel 10, BW20, bssid = a0:65:18:c4:b3:8d[0m
+[0;32mI (2591) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (2611) wifi:pm start, type: 1[0m
+
+[0;32mI (2611) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2631) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (2641) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (3611) esp_netif_handlers: sta ip: 192.168.1.8, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3611) ESP32_DRONE: ESP32 IP Address: 208.92.252.63[0m
+[0;32mI (3641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (3641) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (4641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (4641) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (5641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (5641) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (6641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (6641) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (7641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (7641) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (8641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (8641) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (8641) ESP32_DRONE: IMU Data - GyrX: -0.23, GyrY: -0.26, AccX: 0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (8651) ESP32_DRONE: Angles - TotalX: -1.56, TotalY: -1.76, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (8661) ESP32_DRONE: Errors - Roll: -1.76, Pitch: -1.56[0m
+[0;32mI (8671) ESP32_DRONE: PID Terms - Roll_P: -1.23, Roll_I: -0.01, Roll_D: -0.30, Pitch_P: -1.12, Pitch_I: -0.01, Pitch_D: -0.27[0m
+[0;32mI (8681) ESP32_DRONE: PID Outputs - Roll_PID: -1.54, Pitch_PID: -1.40[0m
+[0;32mI (8691) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.86, M2: 1497.05, M3: 1500.14, M4: 1502.95[0m
+[0;32mI (8701) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (8701) ESP32_DRONE: Motor PWM Output - M1: 1499.86, M2: 1497.05, M3: 1500.14, M4: 1502.95[0m
+[0;32mI (8711) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (9721) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (9721) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (9721) ESP32_DRONE: IMU Data - GyrX: -0.23, GyrY: -0.04, AccX: 0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (9731) ESP32_DRONE: Angles - TotalX: -0.24, TotalY: -0.05, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (9741) ESP32_DRONE: Errors - Roll: -0.05, Pitch: -0.24[0m
+[0;32mI (9751) ESP32_DRONE: PID Terms - Roll_P: -0.03, Roll_I: -0.00, Roll_D: -0.05, Pitch_P: -0.17, Pitch_I: -0.00, Pitch_D: -0.27[0m
+[0;32mI (9761) ESP32_DRONE: PID Outputs - Roll_PID: -0.09, Pitch_PID: -0.45[0m
+[0;32mI (9771) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.36, M2: 1499.46, M3: 1499.64, M4: 1500.54[0m
+[0;32mI (9781) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (9781) ESP32_DRONE: Motor PWM Output - M1: 1500.36, M2: 1499.46, M3: 1499.64, M4: 1500.54[0m
+[0;32mI (9791) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (10801) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (10801) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (10801) ESP32_DRONE: IMU Data - GyrX: 0.23, GyrY: 0.20, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (10811) ESP32_DRONE: Angles - TotalX: 0.24, TotalY: 0.22, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (10821) ESP32_DRONE: Errors - Roll: 0.22, Pitch: 0.24[0m
+[0;32mI (10831) ESP32_DRONE: PID Terms - Roll_P: 0.15, Roll_I: 0.00, Roll_D: 0.24, Pitch_P: 0.17, Pitch_I: 0.00, Pitch_D: 0.27[0m
+[0;32mI (10841) ESP32_DRONE: PID Outputs - Roll_PID: 0.40, Pitch_PID: 0.45[0m
+[0;32mI (10851) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1000.85, M3: 1000.05, M4: 1000.00[0m
+[0;32mI (10861) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (10861) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1000.85, M3: 1000.05, M4: 1000.00[0m
+[0;32mI (10871) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (11881) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (11881) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (11881) ESP32_DRONE: IMU Data - GyrX: -0.04, GyrY: -0.19, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (11891) ESP32_DRONE: Angles - TotalX: -0.05, TotalY: -0.21, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (11901) ESP32_DRONE: Errors - Roll: -0.21, Pitch: -0.05[0m
+[0;32mI (11911) ESP32_DRONE: PID Terms - Roll_P: -0.14, Roll_I: -0.00, Roll_D: -0.23, Pitch_P: -0.04, Pitch_I: -0.00, Pitch_D: -0.06[0m
+[0;32mI (11921) ESP32_DRONE: PID Outputs - Roll_PID: -0.37, Pitch_PID: -0.09[0m
+[0;32mI (11931) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1000.00, M3: 1000.28, M4: 1000.47[0m
+[0;32mI (11941) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (11941) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1000.00, M3: 1000.28, M4: 1000.47[0m
+[0;32mI (11951) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (12961) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (12961) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (12961) ESP32_DRONE: IMU Data - GyrX: -0.32, GyrY: -0.23, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (12971) ESP32_DRONE: Angles - TotalX: -0.34, TotalY: -0.23, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (12981) ESP32_DRONE: Errors - Roll: -0.23, Pitch: -0.34[0m
+[0;32mI (12991) ESP32_DRONE: PID Terms - Roll_P: -0.16, Roll_I: -0.00, Roll_D: -0.26, Pitch_P: -0.24, Pitch_I: -0.00, Pitch_D: -0.38[0m
+[0;32mI (13001) ESP32_DRONE: PID Outputs - Roll_PID: -0.42, Pitch_PID: -0.63[0m
+[0;32mI (13011) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.20, M2: 1000.00, M3: 1000.00, M4: 1001.05[0m
+[0;32mI (13021) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (13021) ESP32_DRONE: Motor PWM Output - M1: 1000.20, M2: 1000.00, M3: 1000.00, M4: 1001.05[0m
+[0;32mI (13031) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (14041) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (14041) ESP32_DRONE: Control Data - Throttle: 1146, Roll: 1500, Pitch: 1500, Yaw: 1854, AUX1: 1[0m
+[0;32mI (14041) ESP32_DRONE: IMU Data - GyrX: -0.07, GyrY: -0.32, AccX: -0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (14051) ESP32_DRONE: Angles - TotalX: -0.08, TotalY: -0.33, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (14061) ESP32_DRONE: Errors - Roll: -0.33, Pitch: -0.08[0m
+[0;32mI (14071) ESP32_DRONE: PID Terms - Roll_P: -0.23, Roll_I: -0.00, Roll_D: -0.37, Pitch_P: -0.06, Pitch_I: -0.00, Pitch_D: -0.09[0m
+[0;32mI (14081) ESP32_DRONE: PID Outputs - Roll_PID: -0.61, Pitch_PID: -0.15[0m
+[0;32mI (14091) ESP32_DRONE: Motor Inputs (Raw) - M1: 1145.55, M2: 1145.24, M3: 1146.45, M4: 1146.76[0m
+[0;32mI (14101) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (14101) ESP32_DRONE: Motor PWM Output - M1: 1145.55, M2: 1145.24, M3: 1146.45, M4: 1146.76[0m
+[0;32mI (14111) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (15121) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (15121) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (15121) ESP32_DRONE: IMU Data - GyrX: -0.07, GyrY: -0.13, AccX: 0.01, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (15131) ESP32_DRONE: Angles - TotalX: -0.08, TotalY: -0.15, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (15141) ESP32_DRONE: Errors - Roll: -0.15, Pitch: -0.08[0m
+[0;32mI (15151) ESP32_DRONE: PID Terms - Roll_P: -0.10, Roll_I: -0.00, Roll_D: -0.17, Pitch_P: -0.06, Pitch_I: -0.00, Pitch_D: -0.09[0m
+[0;32mI (15161) ESP32_DRONE: PID Outputs - Roll_PID: -0.27, Pitch_PID: -0.15[0m
+[0;32mI (15171) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.88, M2: 1499.58, M3: 1500.12, M4: 1500.42[0m
+[0;32mI (15181) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (15181) ESP32_DRONE: Motor PWM Output - M1: 1499.88, M2: 1499.58, M3: 1500.12, M4: 1500.42[0m
+[0;32mI (15191) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (16201) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (16201) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (16201) ESP32_DRONE: IMU Data - GyrX: 0.11, GyrY: -0.01, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (16211) ESP32_DRONE: Angles - TotalX: 0.12, TotalY: -0.01, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (16221) ESP32_DRONE: Errors - Roll: -0.01, Pitch: 0.12[0m
+[0;32mI (16231) ESP32_DRONE: PID Terms - Roll_P: -0.01, Roll_I: -0.00, Roll_D: -0.01, Pitch_P: 0.08, Pitch_I: 0.00, Pitch_D: 0.13[0m
+[0;32mI (16241) ESP32_DRONE: PID Outputs - Roll_PID: -0.02, Pitch_PID: 0.21[0m
+[0;32mI (16251) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.77, M2: 1500.20, M3: 1500.23, M4: 1499.80[0m
+[0;32mI (16261) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (16261) ESP32_DRONE: Motor PWM Output - M1: 1499.77, M2: 1500.20, M3: 1500.23, M4: 1499.80[0m
+[0;32mI (16271) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (17281) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (17281) ESP32_DRONE: Control Data - Throttle: 1854, Roll: 1500, Pitch: 1500, Yaw: 1854, AUX1: 1[0m
+[0;32mI (17281) ESP32_DRONE: IMU Data - GyrX: 0.08, GyrY: -0.01, AccX: -0.00, AccY: -0.00, AccZ: 0.95[0m
+[0;32mI (17291) ESP32_DRONE: Angles - TotalX: 0.09, TotalY: -0.01, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (17301) ESP32_DRONE: Errors - Roll: -0.01, Pitch: 0.09[0m
+[0;32mI (17311) ESP32_DRONE: PID Terms - Roll_P: -0.01, Roll_I: -0.00, Roll_D: -0.01, Pitch_P: 0.06, Pitch_I: 0.00, Pitch_D: 0.10[0m
+[0;32mI (17321) ESP32_DRONE: PID Outputs - Roll_PID: -0.02, Pitch_PID: 0.16[0m
+[0;32mI (17331) ESP32_DRONE: Motor Inputs (Raw) - M1: 1853.81, M2: 1854.14, M3: 1854.19, M4: 1853.86[0m
+[0;32mI (17341) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (17341) ESP32_DRONE: Motor PWM Output - M1: 1853.81, M2: 1854.14, M3: 1854.19, M4: 1853.86[0m
+[0;32mI (17351) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (18361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (18361) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (18361) ESP32_DRONE: IMU Data - GyrX: -0.07, GyrY: -0.07, AccX: 0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (18371) ESP32_DRONE: Angles - TotalX: -0.08, TotalY: -0.08, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (18381) ESP32_DRONE: Errors - Roll: -0.08, Pitch: -0.08[0m
+[0;32mI (18391) ESP32_DRONE: PID Terms - Roll_P: -0.06, Roll_I: -0.00, Roll_D: -0.09, Pitch_P: -0.06, Pitch_I: -0.00, Pitch_D: -0.09[0m
+[0;32mI (18401) ESP32_DRONE: PID Outputs - Roll_PID: -0.14, Pitch_PID: -0.14[0m
+[0;32mI (18411) ESP32_DRONE: Motor Inputs (Raw) - M1: 2000.00, M2: 1999.71, M3: 2000.00, M4: 2000.00[0m
+[0;32mI (18421) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (18421) ESP32_DRONE: Motor PWM Output - M1: 2000.00, M2: 1999.71, M3: 2000.00, M4: 2000.00[0m
+[0;32mI (18431) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (19441) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (19441) ESP32_DRONE: Control Data - Throttle: 1854, Roll: 1500, Pitch: 1500, Yaw: 1146, AUX1: 1[0m
+[0;32mI (19441) ESP32_DRONE: IMU Data - GyrX: -0.07, GyrY: -0.04, AccX: -0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (19451) ESP32_DRONE: Angles - TotalX: -0.08, TotalY: -0.04, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (19461) ESP32_DRONE: Errors - Roll: -0.04, Pitch: -0.08[0m
+[0;32mI (19471) ESP32_DRONE: PID Terms - Roll_P: -0.03, Roll_I: -0.00, Roll_D: -0.05, Pitch_P: -0.06, Pitch_I: -0.00, Pitch_D: -0.09[0m
+[0;32mI (19481) ESP32_DRONE: PID Outputs - Roll_PID: -0.08, Pitch_PID: -0.15[0m
+[0;32mI (19491) ESP32_DRONE: Motor Inputs (Raw) - M1: 1854.07, M2: 1853.77, M3: 1853.93, M4: 1854.23[0m
+[0;32mI (19501) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (19501) ESP32_DRONE: Motor PWM Output - M1: 1854.07, M2: 1853.77, M3: 1853.93, M4: 1854.23[0m
+[0;32mI (19511) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (20521) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (20521) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1000, AUX1: 1[0m
+[0;32mI (20521) ESP32_DRONE: IMU Data - GyrX: 0.08, GyrY: -0.10, AccX: 0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (20531) ESP32_DRONE: Angles - TotalX: 0.08, TotalY: -0.11, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (20541) ESP32_DRONE: Errors - Roll: -0.11, Pitch: 0.08[0m
+[0;32mI (20551) ESP32_DRONE: PID Terms - Roll_P: -0.08, Roll_I: -0.00, Roll_D: -0.12, Pitch_P: 0.06, Pitch_I: 0.00, Pitch_D: 0.09[0m
+[0;32mI (20561) ESP32_DRONE: PID Outputs - Roll_PID: -0.20, Pitch_PID: 0.14[0m
+[0;32mI (20571) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.66, M2: 1499.94, M3: 1500.34, M4: 1500.06[0m
+[0;32mI (20581) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (20581) ESP32_DRONE: Motor PWM Output - M1: 1499.66, M2: 1499.94, M3: 1500.34, M4: 1500.06[0m
+[0;32mI (20591) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (21601) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (21601) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1000, AUX1: 1[0m
+[0;32mI (21601) ESP32_DRONE: IMU Data - GyrX: -0.14, GyrY: -0.04, AccX: -0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (21611) ESP32_DRONE: Angles - TotalX: -0.14, TotalY: -0.04, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (21621) ESP32_DRONE: Errors - Roll: -0.04, Pitch: -0.14[0m
+[0;32mI (21631) ESP32_DRONE: PID Terms - Roll_P: -0.03, Roll_I: -0.00, Roll_D: -0.04, Pitch_P: -0.10, Pitch_I: -0.00, Pitch_D: -0.16[0m
+[0;32mI (21641) ESP32_DRONE: PID Outputs - Roll_PID: -0.07, Pitch_PID: -0.27[0m
+[0;32mI (21651) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.19, M2: 1499.66, M3: 1499.81, M4: 1500.34[0m
+[0;32mI (21661) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (21661) ESP32_DRONE: Motor PWM Output - M1: 1500.19, M2: 1499.66, M3: 1499.81, M4: 1500.34[0m
+[0;32mI (21671) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (22681) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (22681) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (22681) ESP32_DRONE: IMU Data - GyrX: -0.11, GyrY: -0.07, AccX: -0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (22691) ESP32_DRONE: Angles - TotalX: -0.11, TotalY: -0.08, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (22701) ESP32_DRONE: Errors - Roll: -0.08, Pitch: -0.11[0m
+[0;32mI (22711) ESP32_DRONE: PID Terms - Roll_P: -0.05, Roll_I: -0.00, Roll_D: -0.08, Pitch_P: -0.08, Pitch_I: -0.00, Pitch_D: -0.13[0m
+[0;32mI (22721) ESP32_DRONE: PID Outputs - Roll_PID: -0.14, Pitch_PID: -0.21[0m
+[0;32mI (22731) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.07, M2: 1000.00, M3: 1000.00, M4: 1000.35[0m
+[0;32mI (22741) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (22741) ESP32_DRONE: Motor PWM Output - M1: 1000.07, M2: 1000.00, M3: 1000.00, M4: 1000.35[0m
+[0;32mI (22751) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (23761) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (23761) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (23761) ESP32_DRONE: IMU Data - GyrX: 0.17, GyrY: 0.26, AccX: 0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (23771) ESP32_DRONE: Angles - TotalX: 0.18, TotalY: 0.27, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (23781) ESP32_DRONE: Errors - Roll: 0.27, Pitch: 0.18[0m
+[0;32mI (23791) ESP32_DRONE: PID Terms - Roll_P: 0.19, Roll_I: 0.00, Roll_D: 0.30, Pitch_P: 0.13, Pitch_I: 0.00, Pitch_D: 0.21[0m
+[0;32mI (23801) ESP32_DRONE: PID Outputs - Roll_PID: 0.50, Pitch_PID: 0.34[0m
+[0;32mI (23811) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.16, M2: 1000.84, M3: 1000.00, M4: 1000.00[0m
+[0;32mI (23821) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (23821) ESP32_DRONE: Motor PWM Output - M1: 1000.16, M2: 1000.84, M3: 1000.00, M4: 1000.00[0m
+[0;32mI (23831) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (24841) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (24841) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (24841) ESP32_DRONE: IMU Data - GyrX: -0.23, GyrY: -0.32, AccX: 0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (24851) ESP32_DRONE: Angles - TotalX: -0.24, TotalY: -0.34, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (24861) ESP32_DRONE: Errors - Roll: -0.34, Pitch: -0.24[0m
+[0;32mI (24871) ESP32_DRONE: PID Terms - Roll_P: -0.24, Roll_I: -0.00, Roll_D: -0.37, Pitch_P: -0.17, Pitch_I: -0.00, Pitch_D: -0.27[0m
+[0;32mI (24881) ESP32_DRONE: PID Outputs - Roll_PID: -0.61, Pitch_PID: -0.44[0m
+[0;32mI (24891) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1000.00, M3: 1000.17, M4: 1001.05[0m
+[0;32mI (24901) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (24901) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1000.00, M3: 1000.17, M4: 1001.05[0m
+[0;32mI (24911) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (25921) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (25921) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (25921) ESP32_DRONE: IMU Data - GyrX: 0.35, GyrY: 0.29, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (25931) ESP32_DRONE: Angles - TotalX: 0.37, TotalY: 0.31, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (25941) ESP32_DRONE: Errors - Roll: 0.31, Pitch: 0.37[0m
+[0;32mI (25951) ESP32_DRONE: PID Terms - Roll_P: 0.22, Roll_I: 0.00, Roll_D: 0.34, Pitch_P: 0.27, Pitch_I: 0.00, Pitch_D: 0.42[0m
+[0;32mI (25961) ESP32_DRONE: PID Outputs - Roll_PID: 0.56, Pitch_PID: 0.69[0m
+[0;32mI (25971) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.88, M2: 1501.25, M3: 1500.12, M4: 1498.75[0m
+[0;32mI (25981) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (25981) ESP32_DRONE: Motor PWM Output - M1: 1499.88, M2: 1501.25, M3: 1500.12, M4: 1498.75[0m
+[0;32mI (25991) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (27001) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (27001) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (27001) ESP32_DRONE: IMU Data - GyrX: 0.11, GyrY: 0.14, AccX: -0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (27011) ESP32_DRONE: Angles - TotalX: 0.12, TotalY: 0.15, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (27021) ESP32_DRONE: Errors - Roll: 0.15, Pitch: 0.12[0m
+[0;32mI (27031) ESP32_DRONE: PID Terms - Roll_P: 0.10, Roll_I: 0.00, Roll_D: 0.17, Pitch_P: 0.08, Pitch_I: 0.00, Pitch_D: 0.13[0m
+[0;32mI (27041) ESP32_DRONE: PID Outputs - Roll_PID: 0.27, Pitch_PID: 0.22[0m
+[0;32mI (27051) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.05, M2: 1500.49, M3: 1499.95, M4: 1499.51[0m
+[0;32mI (27061) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (27061) ESP32_DRONE: Motor PWM Output - M1: 1500.05, M2: 1500.49, M3: 1499.95, M4: 1499.51[0m
+[0;32mI (27071) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (28081) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (28081) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (28081) ESP32_DRONE: IMU Data - GyrX: 0.08, GyrY: 0.38, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (28091) ESP32_DRONE: Angles - TotalX: 0.07, TotalY: 0.41, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (28101) ESP32_DRONE: Errors - Roll: 0.41, Pitch: 0.07[0m
+[0;32mI (28111) ESP32_DRONE: PID Terms - Roll_P: 0.29, Roll_I: 0.00, Roll_D: 0.45, Pitch_P: 0.05, Pitch_I: 0.00, Pitch_D: 0.08[0m
+[0;32mI (28121) ESP32_DRONE: PID Outputs - Roll_PID: 0.74, Pitch_PID: 0.14[0m
+[0;32mI (28131) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.60, M2: 1500.88, M3: 1499.40, M4: 1499.12[0m
+[0;32mI (28141) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (28141) ESP32_DRONE: Motor PWM Output - M1: 1500.60, M2: 1500.88, M3: 1499.40, M4: 1499.12[0m
+[0;32mI (28151) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (29161) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (29161) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (29161) ESP32_DRONE: IMU Data - GyrX: 0.17, GyrY: 0.17, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (29171) ESP32_DRONE: Angles - TotalX: 0.18, TotalY: 0.18, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (29181) ESP32_DRONE: Errors - Roll: 0.18, Pitch: 0.18[0m
+[0;32mI (29191) ESP32_DRONE: PID Terms - Roll_P: 0.13, Roll_I: 0.00, Roll_D: 0.20, Pitch_P: 0.13, Pitch_I: 0.00, Pitch_D: 0.20[0m
+[0;32mI (29201) ESP32_DRONE: PID Outputs - Roll_PID: 0.33, Pitch_PID: 0.33[0m
+[0;32mI (29211) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.01, M2: 1500.66, M3: 1499.99, M4: 1499.34[0m
+[0;32mI (29221) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (29221) ESP32_DRONE: Motor PWM Output - M1: 1500.01, M2: 1500.66, M3: 1499.99, M4: 1499.34[0m
+[0;32mI (29231) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (30241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (30241) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (30241) ESP32_DRONE: IMU Data - GyrX: -0.35, GyrY: 0.02, AccX: -0.00, AccY: -0.00, AccZ: 0.95[0m
+[0;32mI (30251) ESP32_DRONE: Angles - TotalX: -0.37, TotalY: 0.02, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (30261) ESP32_DRONE: Errors - Roll: 0.02, Pitch: -0.37[0m
+[0;32mI (30271) ESP32_DRONE: PID Terms - Roll_P: 0.01, Roll_I: 0.00, Roll_D: 0.02, Pitch_P: -0.26, Pitch_I: -0.00, Pitch_D: -0.41[0m
+[0;32mI (30281) ESP32_DRONE: PID Outputs - Roll_PID: 0.04, Pitch_PID: -0.68[0m
+[0;32mI (30291) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.72, M2: 1499.36, M3: 1499.28, M4: 1500.64[0m
+[0;32mI (30301) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (30301) ESP32_DRONE: Motor PWM Output - M1: 1500.72, M2: 1499.36, M3: 1499.28, M4: 1500.64[0m
+[0;32mI (30311) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (31321) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (31321) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (31321) ESP32_DRONE: IMU Data - GyrX: 0.17, GyrY: 0.14, AccX: 0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (31331) ESP32_DRONE: Angles - TotalX: 0.18, TotalY: 0.14, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (31341) ESP32_DRONE: Errors - Roll: 0.14, Pitch: 0.18[0m
+[0;32mI (31351) ESP32_DRONE: PID Terms - Roll_P: 0.10, Roll_I: 0.00, Roll_D: 0.16, Pitch_P: 0.13, Pitch_I: 0.00, Pitch_D: 0.21[0m
+[0;32mI (31361) ESP32_DRONE: PID Outputs - Roll_PID: 0.26, Pitch_PID: 0.34[0m
+[0;32mI (31371) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.92, M2: 1500.60, M3: 1500.08, M4: 1499.40[0m
+[0;32mI (31381) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (31381) ESP32_DRONE: Motor PWM Output - M1: 1499.92, M2: 1500.60, M3: 1500.08, M4: 1499.40[0m
+[0;32mI (31391) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (32401) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (32401) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (32401) ESP32_DRONE: IMU Data - GyrX: 0.08, GyrY: 0.48, AccX: -0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (32411) ESP32_DRONE: Angles - TotalX: 0.09, TotalY: 0.51, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (32421) ESP32_DRONE: Errors - Roll: 0.51, Pitch: 0.09[0m
+[0;32mI (32431) ESP32_DRONE: PID Terms - Roll_P: 0.36, Roll_I: 0.00, Roll_D: 0.56, Pitch_P: 0.06, Pitch_I: 0.00, Pitch_D: 0.10[0m
+[0;32mI (32441) ESP32_DRONE: PID Outputs - Roll_PID: 0.92, Pitch_PID: 0.16[0m
+[0;32mI (32451) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.77, M2: 1501.08, M3: 1499.23, M4: 1498.92[0m
+[0;32mI (32461) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (32461) ESP32_DRONE: Motor PWM Output - M1: 1500.77, M2: 1501.08, M3: 1499.23, M4: 1498.92[0m
+[0;32mI (32471) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (33481) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (33481) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (33481) ESP32_DRONE: IMU Data - GyrX: -0.17, GyrY: -0.01, AccX: 0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (33491) ESP32_DRONE: Angles - TotalX: -0.18, TotalY: -0.02, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (33501) ESP32_DRONE: Errors - Roll: -0.02, Pitch: -0.18[0m
+[0;32mI (33511) ESP32_DRONE: PID Terms - Roll_P: -0.01, Roll_I: -0.00, Roll_D: -0.02, Pitch_P: -0.13, Pitch_I: -0.00, Pitch_D: -0.20[0m
+[0;32mI (33521) ESP32_DRONE: PID Outputs - Roll_PID: -0.03, Pitch_PID: -0.34[0m
+[0;32mI (33531) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.31, M2: 1499.64, M3: 1499.69, M4: 1500.36[0m
+[0;32mI (33541) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (33541) ESP32_DRONE: Motor PWM Output - M1: 1500.31, M2: 1499.64, M3: 1499.69, M4: 1500.36[0m
+[0;32mI (33551) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (34561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (34561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (35561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (35561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (36561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (36561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (37561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (37561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (38561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (38561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (39561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (39561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (40561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (40561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (41561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (41561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (42561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (42561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (43561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (43561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (44561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (44561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (45561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (45561) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (46561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (46561) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (46561) ESP32_DRONE: IMU Data - GyrX: 0.17, GyrY: 0.23, AccX: -0.00, AccY: -0.01, AccZ: 0.97[0m
+[0;32mI (46571) ESP32_DRONE: Angles - TotalX: 2.17, TotalY: 2.97, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (46581) ESP32_DRONE: Errors - Roll: 2.97, Pitch: 2.17[0m
+[0;32mI (46591) ESP32_DRONE: PID Terms - Roll_P: 2.08, Roll_I: 0.02, Roll_D: 0.27, Pitch_P: 1.56, Pitch_I: 0.01, Pitch_D: 0.20[0m
+[0;32mI (46601) ESP32_DRONE: PID Outputs - Roll_PID: 2.37, Pitch_PID: 1.78[0m
+[0;32mI (46611) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.59, M2: 1504.15, M3: 1499.41, M4: 1495.85[0m
+[0;32mI (46621) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (46621) ESP32_DRONE: Motor PWM Output - M1: 1500.59, M2: 1504.15, M3: 1499.41, M4: 1495.85[0m
+[0;32mI (46631) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (47641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (47641) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (47641) ESP32_DRONE: IMU Data - GyrX: -0.41, GyrY: -0.23, AccX: 0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (47651) ESP32_DRONE: Angles - TotalX: -0.43, TotalY: -0.24, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (47661) ESP32_DRONE: Errors - Roll: -0.24, Pitch: -0.43[0m
+[0;32mI (47671) ESP32_DRONE: PID Terms - Roll_P: -0.17, Roll_I: -0.00, Roll_D: -0.27, Pitch_P: -0.31, Pitch_I: -0.00, Pitch_D: -0.49[0m
+[0;32mI (47681) ESP32_DRONE: PID Outputs - Roll_PID: -0.44, Pitch_PID: -0.81[0m
+[0;32mI (47691) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.37, M2: 1498.75, M3: 1499.63, M4: 1501.25[0m
+[0;32mI (47701) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (47701) ESP32_DRONE: Motor PWM Output - M1: 1500.37, M2: 1498.75, M3: 1499.63, M4: 1501.25[0m
+[0;32mI (47711) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (48721) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (48721) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (49721) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (49721) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (50721) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (50721) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (51721) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (51721) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (51721) ESP32_DRONE: IMU Data - GyrX: 0.11, GyrY: 0.08, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (51731) ESP32_DRONE: Angles - TotalX: 0.43, TotalY: 0.32, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (51741) ESP32_DRONE: Errors - Roll: 0.32, Pitch: 0.43[0m
+[0;32mI (51751) ESP32_DRONE: PID Terms - Roll_P: 0.23, Roll_I: 0.00, Roll_D: 0.09, Pitch_P: 0.31, Pitch_I: 0.00, Pitch_D: 0.13[0m
+[0;32mI (51761) ESP32_DRONE: PID Outputs - Roll_PID: 0.32, Pitch_PID: 0.44[0m
+[0;32mI (51771) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.88, M2: 1500.76, M3: 1500.12, M4: 1499.24[0m
+[0;32mI (51781) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (51781) ESP32_DRONE: Motor PWM Output - M1: 1499.88, M2: 1500.76, M3: 1500.12, M4: 1499.24[0m
+[0;32mI (51791) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (52801) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (52801) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (53801) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (53801) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (54801) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (54801) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (55801) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (55801) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (55801) ESP32_DRONE: IMU Data - GyrX: -0.26, GyrY: -0.13, AccX: 0.01, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (55811) ESP32_DRONE: Angles - TotalX: -1.03, TotalY: -0.54, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (55821) ESP32_DRONE: Errors - Roll: -0.54, Pitch: -1.03[0m
+[0;32mI (55831) ESP32_DRONE: PID Terms - Roll_P: -0.38, Roll_I: -0.00, Roll_D: -0.16, Pitch_P: -0.74, Pitch_I: -0.01, Pitch_D: -0.31[0m
+[0;32mI (55841) ESP32_DRONE: PID Outputs - Roll_PID: -0.54, Pitch_PID: -1.05[0m
+[0;32mI (55851) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.51, M2: 1498.40, M3: 1499.49, M4: 1501.60[0m
+[0;32mI (55861) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (55861) ESP32_DRONE: Motor PWM Output - M1: 1500.51, M2: 1498.40, M3: 1499.49, M4: 1501.60[0m
+[0;32mI (55871) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (56881) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (56881) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (56881) ESP32_DRONE: IMU Data - GyrX: 0.29, GyrY: 0.11, AccX: 0.00, AccY: -0.00, AccZ: 0.95[0m
+[0;32mI (56891) ESP32_DRONE: Angles - TotalX: 0.31, TotalY: 0.11, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (56901) ESP32_DRONE: Errors - Roll: 0.11, Pitch: 0.31[0m
+[0;32mI (56911) ESP32_DRONE: PID Terms - Roll_P: 0.08, Roll_I: 0.00, Roll_D: 0.13, Pitch_P: 0.22, Pitch_I: 0.00, Pitch_D: 0.35[0m
+[0;32mI (56921) ESP32_DRONE: PID Outputs - Roll_PID: 0.21, Pitch_PID: 0.58[0m
+[0;32mI (56931) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1000.78, M3: 1000.37, M4: 1000.00[0m
+[0;32mI (56941) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (56941) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1000.78, M3: 1000.37, M4: 1000.00[0m
+[0;32mI (56951) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (57961) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (57961) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (57961) ESP32_DRONE: IMU Data - GyrX: -0.17, GyrY: 0.08, AccX: 0.01, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (57971) ESP32_DRONE: Angles - TotalX: -0.18, TotalY: 0.07, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (57981) ESP32_DRONE: Errors - Roll: 0.07, Pitch: -0.18[0m
+[0;32mI (57991) ESP32_DRONE: PID Terms - Roll_P: 0.05, Roll_I: 0.00, Roll_D: 0.08, Pitch_P: -0.13, Pitch_I: -0.00, Pitch_D: -0.20[0m
+[0;32mI (58001) ESP32_DRONE: PID Outputs - Roll_PID: 0.13, Pitch_PID: -0.33[0m
+[0;32mI (58011) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.46, M2: 1499.80, M3: 1499.54, M4: 1500.20[0m
+[0;32mI (58021) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (58021) ESP32_DRONE: Motor PWM Output - M1: 1500.46, M2: 1499.80, M3: 1499.54, M4: 1500.20[0m
+[0;32mI (58031) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (59041) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (59041) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (59041) ESP32_DRONE: IMU Data - GyrX: 0.17, GyrY: 0.08, AccX: 0.01, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (59051) ESP32_DRONE: Angles - TotalX: 0.18, TotalY: 0.08, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (59061) ESP32_DRONE: Errors - Roll: 0.08, Pitch: 0.18[0m
+[0;32mI (59071) ESP32_DRONE: PID Terms - Roll_P: 0.05, Roll_I: 0.00, Roll_D: 0.09, Pitch_P: 0.13, Pitch_I: 0.00, Pitch_D: 0.20[0m
+[0;32mI (59081) ESP32_DRONE: PID Outputs - Roll_PID: 0.14, Pitch_PID: 0.34[0m
+[0;32mI (59091) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.80, M2: 1500.48, M3: 1500.20, M4: 1499.52[0m
+[0;32mI (59101) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (59101) ESP32_DRONE: Motor PWM Output - M1: 1499.80, M2: 1500.48, M3: 1500.20, M4: 1499.52[0m
+[0;32mI (59111) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (60121) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (60121) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (60121) ESP32_DRONE: IMU Data - GyrX: 0.08, GyrY: -0.01, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (60131) ESP32_DRONE: Angles - TotalX: 0.08, TotalY: -0.01, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (60141) ESP32_DRONE: Errors - Roll: -0.01, Pitch: 0.08[0m
+[0;32mI (60151) ESP32_DRONE: PID Terms - Roll_P: -0.01, Roll_I: -0.00, Roll_D: -0.01, Pitch_P: 0.06, Pitch_I: 0.00, Pitch_D: 0.10[0m
+[0;32mI (60161) ESP32_DRONE: PID Outputs - Roll_PID: -0.01, Pitch_PID: 0.16[0m
+[0;32mI (60171) ESP32_DRONE: Motor Inputs (Raw) - M1: 1999.83, M2: 2000.00, M3: 2000.00, M4: 1999.86[0m
+[0;32mI (60181) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (60181) ESP32_DRONE: Motor PWM Output - M1: 1999.83, M2: 2000.00, M3: 2000.00, M4: 1999.86[0m
+[0;32mI (60191) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (61201) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (61201) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (61201) ESP32_DRONE: IMU Data - GyrX: 0.17, GyrY: 0.29, AccX: 0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (61211) ESP32_DRONE: Angles - TotalX: 0.18, TotalY: 0.31, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (61221) ESP32_DRONE: Errors - Roll: 0.31, Pitch: 0.18[0m
+[0;32mI (61231) ESP32_DRONE: PID Terms - Roll_P: 0.22, Roll_I: 0.00, Roll_D: 0.34, Pitch_P: 0.13, Pitch_I: 0.00, Pitch_D: 0.21[0m
+[0;32mI (61241) ESP32_DRONE: PID Outputs - Roll_PID: 0.56, Pitch_PID: 0.34[0m
+[0;32mI (61251) ESP32_DRONE: Motor Inputs (Raw) - M1: 2000.00, M2: 2000.00, M3: 1999.78, M4: 1999.10[0m
+[0;32mI (61261) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (61261) ESP32_DRONE: Motor PWM Output - M1: 2000.00, M2: 2000.00, M3: 1999.78, M4: 1999.10[0m
+[0;32mI (61271) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (62281) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (62281) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (62281) ESP32_DRONE: IMU Data - GyrX: -0.14, GyrY: -0.13, AccX: -0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (62291) ESP32_DRONE: Angles - TotalX: -0.15, TotalY: -0.14, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (62301) ESP32_DRONE: Errors - Roll: -0.14, Pitch: -0.15[0m
+[0;32mI (62311) ESP32_DRONE: PID Terms - Roll_P: -0.10, Roll_I: -0.00, Roll_D: -0.16, Pitch_P: -0.11, Pitch_I: -0.00, Pitch_D: -0.17[0m
+[0;32mI (62321) ESP32_DRONE: PID Outputs - Roll_PID: -0.25, Pitch_PID: -0.27[0m
+[0;32mI (62331) ESP32_DRONE: Motor Inputs (Raw) - M1: 2000.00, M2: 1999.47, M3: 1999.98, M4: 2000.00[0m
+[0;32mI (62341) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (62341) ESP32_DRONE: Motor PWM Output - M1: 2000.00, M2: 1999.47, M3: 1999.98, M4: 2000.00[0m
+[0;32mI (62351) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (63361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (63361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (64361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (64361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (65361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (65361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (66361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (66361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (67361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (67361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (68361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (68361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (69361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (69361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (70361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (70361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (71361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (71361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (72361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (72361) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (73361) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (73361) ESP32_DRONE: Control Data - Throttle: 1018, Roll: 1500, Pitch: 1500, Yaw: 1633, AUX1: 1[0m
+[0;32mI (73371) ESP32_DRONE: IMU Data - GyrX: 0.08, GyrY: -0.07, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (73381) ESP32_DRONE: Angles - TotalX: 0.84, TotalY: -0.79, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (73391) ESP32_DRONE: Errors - Roll: -0.79, Pitch: 0.84[0m
+[0;32mI (73391) ESP32_DRONE: PID Terms - Roll_P: -0.55, Roll_I: -0.00, Roll_D: -0.09, Pitch_P: 0.61, Pitch_I: 0.01, Pitch_D: 0.09[0m
+[0;32mI (73401) ESP32_DRONE: PID Outputs - Roll_PID: -0.64, Pitch_PID: 0.71[0m
+[0;32mI (73411) ESP32_DRONE: Motor Inputs (Raw) - M1: 1016.65, M2: 1018.06, M3: 1019.35, M4: 1017.94[0m
+[0;32mI (73421) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (73431) ESP32_DRONE: Motor PWM Output - M1: 1016.65, M2: 1018.06, M3: 1019.35, M4: 1017.94[0m
+[0;32mI (73441) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (74441) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (74441) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1998, AUX1: 1[0m
+[0;32mI (74441) ESP32_DRONE: IMU Data - GyrX: -0.20, GyrY: -0.32, AccX: 0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (74451) ESP32_DRONE: Angles - TotalX: -0.22, TotalY: -0.34, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (74461) ESP32_DRONE: Errors - Roll: -0.34, Pitch: -0.22[0m
+[0;32mI (74471) ESP32_DRONE: PID Terms - Roll_P: -0.24, Roll_I: -0.00, Roll_D: -0.38, Pitch_P: -0.15, Pitch_I: -0.00, Pitch_D: -0.24[0m
+[0;32mI (74481) ESP32_DRONE: PID Outputs - Roll_PID: -0.61, Pitch_PID: -0.40[0m
+[0;32mI (74491) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.79, M2: 1498.99, M3: 1500.21, M4: 1501.01[0m
+[0;32mI (74501) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (74501) ESP32_DRONE: Motor PWM Output - M1: 1499.79, M2: 1498.99, M3: 1500.21, M4: 1501.01[0m
+[0;32mI (74511) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (75521) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (75521) ESP32_DRONE: Control Data - Throttle: 1708, Roll: 1500, Pitch: 1500, Yaw: 1955, AUX1: 1[0m
+[0;32mI (75521) ESP32_DRONE: IMU Data - GyrX: 0.29, GyrY: 0.17, AccX: 0.00, AccY: -0.02, AccZ: 0.95[0m
+[0;32mI (75531) ESP32_DRONE: Angles - TotalX: 0.30, TotalY: 0.18, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (75541) ESP32_DRONE: Errors - Roll: 0.18, Pitch: 0.30[0m
+[0;32mI (75551) ESP32_DRONE: PID Terms - Roll_P: 0.13, Roll_I: 0.00, Roll_D: 0.20, Pitch_P: 0.21, Pitch_I: 0.00, Pitch_D: 0.34[0m
+[0;32mI (75561) ESP32_DRONE: PID Outputs - Roll_PID: 0.33, Pitch_PID: 0.55[0m
+[0;32mI (75571) ESP32_DRONE: Motor Inputs (Raw) - M1: 1707.78, M2: 1708.88, M3: 1708.22, M4: 1707.12[0m
+[0;32mI (75581) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (75581) ESP32_DRONE: Motor PWM Output - M1: 1707.78, M2: 1708.88, M3: 1708.22, M4: 1707.12[0m
+[0;32mI (75591) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (76601) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (76601) ESP32_DRONE: Control Data - Throttle: 1793, Roll: 1500, Pitch: 1500, Yaw: 1905, AUX1: 1[0m
+[0;32mI (76601) ESP32_DRONE: IMU Data - GyrX: -0.11, GyrY: -0.07, AccX: 0.00, AccY: -0.00, AccZ: 0.95[0m
+[0;32mI (76611) ESP32_DRONE: Angles - TotalX: -0.11, TotalY: -0.08, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (76621) ESP32_DRONE: Errors - Roll: -0.08, Pitch: -0.11[0m
+[0;32mI (76631) ESP32_DRONE: PID Terms - Roll_P: -0.05, Roll_I: -0.00, Roll_D: -0.09, Pitch_P: -0.08, Pitch_I: -0.00, Pitch_D: -0.12[0m
+[0;32mI (76641) ESP32_DRONE: PID Outputs - Roll_PID: -0.14, Pitch_PID: -0.20[0m
+[0;32mI (76651) ESP32_DRONE: Motor Inputs (Raw) - M1: 1793.06, M2: 1792.66, M3: 1792.94, M4: 1793.34[0m
+[0;32mI (76661) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (76661) ESP32_DRONE: Motor PWM Output - M1: 1793.06, M2: 1792.66, M3: 1792.94, M4: 1793.34[0m
+[0;32mI (76671) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (77681) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (77681) ESP32_DRONE: Control Data - Throttle: 1946, Roll: 1500, Pitch: 1500, Yaw: 1725, AUX1: 1[0m
+[0;32mI (77681) ESP32_DRONE: IMU Data - GyrX: -0.01, GyrY: -0.19, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (77691) ESP32_DRONE: Angles - TotalX: -0.02, TotalY: -0.20, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (77701) ESP32_DRONE: Errors - Roll: -0.20, Pitch: -0.02[0m
+[0;32mI (77711) ESP32_DRONE: PID Terms - Roll_P: -0.14, Roll_I: -0.00, Roll_D: -0.22, Pitch_P: -0.01, Pitch_I: -0.00, Pitch_D: -0.02[0m
+[0;32mI (77721) ESP32_DRONE: PID Outputs - Roll_PID: -0.36, Pitch_PID: -0.03[0m
+[0;32mI (77731) ESP32_DRONE: Motor Inputs (Raw) - M1: 1945.67, M2: 1945.60, M3: 1946.33, M4: 1946.40[0m
+[0;32mI (77741) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (77741) ESP32_DRONE: Motor PWM Output - M1: 1945.67, M2: 1945.60, M3: 1946.33, M4: 1946.40[0m
+[0;32mI (77751) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (78761) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (78761) ESP32_DRONE: Control Data - Throttle: 1999, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (78761) ESP32_DRONE: IMU Data - GyrX: 0.14, GyrY: -0.04, AccX: 0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (78771) ESP32_DRONE: Angles - TotalX: 0.14, TotalY: -0.05, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (78781) ESP32_DRONE: Errors - Roll: -0.05, Pitch: 0.14[0m
+[0;32mI (78791) ESP32_DRONE: PID Terms - Roll_P: -0.03, Roll_I: -0.00, Roll_D: -0.05, Pitch_P: 0.10, Pitch_I: 0.00, Pitch_D: 0.16[0m
+[0;32mI (78801) ESP32_DRONE: PID Outputs - Roll_PID: -0.08, Pitch_PID: 0.27[0m
+[0;32mI (78811) ESP32_DRONE: Motor Inputs (Raw) - M1: 1998.65, M2: 1999.18, M3: 1999.35, M4: 1998.82[0m
+[0;32mI (78821) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (78821) ESP32_DRONE: Motor PWM Output - M1: 1998.65, M2: 1999.18, M3: 1999.35, M4: 1998.82[0m
+[0;32mI (78831) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (79841) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (79841) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (79841) ESP32_DRONE: IMU Data - GyrX: -0.01, GyrY: 0.02, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (79851) ESP32_DRONE: Angles - TotalX: -0.02, TotalY: 0.02, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (79861) ESP32_DRONE: Errors - Roll: 0.02, Pitch: -0.02[0m
+[0;32mI (79871) ESP32_DRONE: PID Terms - Roll_P: 0.01, Roll_I: 0.00, Roll_D: 0.02, Pitch_P: -0.01, Pitch_I: -0.00, Pitch_D: -0.02[0m
+[0;32mI (79881) ESP32_DRONE: PID Outputs - Roll_PID: 0.04, Pitch_PID: -0.04[0m
+[0;32mI (79891) ESP32_DRONE: Motor Inputs (Raw) - M1: 2000.00, M2: 2000.00, M3: 1999.93, M4: 2000.00[0m
+[0;32mI (79901) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (79901) ESP32_DRONE: Motor PWM Output - M1: 2000.00, M2: 2000.00, M3: 1999.93, M4: 2000.00[0m
+[0;32mI (79911) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (80921) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (80921) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (80921) ESP32_DRONE: IMU Data - GyrX: -0.11, GyrY: -0.16, AccX: -0.00, AccY: -0.01, AccZ: 0.97[0m
+[0;32mI (80931) ESP32_DRONE: Angles - TotalX: -0.11, TotalY: -0.17, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (80941) ESP32_DRONE: Errors - Roll: -0.17, Pitch: -0.11[0m
+[0;32mI (80951) ESP32_DRONE: PID Terms - Roll_P: -0.12, Roll_I: -0.00, Roll_D: -0.19, Pitch_P: -0.08, Pitch_I: -0.00, Pitch_D: -0.13[0m
+[0;32mI (80961) ESP32_DRONE: PID Outputs - Roll_PID: -0.31, Pitch_PID: -0.21[0m
+[0;32mI (80971) ESP32_DRONE: Motor Inputs (Raw) - M1: 1999.90, M2: 1999.48, M3: 2000.00, M4: 2000.00[0m
+[0;32mI (80981) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (80981) ESP32_DRONE: Motor PWM Output - M1: 1999.90, M2: 1999.48, M3: 2000.00, M4: 2000.00[0m
+[0;32mI (80991) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (82001) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (82001) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (82001) ESP32_DRONE: IMU Data - GyrX: -0.07, GyrY: -0.19, AccX: 0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (82011) ESP32_DRONE: Angles - TotalX: -0.09, TotalY: -0.21, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (82021) ESP32_DRONE: Errors - Roll: -0.21, Pitch: -0.09[0m
+[0;32mI (82031) ESP32_DRONE: PID Terms - Roll_P: -0.15, Roll_I: -0.00, Roll_D: -0.23, Pitch_P: -0.06, Pitch_I: -0.00, Pitch_D: -0.10[0m
+[0;32mI (82041) ESP32_DRONE: PID Outputs - Roll_PID: -0.38, Pitch_PID: -0.16[0m
+[0;32mI (82051) ESP32_DRONE: Motor Inputs (Raw) - M1: 1999.78, M2: 1999.46, M3: 2000.00, M4: 2000.00[0m
+[0;32mI (82061) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (82061) ESP32_DRONE: Motor PWM Output - M1: 1999.78, M2: 1999.46, M3: 2000.00, M4: 2000.00[0m
+[0;32mI (82071) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (83081) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (83081) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (83081) ESP32_DRONE: IMU Data - GyrX: -0.14, GyrY: -0.04, AccX: 0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (83091) ESP32_DRONE: Angles - TotalX: -0.15, TotalY: -0.05, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (83101) ESP32_DRONE: Errors - Roll: -0.05, Pitch: -0.15[0m
+[0;32mI (83111) ESP32_DRONE: PID Terms - Roll_P: -0.03, Roll_I: -0.00, Roll_D: -0.05, Pitch_P: -0.11, Pitch_I: -0.00, Pitch_D: -0.17[0m
+[0;32mI (83121) ESP32_DRONE: PID Outputs - Roll_PID: -0.08, Pitch_PID: -0.27[0m
+[0;32mI (83131) ESP32_DRONE: Motor Inputs (Raw) - M1: 2000.00, M2: 1999.64, M3: 1999.81, M4: 2000.00[0m
+[0;32mI (83141) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (83141) ESP32_DRONE: Motor PWM Output - M1: 2000.00, M2: 1999.64, M3: 1999.81, M4: 2000.00[0m
+[0;32mI (83151) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (84161) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (84161) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (84161) ESP32_DRONE: IMU Data - GyrX: -0.04, GyrY: 0.05, AccX: -0.00, AccY: -0.00, AccZ: 0.95[0m
+[0;32mI (84171) ESP32_DRONE: Angles - TotalX: -0.04, TotalY: 0.05, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (84181) ESP32_DRONE: Errors - Roll: 0.05, Pitch: -0.04[0m
+[0;32mI (84191) ESP32_DRONE: PID Terms - Roll_P: 0.04, Roll_I: 0.00, Roll_D: 0.06, Pitch_P: -0.03, Pitch_I: -0.00, Pitch_D: -0.05[0m
+[0;32mI (84201) ESP32_DRONE: PID Outputs - Roll_PID: 0.10, Pitch_PID: -0.08[0m
+[0;32mI (84211) ESP32_DRONE: Motor Inputs (Raw) - M1: 2000.00, M2: 2000.00, M3: 1999.82, M4: 1999.98[0m
+[0;32mI (84221) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (84221) ESP32_DRONE: Motor PWM Output - M1: 2000.00, M2: 2000.00, M3: 1999.82, M4: 1999.98[0m
+[0;32mI (84231) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (85241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (85241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (86241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (86241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (87241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (87241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (88241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (88241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (89241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (89241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (90241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (90241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (91241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (91241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (92241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (92241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (93241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (93241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (94241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (94241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (95241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (95241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (96241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (96241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (97241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (97241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (98241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (98241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (99241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (99241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (100241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (100241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (101241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (101241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (102241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (102241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (103241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (103241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (104241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (104241) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (105241) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (105241) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (105241) ESP32_DRONE: IMU Data - GyrX: 0.23, GyrY: 0.26, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (105251) ESP32_DRONE: Angles - TotalX: 4.75, TotalY: 5.42, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (105261) ESP32_DRONE: Errors - Roll: 5.42, Pitch: 4.75[0m
+[0;32mI (105271) ESP32_DRONE: PID Terms - Roll_P: 3.79, Roll_I: 0.00, Roll_D: 0.31, Pitch_P: 3.42, Pitch_I: 0.00, Pitch_D: 0.28[0m
+[0;32mI (105281) ESP32_DRONE: PID Outputs - Roll_PID: 4.10, Pitch_PID: 3.70[0m
+[0;32mI (105291) ESP32_DRONE: Motor Inputs (Raw) - M1: 1500.40, M2: 1507.80, M3: 1499.60, M4: 1492.20[0m
+[0;32mI (105301) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (105301) ESP32_DRONE: Motor PWM Output - M1: 1500.40, M2: 1507.80, M3: 1499.60, M4: 1492.20[0m
+[0;32mI (105311) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (106321) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (106321) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (106321) ESP32_DRONE: IMU Data - GyrX: 0.17, GyrY: 0.14, AccX: 0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (106331) ESP32_DRONE: Angles - TotalX: 0.18, TotalY: 0.15, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (106341) ESP32_DRONE: Errors - Roll: 0.15, Pitch: 0.18[0m
+[0;32mI (106351) ESP32_DRONE: PID Terms - Roll_P: 0.10, Roll_I: 0.00, Roll_D: 0.16, Pitch_P: 0.13, Pitch_I: 0.00, Pitch_D: 0.21[0m
+[0;32mI (106361) ESP32_DRONE: PID Outputs - Roll_PID: 0.27, Pitch_PID: 0.34[0m
+[0;32mI (106371) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.92, M2: 1500.61, M3: 1500.08, M4: 1499.39[0m
+[0;32mI (106381) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (106381) ESP32_DRONE: Motor PWM Output - M1: 1499.92, M2: 1500.61, M3: 1500.08, M4: 1499.39[0m
+[0;32mI (106391) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (107401) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (107401) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (107401) ESP32_DRONE: IMU Data - GyrX: -0.01, GyrY: 0.23, AccX: 0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (107411) ESP32_DRONE: Angles - TotalX: -0.02, TotalY: 0.24, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (107421) ESP32_DRONE: Errors - Roll: 0.24, Pitch: -0.02[0m
+[0;32mI (107431) ESP32_DRONE: PID Terms - Roll_P: 0.17, Roll_I: 0.00, Roll_D: 0.27, Pitch_P: -0.02, Pitch_I: -0.00, Pitch_D: -0.02[0m
+[0;32mI (107441) ESP32_DRONE: PID Outputs - Roll_PID: 0.44, Pitch_PID: -0.04[0m
+[0;32mI (107451) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.48, M2: 1000.40, M3: 1000.00, M4: 1000.00[0m
+[0;32mI (107461) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (107461) ESP32_DRONE: Motor PWM Output - M1: 1000.48, M2: 1000.40, M3: 1000.00, M4: 1000.00[0m
+[0;32mI (107471) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (108481) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (108481) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (108481) ESP32_DRONE: IMU Data - GyrX: -0.17, GyrY: -0.26, AccX: 0.00, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (108491) ESP32_DRONE: Angles - TotalX: -0.17, TotalY: -0.27, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (108501) ESP32_DRONE: Errors - Roll: -0.27, Pitch: -0.17[0m
+[0;32mI (108511) ESP32_DRONE: PID Terms - Roll_P: -0.19, Roll_I: -0.00, Roll_D: -0.30, Pitch_P: -0.12, Pitch_I: -0.00, Pitch_D: -0.20[0m
+[0;32mI (108521) ESP32_DRONE: PID Outputs - Roll_PID: -0.50, Pitch_PID: -0.32[0m
+[0;32mI (108531) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1000.00, M3: 1000.18, M4: 1000.82[0m
+[0;32mI (108541) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (108541) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1000.00, M3: 1000.18, M4: 1000.82[0m
+[0;32mI (108551) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (109561) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (109561) ESP32_DRONE: Control Data - Throttle: 1146, Roll: 1500, Pitch: 1500, Yaw: 1854, AUX1: 1[0m
+[0;32mI (109561) ESP32_DRONE: IMU Data - GyrX: -0.07, GyrY: -0.19, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (109571) ESP32_DRONE: Angles - TotalX: -0.08, TotalY: -0.20, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (109581) ESP32_DRONE: Errors - Roll: -0.20, Pitch: -0.08[0m
+[0;32mI (109591) ESP32_DRONE: PID Terms - Roll_P: -0.14, Roll_I: -0.00, Roll_D: -0.22, Pitch_P: -0.06, Pitch_I: -0.00, Pitch_D: -0.09[0m
+[0;32mI (109601) ESP32_DRONE: PID Outputs - Roll_PID: -0.37, Pitch_PID: -0.15[0m
+[0;32mI (109611) ESP32_DRONE: Motor Inputs (Raw) - M1: 1145.79, M2: 1145.48, M3: 1146.21, M4: 1146.52[0m
+[0;32mI (109621) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (109621) ESP32_DRONE: Motor PWM Output - M1: 1145.79, M2: 1145.48, M3: 1146.21, M4: 1146.52[0m
+[0;32mI (109631) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (110641) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (110641) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (110641) ESP32_DRONE: IMU Data - GyrX: -0.20, GyrY: -0.23, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (110651) ESP32_DRONE: Angles - TotalX: -0.21, TotalY: -0.23, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (110661) ESP32_DRONE: Errors - Roll: -0.23, Pitch: -0.21[0m
+[0;32mI (110671) ESP32_DRONE: PID Terms - Roll_P: -0.16, Roll_I: -0.00, Roll_D: -0.26, Pitch_P: -0.15, Pitch_I: -0.00, Pitch_D: -0.23[0m
+[0;32mI (110681) ESP32_DRONE: PID Outputs - Roll_PID: -0.42, Pitch_PID: -0.39[0m
+[0;32mI (110691) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.96, M2: 1499.19, M3: 1500.04, M4: 1500.81[0m
+[0;32mI (110701) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (110701) ESP32_DRONE: Motor PWM Output - M1: 1499.96, M2: 1499.19, M3: 1500.04, M4: 1500.81[0m
+[0;32mI (110711) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (111721) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (111721) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (111721) ESP32_DRONE: IMU Data - GyrX: 0.08, GyrY: -0.01, AccX: -0.00, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (111731) ESP32_DRONE: Angles - TotalX: 0.08, TotalY: -0.01, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (111741) ESP32_DRONE: Errors - Roll: -0.01, Pitch: 0.08[0m
+[0;32mI (111751) ESP32_DRONE: PID Terms - Roll_P: -0.01, Roll_I: -0.00, Roll_D: -0.01, Pitch_P: 0.06, Pitch_I: 0.00, Pitch_D: 0.09[0m
+[0;32mI (111761) ESP32_DRONE: PID Outputs - Roll_PID: -0.02, Pitch_PID: 0.16[0m
+[0;32mI (111771) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.83, M2: 1500.14, M3: 1500.17, M4: 1499.86[0m
+[0;32mI (111781) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (111781) ESP32_DRONE: Motor PWM Output - M1: 1499.83, M2: 1500.14, M3: 1500.17, M4: 1499.86[0m
+[0;32mI (111791) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (112801) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (112801) ESP32_DRONE: Control Data - Throttle: 2000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (112801) ESP32_DRONE: IMU Data - GyrX: 0.26, GyrY: -0.04, AccX: -0.00, AccY: -0.01, AccZ: 0.94[0m
+[0;32mI (112811) ESP32_DRONE: Angles - TotalX: 0.27, TotalY: -0.04, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (112821) ESP32_DRONE: Errors - Roll: -0.04, Pitch: 0.27[0m
+[0;32mI (112831) ESP32_DRONE: PID Terms - Roll_P: -0.03, Roll_I: -0.00, Roll_D: -0.05, Pitch_P: 0.20, Pitch_I: 0.00, Pitch_D: 0.31[0m
+[0;32mI (112841) ESP32_DRONE: PID Outputs - Roll_PID: -0.08, Pitch_PID: 0.51[0m
+[0;32mI (112851) ESP32_DRONE: Motor Inputs (Raw) - M1: 1999.42, M2: 2000.00, M3: 2000.00, M4: 1999.57[0m
+[0;32mI (112861) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (112861) ESP32_DRONE: Motor PWM Output - M1: 1999.42, M2: 2000.00, M3: 2000.00, M4: 1999.57[0m
+[0;32mI (112871) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (113881) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (113881) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 1000, AUX1: 1[0m
+[0;32mI (113881) ESP32_DRONE: IMU Data - GyrX: -0.14, GyrY: -0.38, AccX: -0.01, AccY: -0.00, AccZ: 0.96[0m
+[0;32mI (113891) ESP32_DRONE: Angles - TotalX: -0.14, TotalY: -0.39, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (113901) ESP32_DRONE: Errors - Roll: -0.39, Pitch: -0.14[0m
+[0;32mI (113911) ESP32_DRONE: PID Terms - Roll_P: -0.27, Roll_I: -0.00, Roll_D: -0.44, Pitch_P: -0.10, Pitch_I: -0.00, Pitch_D: -0.15[0m
+[0;32mI (113921) ESP32_DRONE: PID Outputs - Roll_PID: -0.71, Pitch_PID: -0.25[0m
+[0;32mI (113931) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.54, M2: 1499.03, M3: 1500.46, M4: 1500.97[0m
+[0;32mI (113941) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (113941) ESP32_DRONE: Motor PWM Output - M1: 1499.54, M2: 1499.03, M3: 1500.46, M4: 1500.97[0m
+[0;32mI (113951) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (114961) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (114961) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (114961) ESP32_DRONE: IMU Data - GyrX: 0.23, GyrY: 0.11, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (114971) ESP32_DRONE: Angles - TotalX: 0.24, TotalY: 0.12, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (114981) ESP32_DRONE: Errors - Roll: 0.12, Pitch: 0.24[0m
+[0;32mI (114991) ESP32_DRONE: PID Terms - Roll_P: 0.08, Roll_I: 0.00, Roll_D: 0.13, Pitch_P: 0.17, Pitch_I: 0.00, Pitch_D: 0.27[0m
+[0;32mI (115001) ESP32_DRONE: PID Outputs - Roll_PID: 0.22, Pitch_PID: 0.44[0m
+[0;32mI (115011) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1000.66, M3: 1000.23, M4: 1000.00[0m
+[0;32mI (115021) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (115021) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1000.66, M3: 1000.23, M4: 1000.00[0m
+[0;32mI (115031) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (116041) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (116041) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (116041) ESP32_DRONE: IMU Data - GyrX: 0.20, GyrY: -0.01, AccX: -0.00, AccY: -0.02, AccZ: 0.95[0m
+[0;32mI (116051) ESP32_DRONE: Angles - TotalX: 0.20, TotalY: -0.01, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (116061) ESP32_DRONE: Errors - Roll: -0.01, Pitch: 0.20[0m
+[0;32mI (116071) ESP32_DRONE: PID Terms - Roll_P: -0.01, Roll_I: -0.00, Roll_D: -0.01, Pitch_P: 0.14, Pitch_I: 0.00, Pitch_D: 0.23[0m
+[0;32mI (116081) ESP32_DRONE: PID Outputs - Roll_PID: -0.02, Pitch_PID: 0.37[0m
+[0;32mI (116091) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1000.35, M3: 1000.39, M4: 1000.00[0m
+[0;32mI (116101) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (116101) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1000.35, M3: 1000.39, M4: 1000.00[0m
+[0;32mI (116111) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (117121) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (117121) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (117121) ESP32_DRONE: IMU Data - GyrX: 0.14, GyrY: -0.19, AccX: -0.00, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (117131) ESP32_DRONE: Angles - TotalX: 0.14, TotalY: -0.20, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (117141) ESP32_DRONE: Errors - Roll: -0.20, Pitch: 0.14[0m
+[0;32mI (117151) ESP32_DRONE: PID Terms - Roll_P: -0.14, Roll_I: -0.00, Roll_D: -0.23, Pitch_P: 0.10, Pitch_I: 0.00, Pitch_D: 0.16[0m
+[0;32mI (117161) ESP32_DRONE: PID Outputs - Roll_PID: -0.37, Pitch_PID: 0.27[0m
+[0;32mI (117171) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.36, M2: 1499.90, M3: 1500.64, M4: 1500.10[0m
+[0;32mI (117181) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (117181) ESP32_DRONE: Motor PWM Output - M1: 1499.36, M2: 1499.90, M3: 1500.64, M4: 1500.10[0m
+[0;32mI (117191) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (118201) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (118201) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (118201) ESP32_DRONE: IMU Data - GyrX: 0.11, GyrY: 0.08, AccX: -0.01, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (118211) ESP32_DRONE: Angles - TotalX: 0.11, TotalY: 0.09, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (118221) ESP32_DRONE: Errors - Roll: 0.09, Pitch: 0.11[0m
+[0;32mI (118231) ESP32_DRONE: PID Terms - Roll_P: 0.06, Roll_I: 0.00, Roll_D: 0.10, Pitch_P: 0.08, Pitch_I: 0.00, Pitch_D: 0.13[0m
+[0;32mI (118241) ESP32_DRONE: PID Outputs - Roll_PID: 0.17, Pitch_PID: 0.21[0m
+[0;32mI (118251) ESP32_DRONE: Motor Inputs (Raw) - M1: 1499.95, M2: 1500.38, M3: 1500.05, M4: 1499.62[0m
+[0;32mI (118261) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (118261) ESP32_DRONE: Motor PWM Output - M1: 1499.95, M2: 1500.38, M3: 1500.05, M4: 1499.62[0m
+[0;32mI (118271) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (119281) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (119281) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (120281) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (120281) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (121281) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (121281) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (122281) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (122281) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;33mW (1141) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (1151) wifi:mode : sta (c8:f0:9e:f2:90:78)[0m
+[0;32mI (1161) wifi:enable tsf[0m
+[0;32mI (1171) ESP32_DRONE: MPU6050 Initialized[0m
+[0;32mI (1171) ESP32_DRONE: Starting Gyro Calibration[0m
+[0;32mI (1351) ESP32_DRONE: Gyro Calibration Complete - ErrorX: 38.27, ErrorY: -1.06[0m
+[0;32mI (1351) ESP32_DRONE: Starting Accel Calibration[0m
+[0;32mI (1591) ESP32_DRONE: Accel Calibration Complete - ErrorX: -0.49, ErrorY: -0.82[0m
+[0;32mI (1591) ESP32_DRONE: Motor PWM Configured[0m
+[0;32mI (1591) ESP32_DRONE: Control Task Started - PID and Angle variables reset[0m
+[0;32mI (1601) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (1601) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (1611) ESP32_DRONE: Control Task Created[0m
+[0;32mI (1621) ESP32_DRONE: App Main Initialization Complete[0m
+[0;32mI (1621) main_task: Returned from app_main()[0m
+[0;32mI (2521) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2531) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2531) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2541) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2541) wifi:<ba-add>idx:0 (ifx:0, a0:65:18:c4:b3:8d), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2561) wifi:connected with Van Vuong, aid = 4, channel 10, BW20, bssid = a0:65:18:c4:b3:8d[0m
+[0;32mI (2561) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (2581) wifi:pm start, type: 1[0m
+
+[0;32mI (2581) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2611) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (2611) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (2621) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3581) esp_netif_handlers: sta ip: 192.168.1.8, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3581) ESP32_DRONE: ESP32 IP Address: 208.92.252.63[0m
+[0;32mI (3611) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (3611) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (4611) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (4611) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (5611) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (5611) ESP32_DRONE: Motors Disarmed via AUX1=0 - PWM set to MIN_US[0m
+[0;32mI (6611) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (6611) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (6611) ESP32_DRONE: IMU Data - GyrX: 6.70, GyrY: 5.69, AccX: 0.01, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (6621) ESP32_DRONE: Angles - TotalX: 32.92, TotalY: 28.01, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (6631) ESP32_DRONE: Errors - Roll: 28.01, Pitch: 32.92[0m
+[0;32mI (6641) ESP32_DRONE: PID Terms - Roll_P: 19.60, Roll_I: 0.00, Roll_D: 6.70, Pitch_P: 23.71, Pitch_I: 0.00, Pitch_D: 8.01[0m
+[0;32mI (6651) ESP32_DRONE: PID Outputs - Roll_PID: 26.30, Pitch_PID: 31.71[0m
+[0;32mI (6661) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1058.01, M3: 1005.41, M4: 1000.00[0m
+[0;32mI (6671) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (6671) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1058.01, M3: 1005.41, M4: 1000.00[0m
+[0;32mI (6681) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (7691) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (7691) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (7691) ESP32_DRONE: IMU Data - GyrX: 6.61, GyrY: 5.48, AccX: 0.02, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (7701) ESP32_DRONE: Angles - TotalX: 6.99, TotalY: 5.80, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (7711) ESP32_DRONE: Errors - Roll: 5.80, Pitch: 6.99[0m
+[0;32mI (7721) ESP32_DRONE: PID Terms - Roll_P: 4.06, Roll_I: 0.00, Roll_D: 6.44, Pitch_P: 5.03, Pitch_I: 0.00, Pitch_D: 7.89[0m
+[0;32mI (7731) ESP32_DRONE: PID Outputs - Roll_PID: 10.50, Pitch_PID: 12.93[0m
+[0;32mI (7741) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.43, M3: 1002.42, M4: 1000.00[0m
+[0;32mI (7751) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (7751) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.43, M3: 1002.42, M4: 1000.00[0m
+[0;32mI (7761) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (8771) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (8771) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (8771) ESP32_DRONE: IMU Data - GyrX: 6.48, GyrY: 5.66, AccX: 0.01, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (8781) ESP32_DRONE: Angles - TotalX: 6.86, TotalY: 6.00, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (8791) ESP32_DRONE: Errors - Roll: 6.00, Pitch: 6.86[0m
+[0;32mI (8801) ESP32_DRONE: PID Terms - Roll_P: 4.20, Roll_I: 0.00, Roll_D: 6.66, Pitch_P: 4.94, Pitch_I: 0.00, Pitch_D: 7.75[0m
+[0;32mI (8811) ESP32_DRONE: PID Outputs - Roll_PID: 10.86, Pitch_PID: 12.69[0m
+[0;32mI (8821) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.55, M3: 1001.83, M4: 1000.00[0m
+[0;32mI (8831) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (8831) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.55, M3: 1001.83, M4: 1000.00[0m
+[0;32mI (8841) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (9851) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (9851) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (9851) ESP32_DRONE: IMU Data - GyrX: 6.27, GyrY: 5.15, AccX: 0.02, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (9861) ESP32_DRONE: Angles - TotalX: 6.63, TotalY: 5.44, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (9871) ESP32_DRONE: Errors - Roll: 5.44, Pitch: 6.63[0m
+[0;32mI (9881) ESP32_DRONE: PID Terms - Roll_P: 3.81, Roll_I: 0.00, Roll_D: 6.05, Pitch_P: 4.78, Pitch_I: 0.00, Pitch_D: 7.49[0m
+[0;32mI (9891) ESP32_DRONE: PID Outputs - Roll_PID: 9.85, Pitch_PID: 12.27[0m
+[0;32mI (9901) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1022.12, M3: 1002.41, M4: 1000.00[0m
+[0;32mI (9911) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (9911) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1022.12, M3: 1002.41, M4: 1000.00[0m
+[0;32mI (9921) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (10931) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (10931) ESP32_DRONE: Control Data - Throttle: 1146, Roll: 1500, Pitch: 1500, Yaw: 1854, AUX1: 1[0m
+[0;32mI (10931) ESP32_DRONE: IMU Data - GyrX: 6.39, GyrY: 5.57, AccX: 0.01, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (10941) ESP32_DRONE: Angles - TotalX: 6.77, TotalY: 5.90, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (10951) ESP32_DRONE: Errors - Roll: 5.90, Pitch: 6.77[0m
+[0;32mI (10961) ESP32_DRONE: PID Terms - Roll_P: 4.13, Roll_I: 0.00, Roll_D: 6.56, Pitch_P: 4.87, Pitch_I: 0.00, Pitch_D: 7.64[0m
+[0;32mI (10971) ESP32_DRONE: PID Outputs - Roll_PID: 10.69, Pitch_PID: 12.51[0m
+[0;32mI (10981) ESP32_DRONE: Motor Inputs (Raw) - M1: 1144.17, M2: 1169.20, M3: 1147.83, M4: 1122.80[0m
+[0;32mI (10991) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (10991) ESP32_DRONE: Motor PWM Output - M1: 1144.17, M2: 1169.20, M3: 1147.83, M4: 1122.80[0m
+[0;32mI (11001) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (12011) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (12011) ESP32_DRONE: Control Data - Throttle: 1500, Roll: 1500, Pitch: 1500, Yaw: 2000, AUX1: 1[0m
+[0;32mI (12011) ESP32_DRONE: IMU Data - GyrX: 6.45, GyrY: 5.76, AccX: 0.01, AccY: -0.00, AccZ: 0.95[0m
+[0;32mI (12021) ESP32_DRONE: Angles - TotalX: 6.83, TotalY: 6.09, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (12031) ESP32_DRONE: Errors - Roll: 6.09, Pitch: 6.83[0m
+[0;32mI (12041) ESP32_DRONE: PID Terms - Roll_P: 4.27, Roll_I: 0.00, Roll_D: 6.77, Pitch_P: 4.92, Pitch_I: 0.00, Pitch_D: 7.72[0m
+[0;32mI (12051) ESP32_DRONE: PID Outputs - Roll_PID: 11.04, Pitch_PID: 12.64[0m
+[0;32mI (12061) ESP32_DRONE: Motor Inputs (Raw) - M1: 1498.40, M2: 1523.68, M3: 1501.60, M4: 1476.32[0m
+[0;32mI (12071) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (12071) ESP32_DRONE: Motor PWM Output - M1: 1498.40, M2: 1523.68, M3: 1501.60, M4: 1476.32[0m
+[0;32mI (12081) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (13091) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (13091) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (13091) ESP32_DRONE: IMU Data - GyrX: 6.48, GyrY: 5.57, AccX: 0.01, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (13101) ESP32_DRONE: Angles - TotalX: 6.86, TotalY: 5.90, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (13111) ESP32_DRONE: Errors - Roll: 5.90, Pitch: 6.86[0m
+[0;32mI (13121) ESP32_DRONE: PID Terms - Roll_P: 4.13, Roll_I: 0.00, Roll_D: 6.55, Pitch_P: 4.94, Pitch_I: 0.00, Pitch_D: 7.75[0m
+[0;32mI (13131) ESP32_DRONE: PID Outputs - Roll_PID: 10.68, Pitch_PID: 12.69[0m
+[0;32mI (13141) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.37, M3: 1002.01, M4: 1000.00[0m
+[0;32mI (13151) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (13151) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.37, M3: 1002.01, M4: 1000.00[0m
+[0;32mI (13161) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (14171) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (14171) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (14171) ESP32_DRONE: IMU Data - GyrX: 6.48, GyrY: 5.54, AccX: 0.02, AccY: -0.01, AccZ: 0.94[0m
+[0;32mI (14181) ESP32_DRONE: Angles - TotalX: 6.86, TotalY: 5.86, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (14191) ESP32_DRONE: Errors - Roll: 5.86, Pitch: 6.86[0m
+[0;32mI (14201) ESP32_DRONE: PID Terms - Roll_P: 4.10, Roll_I: 0.00, Roll_D: 6.51, Pitch_P: 4.94, Pitch_I: 0.00, Pitch_D: 7.75[0m
+[0;32mI (14211) ESP32_DRONE: PID Outputs - Roll_PID: 10.62, Pitch_PID: 12.68[0m
+[0;32mI (14221) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.30, M3: 1002.07, M4: 1000.00[0m
+[0;32mI (14231) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (14231) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.30, M3: 1002.07, M4: 1000.00[0m
+[0;32mI (14241) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (15251) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (15251) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (15251) ESP32_DRONE: IMU Data - GyrX: 6.48, GyrY: 5.82, AccX: 0.01, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (15261) ESP32_DRONE: Angles - TotalX: 6.87, TotalY: 6.17, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (15271) ESP32_DRONE: Errors - Roll: 6.17, Pitch: 6.87[0m
+[0;32mI (15281) ESP32_DRONE: PID Terms - Roll_P: 4.32, Roll_I: 0.00, Roll_D: 6.85, Pitch_P: 4.95, Pitch_I: 0.00, Pitch_D: 7.75[0m
+[0;32mI (15291) ESP32_DRONE: PID Outputs - Roll_PID: 11.16, Pitch_PID: 12.70[0m
+[0;32mI (15301) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.86, M3: 1001.53, M4: 1000.00[0m
+[0;32mI (15311) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (15311) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.86, M3: 1001.53, M4: 1000.00[0m
+[0;32mI (15321) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (16331) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (16331) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (16331) ESP32_DRONE: IMU Data - GyrX: 6.45, GyrY: 5.51, AccX: 0.02, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (16341) ESP32_DRONE: Angles - TotalX: 6.82, TotalY: 5.82, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (16351) ESP32_DRONE: Errors - Roll: 5.82, Pitch: 6.82[0m
+[0;32mI (16361) ESP32_DRONE: PID Terms - Roll_P: 4.07, Roll_I: 0.00, Roll_D: 6.47, Pitch_P: 4.91, Pitch_I: 0.00, Pitch_D: 7.71[0m
+[0;32mI (16371) ESP32_DRONE: PID Outputs - Roll_PID: 10.55, Pitch_PID: 12.62[0m
+[0;32mI (16381) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.17, M3: 1002.07, M4: 1000.00[0m
+[0;32mI (16391) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (16391) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.17, M3: 1002.07, M4: 1000.00[0m
+[0;32mI (16401) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (17411) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (17411) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (17411) ESP32_DRONE: IMU Data - GyrX: 6.39, GyrY: 5.57, AccX: 0.01, AccY: -0.01, AccZ: 0.96[0m
+[0;32mI (17421) ESP32_DRONE: Angles - TotalX: 6.76, TotalY: 5.90, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (17431) ESP32_DRONE: Errors - Roll: 5.90, Pitch: 6.76[0m
+[0;32mI (17441) ESP32_DRONE: PID Terms - Roll_P: 4.13, Roll_I: 0.00, Roll_D: 6.56, Pitch_P: 4.87, Pitch_I: 0.00, Pitch_D: 7.64[0m
+[0;32mI (17451) ESP32_DRONE: PID Outputs - Roll_PID: 10.68, Pitch_PID: 12.51[0m
+[0;32mI (17461) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.20, M3: 1001.83, M4: 1000.00[0m
+[0;32mI (17471) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (17471) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.20, M3: 1001.83, M4: 1000.00[0m
+[0;32mI (17481) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (18491) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (18491) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (18491) ESP32_DRONE: IMU Data - GyrX: 6.79, GyrY: 5.54, AccX: 0.02, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (18501) ESP32_DRONE: Angles - TotalX: 7.19, TotalY: 5.86, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (18511) ESP32_DRONE: Errors - Roll: 5.86, Pitch: 7.19[0m
+[0;32mI (18521) ESP32_DRONE: PID Terms - Roll_P: 4.10, Roll_I: 0.00, Roll_D: 6.51, Pitch_P: 5.17, Pitch_I: 0.00, Pitch_D: 8.12[0m
+[0;32mI (18531) ESP32_DRONE: PID Outputs - Roll_PID: 10.61, Pitch_PID: 13.29[0m
+[0;32mI (18541) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1023.91, M3: 1002.68, M4: 1000.00[0m
+[0;32mI (18551) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (18551) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1023.91, M3: 1002.68, M4: 1000.00[0m
+[0;32mI (18561) ESP32_DRONE: --------------------------------------------------[0m
+[0;32mI (19571) ESP32_DRONE: Control Loop Iteration - PID and Angle variables reset at loop start[0m
+[0;32mI (19571) ESP32_DRONE: Control Data - Throttle: 1000, Roll: 1500, Pitch: 1500, Yaw: 1500, AUX1: 1[0m
+[0;32mI (19571) ESP32_DRONE: IMU Data - GyrX: 6.39, GyrY: 5.27, AccX: 0.01, AccY: -0.01, AccZ: 0.95[0m
+[0;32mI (19581) ESP32_DRONE: Angles - TotalX: 6.76, TotalY: 5.58, DesiredRoll: 0.00, DesiredPitch: 0.00[0m
+[0;32mI (19591) ESP32_DRONE: Errors - Roll: 5.58, Pitch: 6.76[0m
+[0;32mI (19601) ESP32_DRONE: PID Terms - Roll_P: 3.91, Roll_I: 0.00, Roll_D: 6.20, Pitch_P: 4.87, Pitch_I: 0.00, Pitch_D: 7.64[0m
+[0;32mI (19611) ESP32_DRONE: PID Outputs - Roll_PID: 10.11, Pitch_PID: 12.51[0m
+[0;32mI (19621) ESP32_DRONE: Motor Inputs (Raw) - M1: 1000.00, M2: 1022.62, M3: 1002.40, M4: 1000.00[0m
+[0;32mI (19631) ESP32_DRONE: Motors Armed - PWM set to calculated values[0m
+[0;32mI (19631) ESP32_DRONE: Motor PWM Output - M1: 1000.00, M2: 1022.62, M3: 1002.40, M4: 1000.00[0m
+[0;32mI (19641) ESP32_DRONE: --------------------------------------------------[0m
