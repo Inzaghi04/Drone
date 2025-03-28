@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone Controller</title>
+  <style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    flex-direction: column;
+    }
+    .joystick-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    }
+    .joystick {
+    width: 150px;
+    height: 150px;
+    background-color: lightgray;
+    border-radius: 50%;
+    position: relative;
+    touch-action: none;
+    }
+    .knob {
+    width: 50px;
+    height: 50px;
+    background-color: darkgray;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .switch-container {
+    margin-top: 20px;
+    }
+    .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    }
+
+    .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+    .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    }
+
+    .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    }
+
+    input:checked + .slider {
+    background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+    border-radius: 34px;
+    }
+
+    .slider.round:before {
+    border-radius: 50%;
+    }
+
+    .ip-container {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ip-container label {
+        margin-bottom: 5px;
+    }
+
+    .ip-container input[type="text"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        color: black; /* Ensure text is visible on dark background */
+
+    }
+    .thumb {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px; height: 40px;
+        background: radial-gradient(circle, #444, #222);
+        border: 2px solid #666;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(0,0,0,0.7);
+        cursor: pointer;
+        transition: transform 0.1s; /* Thêm dòng này */
+        touch-action: none; /* Thêm dòng này */
+    }
+  </style>
+</head>
+<body>
+  <h1>Drone Controller</h1>
+
+  <div class="ip-container">
+    <label for="drone-ip">Drone IP Address:</label>
+    <input type="text" id="drone-ip" placeholder="Enter IP Address">
+  </div>
+
+  <div class="joystick-container">
+    <div class="joystick" id="left-joystick">
+      <div class="knob" id="left-knob"></div>
+    </div>
+    <div class="joystick" id="right-joystick">
+      <div class="knob" id="right-knob"></div>
+    </div>
+  </div>
+
+  <div class="switch-container">
+    <label class="switch">
+      <input type="checkbox" id="special-action-switch">
+      <span class="slider round"></span>
+    </label>
+    <span style="margin-left: 10px;">ARM MODE</span>
+  </div>
+
+  <script>
+    let isArmed = false;
+    let joystickState = { leftX: 0, leftY: 0, rightX: 0, rightY: 0, specialAction: 0 }; // Initialize to 0
+    let lastSentTime = 0;
+    const specialActionSwitch = document.getElementById('special-action-switch');
+    const ipInput = document.getElementById('drone-ip');
+    let droneIpAddress = 'http://192.168.5.147'; // Default IP address
+
+    // Load IP address from local storage or use default
+    function loadIpAddress() {
+        const storedIp = localStorage.getItem('droneIpAddress');
+        if (storedIp) {
+            droneIpAddress = storedIp;
+            ipInput.value = storedIp.replace('http://', ''); // Display without http://
+        } else {
+            ipInput.value = droneIpAddress.replace('http://', ''); // Display default without http://
+        }
+    }
+
+    // Save IP address to local storage
+    function saveIpAddress() {
+        let enteredIp = ipInput.value.trim();
+        if (!enteredIp.startsWith('http://') && !enteredIp.startsWith('https://')) {
+            enteredIp = 'http://' + enteredIp; // Assume http if protocol is missing
+        }
+        droneIpAddress = enteredIp;
+        localStorage.setItem('droneIpAddress', droneIpAddress);
+    }
+
+    ipInput.addEventListener('change', saveIpAddress);
+    window.addEventListener('load', loadIpAddress); // Load IP when page loads
+
+    function sendEmergencyStop() {
+    const emergencyData = {
+        roll: 1500,
+        pitch: 1500,
+        yaw: 1500,
+        throttle: 1500,
+        AUX1: 0
+    };
+
+    fetch(`${droneIpAddress}/control`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(emergencyData)
+    })
+    .then(() => console.log("Emergency stop sent"))
+    .catch(error => console.error("Emergency stop failed:", error));
+}
+
+    function scaleValue(val) {
+        if (Math.abs(val) < 0.1) return 1500; // Giá trị trung tâm
+        return Math.round((val + 1) * 500 + 1000); // Chuyển -1..1 thành 1000..2000
+    }
+
+    function sendJoystickData() {
+        if (!isArmed) return ;
+        const now = Date.now();
+        if (now - lastSentTime < 100) return; // Throttle to 100ms
+        lastSentTime = now;
+
+        const data = {
+            roll: scaleValue(joystickState.leftX),
+            pitch: scaleValue(joystickState.leftY),
+            yaw: scaleValue(joystickState.rightX),
+            throttle: scaleValue(joystickState.rightY),
+            AUX1: joystickState.specialAction // Include switch state
+        };
+
+        console.log("Sending data:", data);
+
+        fetch(`${droneIpAddress}/control`, { // Use dynamic IP address
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(result => console.log("Server response:", result))
+            .catch(error => console.error("Error:", error));
+    }
+
+    function setupJoystick(joystickId, knobId, joystickKeyX, joystickKeyY,  isLeftJoystick = false, shouldReset = true) {
+        const joystick = document.getElementById(joystickId);
+        const knob = document.getElementById(knobId);
+        let active = false; // Track active state *per joystick*
+        let eventType = ''; // Track event type (mouse or touch) *per joystick*
+
+        function startMove(event) {
+            event.preventDefault();
+            active = true;
+            eventType = event.type.startsWith('touch') ? 'touch' : 'mouse';
+            moveKnob(event);
+        }
+
+        function doMove(event) {
+            if (active) {
+                moveKnob(event);
+            }
+        }
+
+        function stopMove() {
+            active = false;
+            
+            // CHỈ reset khi shouldReset = true
+            if (shouldReset) {
+                knob.style.top = '50%';
+                knob.style.left = '50%';
+                joystickState[joystickKeyX] = 0;
+                joystickState[joystickKeyY] = 0;
+            }
+            
+            sendJoystickData();
+            if (isArmed) sendJoystickData();
+        }
+        specialActionSwitch.addEventListener('change', () => {
+            isArmed = specialActionSwitch.checked;
+            joystickState.specialAction = isArmed ? 1 : 0;
+
+            if (!isArmed) {
+                // Reset values and send emergency stop
+                joystickState = { leftX:0, leftY:0, rightX:0, rightY:0, specialAction:0 };
+                updateJoystickVisual('left-joystick', 'left-knob', 0, 0);
+                updateJoystickVisual('right-joystick', 'right-knob', 0, 0);
+
+                // Bypass throttle and send immediately
+                lastSentTime = 0; // Reset throttle timer
+                sendEmergencyStop(); // Gửi lệnh dừng khẩn cấp
+            } else {
+                sendJoystickData(); // Gửi trạng thái ARM
+            }
+        });
+
+        function getEventCoordinates(event) {
+            if (eventType === 'touch' && event.touches.length > 0) {
+                // Find the touch associated with this joystick
+                for (let i = 0; i < event.touches.length; i++) {
+                    const touch = event.touches[i];
+                    const target = touch.target; // The element that was touched
+                    if (target === joystick || target === knob) {
+                        return { clientX: touch.clientX, clientY: touch.clientY };
+                    }
+                }
+                // If no matching touch is found, return null
+                return null;
+            } else {
+                return { clientX: event.clientX, clientY: event.clientY };
+            }
+        }
+
+        function moveKnob(event) {
+            if (!active) return;
+            const coords = getEventCoordinates(event);
+            if (!coords) return;
+
+            const rect = joystick.getBoundingClientRect();
+            let x = coords.clientX - rect.left - rect.width / 2;
+            let y = coords.clientY - rect.top - rect.height / 2;
+            let maxDist = rect.width / 2 - 25;
+            let dist = Math.sqrt(x * x + y * y);
+
+            // Chỉ áp dụng giới hạn hình tròn cho joystick trái
+            if (isLeftJoystick && dist > maxDist) {
+                x = (x / dist) * maxDist;
+                y = (y / dist) * maxDist;
+            }
+
+            // Giữ nguyên logic cũ cho joystick phải
+            if (!isLeftJoystick) {
+                x = 0; // Khóa trục X cho joystick phải
+                if (Math.abs(y) > maxDist) {
+                    y = (y / Math.abs(y)) * maxDist;
+                }
+            }
+
+            knob.style.left = `${50 + (x / maxDist) * 50}%`;
+            knob.style.top = `${50 + (y / maxDist) * 50}%`;
+
+            joystickState[joystickKeyX] = x / maxDist;
+            joystickState[joystickKeyY] = y / maxDist;
+
+            sendJoystickData();
+        }
+
+        joystick.addEventListener('mousedown', startMove);
+        joystick.addEventListener('touchstart', startMove, { passive: false });
+
+        document.addEventListener('mousemove', doMove);  // Listen on document
+        document.addEventListener('touchmove', doMove, { passive: false }); // Listen on document
+
+        document.addEventListener('mouseup', stopMove);   // Listen on document
+        document.addEventListener('touchend', stopMove);  // Listen on document
+        document.addEventListener('mouseleave', stopMove); // Listen on document
+    }
+
+    setupJoystick('left-joystick', 'left-knob', 'leftX', 'leftY', true, true); // Thêm true cho joystick trái
+    setupJoystick('right-joystick', 'right-knob', 'dummy', 'rightY', false, false); // Giữ nguyên cho joystick phải
+
+    specialActionSwitch.addEventListener('change', () => {
+        joystickState.specialAction = specialActionSwitch.checked ? 1 : 0; // Set to 1 when checked, 0 when unchecked.
+        sendJoystickData();
+    });
+    const keysPressed = {
+        w: false,
+        a: false,
+        s: false,
+        d: false,
+        arrowup: false,
+        arrowleft: false,
+        arrowdown: false,
+        arrowright: false
+    };
+
+    function handleKeyDown(event) {
+        const key = event.key.toLowerCase();
+        if (key in keysPressed) {
+            keysPressed[key] = true;
+            updateJoystickFromKeys();
+        }
+    }
+
+    function handleKeyUp(event) {
+        const key = event.key.toLowerCase();
+        if (key in keysPressed) {
+            keysPressed[key] = false;
+            updateJoystickFromKeys();
+        }
+    }
+
+    function handleKeyDown(event) {
+    const key = event.key.toLowerCase();
+    const isArrowKey = ['arrowup', 'arrowdown', 'arrowleft', 'arrowright'].includes(key);
+
+    // Chỉ ngăn cuộn nếu không ở trong ô nhập liệu
+    if (isArrowKey && !event.target.matches('input, textarea, select')) {
+        event.preventDefault();
+    }
+
+    if (key in keysPressed) {
+        keysPressed[key] = true;
+        updateJoystickFromKeys();
+    }
+}
+
+function updateJoystickFromKeys() {
+    // Cập nhật joystick trái (WASD)
+    let leftX = 0;
+    let leftY = 0;
+    if (keysPressed.a) leftX -= 1;
+    if (keysPressed.d) leftX += 1;
+    if (keysPressed.w) leftY -= 1;
+    if (keysPressed.s) leftY += 1;
+
+    // Chuẩn hóa giá trị trái
+    let leftMagnitude = Math.sqrt(leftX * leftX + leftY * leftY);
+    if (leftMagnitude > 1) {
+        leftX /= leftMagnitude;
+        leftY /= leftMagnitude;
+    }
+
+    // Cập nhật joystick phải (Mũi tên)
+    let rightX = 0;
+    let rightY = 0;
+    if (keysPressed.arrowleft) rightX -= 1;
+    if (keysPressed.arrowright) rightX += 1;
+    if (keysPressed.arrowup) rightY -= 1;
+    if (keysPressed.arrowdown) rightY += 1;
+
+    // Chuẩn hóa giá trị phải
+    let rightMagnitude = Math.sqrt(rightX * rightX + rightY * rightY);
+    if (rightMagnitude > 1) {
+        rightX /= rightMagnitude;
+        rightY /= rightMagnitude;
+    }
+
+    // Áp dụng giá trị vào joystickState
+    joystickState.leftX = leftX;
+    joystickState.leftY = leftY;
+    joystickState.rightX = rightX;
+    joystickState.rightY = rightY;
+
+    // Cập nhật hiển thị trực quan
+    updateJoystickVisual('left-joystick', 'left-knob', leftX, leftY);
+    updateJoystickVisual('right-joystick', 'right-knob', rightX, rightY);
+
+    sendJoystickData();
+}
+
+    function updateJoystickVisual(joystickId, knobId, x, y) {
+        const joystick = document.getElementById(joystickId);
+        const knob = document.getElementById(knobId);
+        const rect = joystick.getBoundingClientRect();
+        const maxDist = rect.width / 2 - 25;
+
+        knob.style.left = `${50 + (x * 50)}%`;
+        knob.style.top = `${50 + (y * 50)}%`;
+    }
+
+    // Thêm event listeners cho bàn phím
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
+    document.addEventListener('DOMContentLoaded', () => {
+    const rightJoystick = document.querySelector('.right-joystick');
+    const rightThumb = rightJoystick.querySelector('.thumb');
+    let isDragging = false;
+
+    function calculateValues(x, y) {
+        const rect = rightJoystick.getBoundingClientRect();
+        const relX = Math.min(Math.max((x - rect.left) / rect.width, 0), 1);
+        const relY = Math.min(Math.max((y - rect.top) / rect.height, 0), 1);
+        
+        return {
+            throttle: 2000 - (relY * 1000),
+            yaw: 1000 + (relX * 1000),
+            relX,
+            relY
+        };
+    }
+
+    function updatePosition(e) {
+        if (!isDragging) return;
+        
+        const { throttle, yaw, relX, relY } = calculateValues(e.clientX, e.clientY);
+        rightThumb.style.transform = `translate(
+            ${(relX - 0.5) * 40}px, 
+            ${(relY - 0.5) * 40}px
+        )`;
+
+        console.log(`THROTTLE: ${throttle.toFixed(0)}, YAW: ${yaw.toFixed(0)}`);
+    }
+
+    // Xử lý sự kiện chuột
+    rightThumb.addEventListener('mousedown', () => isDragging = true);
+    document.addEventListener('mousemove', updatePosition);
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        rightThumb.style.transform = 'translate(-50%, -50%)';
+        console.log('THROTTLE: 1500, YAW: 1500'); // Reset values
+    });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+    const rightJoystick = document.querySelector('.right-joystick');
+    const rightThumb = rightJoystick.querySelector('.thumb');
+    let isDragging = false;
+    let lockedAxis = null; // 'x' hoặc 'y'
+    let startPosition = { x: 0, y: 0 };
+
+    function calculateValues(x, y) {
+        const rect = rightJoystick.getBoundingClientRect();
+        const centerX = rect.left + rect.width/2;
+        const centerY = rect.top + rect.height/2;
+        
+        // Tính toán offset từ tâm
+        let deltaX = x - centerX;
+        let deltaY = y - centerY;
+        const maxDist = 40; // Giới hạn di chuyển
+
+        // Áp dụng khóa trục
+        if(lockedAxis === 'x') {
+            deltaY = 0;
+        } else if(lockedAxis === 'y') {
+            deltaX = 0;
+        }
+
+        // Giới hạn phạm vi di chuyển
+        const dist = Math.sqrt(deltaX*deltaX + deltaY*deltaY);
+        if(dist > maxDist) {
+            deltaX *= maxDist/dist;
+            deltaY *= maxDist/dist;
+        }
+
+        // Tính giá trị điều khiển
+        const throttle = 2000 - ((deltaY/maxDist)*500 + 1500);
+        const yaw = 1500 + ((deltaX/maxDist)*500);
+
+        return { 
+            throttle: Math.round(throttle),
+            yaw: Math.round(yaw),
+            deltaX,
+            deltaY 
+        };
+    }
+
+    function updatePosition(e) {
+        if (!isDragging) return;
+        
+        const { throttle, yaw, deltaX, deltaY } = calculateValues(e.clientX, e.clientY);
+        
+        // Cập nhật vị trí thumb
+        rightThumb.style.transform = `translate(
+            ${deltaX}px, 
+            ${deltaY}px
+        )`;
+
+        console.log(`THROTTLE: ${throttle}, YAW: ${yaw}`);
+    }
+
+    // Xử lý sự kiện bắt đầu kéo
+    rightThumb.addEventListener('mousedown', (e) => {
+        const rect = rightJoystick.getBoundingClientRect();
+        startPosition.x = e.clientX;
+        startPosition.y = e.clientY;
+        
+        // Xác định hướng kéo chính
+        const initialDeltaX = Math.abs(e.clientX - (rect.left + rect.width/2));
+        const initialDeltaY = Math.abs(e.clientY - (rect.top + rect.height/2));
+        
+        // Khóa trục nào có độ lệch lớn hơn ban đầu
+        lockedAxis = initialDeltaX > initialDeltaY ? 'x' : 'y';
+        isDragging = true;
+    });
+
+    document.addEventListener('mousemove', updatePosition);
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        lockedAxis = null;
+        rightThumb.style.transform = 'translate(-50%, -50%)';
+        console.log('THROTTLE: 1500, YAW: 1500');
+    });
+});
+  </script>
+</body>
+</html>
