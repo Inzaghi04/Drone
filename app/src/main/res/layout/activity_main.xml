@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282c34">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- IP Address Input -->
+        <LinearLayout
+            android:id="@+id/ipContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ipLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Drone IP Address:"
+                android:textColor="#FFFFFF" />
+
+            <!-- LinearLayout ngang chứa EditText và Button được căn giữa -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/droneIp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Enter IP Address"
+                    android:padding="8dp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/saveIpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Joystick Container -->
+        <LinearLayout
+            android:id="@+id/joystickContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="207dp"
+            android:layout_marginBottom="-30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Left Joystick -->
+
+            <!-- Right Joystick -->
+
+            <FrameLayout
+                android:id="@+id/leftJoystick"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="150dp"
+                android:background="@drawable/joystick_bg"
+                android:translationY="-20dp">
+
+                <View
+                    android:id="@+id/leftKnob"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/knob_bg" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/rightJoystick"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="150dp"
+                android:background="@drawable/joystick_bg"
+                android:translationY="-20dp">
+
+                <View
+                    android:id="@+id/rightKnob"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/knob_bg"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/switchContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="-50dp">
+
+            <Switch
+                android:id="@+id/armSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/switchLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARM MODE"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
