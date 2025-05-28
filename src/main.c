@@ -7,7 +7,7 @@
 #include "nvs_flash.h"
 #include "esp_log.h"
 #include "driver/ledc.h"
-#include "driver/i2c.h"
+#include "driver/i2c_master.h"
 #include "driver/gpio.h"
 #include "esp_http_server.h"
 #include "freertos/FreeRTOS.h"
@@ -20,11 +20,11 @@ static const char* TAG = "ESP32_DRONE";
 
 // Cấu trúc dữ liệu từ web
 typedef struct {
-    uint16_t throttle;
-    uint16_t yaw;
-    uint16_t pitch;
-    uint16_t roll;
-    uint16_t AUX1;
+    float throttle;
+    float yaw;
+    float pitch;
+    float roll;
+    float AUX1;
 } joystick_data_t;
 
 static joystick_data_t web_control_data = {
@@ -37,10 +37,10 @@ static joystick_data_t web_control_data = {
 static SemaphoreHandle_t web_data_mutex; // Mutex để bảo vệ dữ liệu web
 
 // Định nghĩa chân PWM cho ESC
-#define ESC_MOTOR_1 14
-#define ESC_MOTOR_2 19
-#define ESC_MOTOR_3 25
-#define ESC_MOTOR_4 15
+#define ESC_MOTOR_1 19
+#define ESC_MOTOR_2 15
+#define ESC_MOTOR_3 14
+#define ESC_MOTOR_4 25
 #define LED 2
 
 #define LEDC_TIMER      LEDC_TIMER_0
@@ -52,35 +52,77 @@ static SemaphoreHandle_t web_data_mutex; // Mutex để bảo vệ dữ liệu w
 
 #define PWM_MIN_DUTY   (1023 * 5 / 100)    // 51 (~1000µs)
 #define PWM_MAX_DUTY   (1023 * 10 / 100)   // 102 (~2000µs)
+#define I2C_MASTER_SCL_IO           22
+#define I2C_MASTER_SDA_IO           21
+#define I2C_MASTER_NUM              I2C_NUM_0
+#define I2C_MASTER_FREQ_HZ          400000
+#define MPU6050_ADDR                0x68
 
-#define I2C_MASTER_SCL_IO 22
-#define I2C_MASTER_SDA_IO 21
-#define I2C_MASTER_NUM I2C_NUM_0
-#define I2C_MASTER_FREQ_HZ 100000
-#define MPU6050_ADDR 0x68
-
-// Biến toàn cục cho PID và MPU6050
+float x, y, z, t;
+float RateRoll, RatePitch, RateYaw;
+float RateCalibrationRoll, RateCalibrationPitch, RateCalibrationYaw;
+int RateCalibrationNumber;
+float CurrentConsumed=0;
+uint64_t LoopTimer;
+float DesiredRateRoll, DesiredRatePitch,DesiredRateYaw;
+float ErrorRateRoll, ErrorRatePitch, ErrorRateYaw;
+float InputRoll, InputThrottle, InputPitch, InputYaw;
+float Throttle, Yaw, Roll, Pitch;
+float PrevErrorRateRoll, PrevErrorRatePitch, PrevErrorRateYaw;
+float PrevItermRateRoll, PrevItermRatePitch, PrevItermRateYaw;
+float PIDReturn[] = {0, 0, 0};
+float PRateRoll = 0.625;  float PRateYaw = 4.0;
+float IRateRoll = 2.1;  float IRateYaw = 3.0;
+float DRateRoll = 0.0088; float DRateYaw = 0;
+float PRatePitch = 0.625;
+float IRatePitch = 2.1; 
+float DRatePitch = 0.0088 ;
 float MotorInput1, MotorInput2, MotorInput3, MotorInput4;
-float elapsedTime, timePrev;
-int gyro_error = 0, acc_error = 0;
-float Gyr_rawX, Gyr_rawY, Gyro_angle_x, Gyro_angle_y, Gyro_raw_error_x, Gyro_raw_error_y;
-float rad_to_deg = 180 / 3.141592654;
-float Acc_rawX, Acc_rawY, Acc_rawZ, Acc_angleX, Acc_angleY, Acc_raw_error_x, Acc_raw_error_y;
-float Total_angleX, Total_angleY;
-float yaw_PID;
+float AccX, AccY, AccZ;
+float AngleRoll, AnglePitch;
+float KalmanAngleRoll = 0, KalmanUncertaintyAngleRoll = 2 * 2;
+float KalmanAnglePitch = 0, KalmanUncertaintyAnglePitch = 2 * 2;
+float Kalman1DOutput[] = {0, 0};
+float DesiredAngleRoll, DesiredAnglePitch;
+float ErrorAngleRoll, ErrorAnglePitch;
+float PrevErrorAngleRoll, PrevErrorAnglePitch;
+float PrevItermAngleRoll, PrevItermAnglePitch;
+float PAngleRoll=2.0; float PAnglePitch = 2.0;
+float IAngleRoll=0.5; float IAnglePitch = 0.5;
+float DAngleRoll=0.007; float DAnglePitch = 0.007;
 
-float roll_PID, roll_error, roll_previous_error, roll_pid_p, roll_pid_i, roll_pid_d;
-float pitch_PID, pitch_error, pitch_previous_error, pitch_pid_p, pitch_pid_i, pitch_pid_d;
-double roll_kp = 0.7, roll_ki = 0.006, roll_kd = 1.2;
-double pitch_kp = 0.72, pitch_ki = 0.006, pitch_kd = 1.22;
-double yaw_kp = 1.0, yaw_ki = 0.0, yaw_kd = 0.0; // Giá trị PID cho Yaw (chưa tinh chỉnh)
-float yaw_error, yaw_previous_error, yaw_pid_p, yaw_pid_i, yaw_pid_d; // Các biến yaw PID
+i2c_master_bus_handle_t bus_handle;
+i2c_master_dev_handle_t dev_handle;
 
-float roll_desired_angle = 0, pitch_desired_angle = 0, yaw_desired_angle = 0;
+float round_to_2_decimal_places(float num) {
+    return roundf(num * 100) / 100;
+}
+void kalman_1d(float KalmanState, float KalmanUncertainty, float KalmanInput, float KalmanMeasurement) {
+    KalmanState = KalmanState + 0.02 * KalmanInput;
+    KalmanUncertainty = KalmanUncertainty + 0.02 * 0.02 * 4 * 4;
+    float KalmanGain = KalmanUncertainty * 1 / (1 * KalmanUncertainty + 3 * 3);
+    KalmanState = KalmanState + KalmanGain * (KalmanMeasurement - KalmanState);
+    KalmanUncertainty = (1 - KalmanGain) * KalmanUncertainty;
+    Kalman1DOutput[0] = KalmanState; 
+    Kalman1DOutput[1] = KalmanUncertainty;
+}
+// Hàm ghi thanh ghi
+esp_err_t mpu6050_register_write(uint8_t reg, uint8_t data) {
+    uint8_t write_buf[2] = {reg, data};
+    return i2c_master_transmit(dev_handle, write_buf, sizeof(write_buf), pdMS_TO_TICKS(1000));
+}
 
-// Hàm ánh xạ PWM
+// Hàm đọc thanh ghi
+esp_err_t mpu6050_register_read(uint8_t reg, uint8_t *data, size_t len) {
+    // Gửi địa chỉ thanh ghi trước
+    ESP_ERROR_CHECK(i2c_master_transmit(dev_handle, &reg, 1, pdMS_TO_TICKS(1000)));
+    // Đọc dữ liệu
+    return i2c_master_receive(dev_handle, data, len, pdMS_TO_TICKS(1000));
+}
+
 void setMotorSpeed(ledc_channel_t channel, float input) {
     // Tính duty cycle cho 10-bit (0-1023)
+ // Giới hạn giá trị input trong khoảng cho phép
     uint32_t duty = (uint32_t)(
         (input - 1000) * (PWM_MAX_DUTY - PWM_MIN_DUTY) / 1000 + PWM_MIN_DUTY
     );
@@ -116,20 +158,42 @@ static void configureMotor(int gpio, ledc_channel_t channel) {
 
 // Xử lý yêu cầu HTTP POST từ web
 static esp_err_t control_post_handler(httpd_req_t *req) {
+    // Thêm header CORS
     httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
-    char content[100];
+    
+    char content[256];
     int ret = httpd_req_recv(req, content, sizeof(content));
-    if (ret <= 0) return ESP_FAIL;
+    if (ret <= 0) {
+        return ESP_FAIL;
+    }
+    
+    // Đảm bảo kết thúc chuỗi đúng cách
+    content[ret] = '\0';
 
-    joystick_data_t temp_data;
-    sscanf(content, "{\"roll\":%hu,\"pitch\":%hu,\"yaw\":%hu,\"throttle\":%hu,\"AUX1\":%hu}",
-           &temp_data.roll, &temp_data.pitch, &temp_data.yaw, &temp_data.throttle, &temp_data.AUX1);
-   // ESP_LOGI(TAG, "Received data: roll=%d, pitch=%d, yaw=%d, throttle=%d, AUX1=%d",
-      //       temp_data.roll, temp_data.pitch, temp_data.yaw, temp_data.throttle, temp_data.AUX1);
-
-    xSemaphoreTake(web_data_mutex, portMAX_DELAY);
-    web_control_data = temp_data;
-    xSemaphoreGive(web_data_mutex);
+    // Thử sử dụng nhiều định dạng phân tích khác nhau
+    int parsed = 0;
+    
+    // Phân tích nếu số là chuỗi: "1500.00"
+    parsed = sscanf(content, "{\"roll\":\"%f\",\"pitch\":\"%f\",\"yaw\":\"%f\",\"throttle\":\"%f\",\"AUX1\":\"%f\"}", 
+                    &web_control_data.roll, &web_control_data.pitch, 
+                    &web_control_data.yaw, &web_control_data.throttle, &web_control_data.AUX1);
+    
+    // Nếu không thành công, thử phân tích nếu số không phải chuỗi: 1500.00
+    if (parsed != 5) {
+        parsed = sscanf(content, "{\"roll\":%f,\"pitch\":%f,\"yaw\":%f,\"throttle\":%f,\"AUX1\":%f}", 
+                        &web_control_data.roll, &web_control_data.pitch, 
+                        &web_control_data.yaw, &web_control_data.throttle, &web_control_data.AUX1);
+    }
+    
+    if (parsed == 5) {
+        x = round_to_2_decimal_places(web_control_data.pitch);
+        y = round_to_2_decimal_places(web_control_data.roll);
+        z = round_to_2_decimal_places(web_control_data.yaw);
+        t = round_to_2_decimal_places(web_control_data.throttle);
+        
+    } else {
+        ESP_LOGE(TAG, "Failed to parse JSON data");
+    }
 
     httpd_resp_send(req, "OK", 2);
     return ESP_OK;
@@ -161,6 +225,7 @@ static void start_webserver(void) {
 static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {
     if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         esp_netif_ip_info_t* ip_info = (esp_netif_ip_info_t*)event_data;
+        (void) ip_info;
     }
 }
 
@@ -195,288 +260,177 @@ static void init_wifi(void) {
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
 
+    esp_wifi_set_storage(WIFI_STORAGE_RAM);  // Lưu cấu hình Wi-Fi trong RAM thay vì NVS
+    esp_wifi_set_bandwidth(WIFI_IF_STA, WIFI_BW_HT20);  // Cố định băng thông 20MHz
+    esp_wifi_config_11b_rate(ESP_IF_WIFI_STA, true);  // Bật tính năng HE nếu dùng Wi-Fi 6
     // Tăng tốc kết nối lại
+
     ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));  // Tắt Power Save mode
     ESP_ERROR_CHECK(esp_wifi_start());
     
     ESP_LOGI(TAG, "WiFi Initialization Complete. Connecting...");
     
     ESP_ERROR_CHECK(esp_wifi_connect());
-}
-// Khởi tạo I2C
-static void i2c_master_init(void) {
-    i2c_config_t conf = {
-        .mode = I2C_MODE_MASTER,
-        .sda_io_num = I2C_MASTER_SDA_IO,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_io_num = I2C_MASTER_SCL_IO,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
-        .master.clk_speed = I2C_MASTER_FREQ_HZ,
-    };
-    i2c_param_config(I2C_MASTER_NUM, &conf);
-    i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
+  
 }
 
-// Ghi dữ liệu I2C
-static esp_err_t i2c_write_byte(uint8_t dev_addr, uint8_t reg_addr, uint8_t data) {
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (dev_addr << 1) | I2C_MASTER_WRITE, true);
-    i2c_master_write_byte(cmd, reg_addr, true);
-    i2c_master_write_byte(cmd, data, true);
-    i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, pdMS_TO_TICKS(50));
-    i2c_cmd_link_delete(cmd);
-    return ret;
+void read_receiver(void) {
+    xSemaphoreTake(web_data_mutex, portMAX_DELAY);
+    xSemaphoreGive(web_data_mutex);
+    Throttle = t;
+    Yaw = z;
+    Roll = y;
+    Pitch = x;
 }
 
-// Đọc dữ liệu I2C
-static esp_err_t i2c_read_bytes(uint8_t dev_addr, uint8_t reg_addr, uint8_t *data, size_t len) {
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (dev_addr << 1) | I2C_MASTER_WRITE, true);
-    i2c_master_write_byte(cmd, reg_addr, true);
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (dev_addr << 1) | I2C_MASTER_READ, true);
-    i2c_master_read(cmd, data, len, I2C_MASTER_LAST_NACK);
-    i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, pdMS_TO_TICKS(50));
-    i2c_cmd_link_delete(cmd);
-    return ret;
+void gyro_signals(void) {
+    // Cấu hình MPU6050
+    ESP_ERROR_CHECK(mpu6050_register_write(0x1A, 0x05));  // Low-pass filter
+    ESP_ERROR_CHECK(mpu6050_register_write(0x1C, 0x10));  // Accelerometer +/- 8g
+    ESP_ERROR_CHECK(mpu6050_register_write(0x1B, 0x8));  // Gyro +/- 500dps
+
+    // Đọc dữ liệu accelerometer
+    uint8_t acc_data[6];
+    ESP_ERROR_CHECK(mpu6050_register_read(0x3B, acc_data, sizeof(acc_data)));
+    // Xử lý dữ liệu accelerometer
+    int16_t AccXLSB = (acc_data[0] << 8) | acc_data[1];
+    int16_t AccYLSB = (acc_data[2] << 8) | acc_data[3];
+    int16_t AccZLSB = (acc_data[4] << 8) | acc_data[5];
+        
+    
+    // Đọc dữ liệu gyro
+    uint8_t gyro_data[6];
+    ESP_ERROR_CHECK(mpu6050_register_read(0x43, gyro_data, sizeof(gyro_data)));
+
+    // Xử lý dữ liệu gyro
+    int16_t GyroX = (gyro_data[0] << 8) | gyro_data[1];
+    int16_t GyroY = (gyro_data[2] << 8) | gyro_data[3];
+    int16_t GyroZ = (gyro_data[4] << 8) | gyro_data[5];
+
+    // Chuyển đổi giá trị
+    
+    RateRoll = (float) GyroX / 65.5;
+    RatePitch = (float) GyroY / 65.5;
+    RateYaw = (float) GyroZ / 65.5;
+
+    AccX = (float) AccXLSB / 4096.0 - 0.07;
+    AccY = (float) AccYLSB / 4096.0 + 0.01;
+    AccZ = (float) AccZLSB / 4096.0 - 0.04;
+
+    // Tính toán góc
+    AngleRoll=atan(AccY/sqrt(AccX*AccX+AccZ*AccZ))*1/(3.142/180);
+    AnglePitch=-atan(AccX/sqrt(AccY*AccY+AccZ*AccZ))*1/(3.142/180);
 }
 
-// Cập nhật tốc độ động cơ
-static void update_motor(joystick_data_t *control_data) { // Thêm tham số control_data
-    int64_t time = esp_timer_get_time(); // Microseconds
-    elapsedTime = (time - timePrev) / 1000000.0; // Seconds
-    timePrev = time;
+void pid_equation(float Error, float P, float I, float D, float PrevError, float PrevIterm) {
+    // === Thông số PID ===
+    const float dt = 0.02f;     // thời gian mẫu phần I (10ms)
+    const float dt_d = 0.02f;   // thời gian mẫu phần D (20ms)
+    const float error_threshold = 5.0f;
+    const float Iterm_max = 400.0f;
+    const float Iterm_min = -400.0f;
+    const float output_max = 400.0f;
+    const float output_min = -400.0f;
+    const float anti_windup_gain = 0.1f;
 
-    uint8_t data[6];
-    if (i2c_read_bytes(MPU6050_ADDR, 0x43, data, 4) == ESP_OK) {
-        Gyr_rawX = ((int16_t)(data[0] << 8) | data[1]) / 32.8 - Gyro_raw_error_x;
-        Gyr_rawY = ((int16_t)(data[2] << 8) | data[3]) / 32.8 - Gyro_raw_error_y;
-        Gyro_angle_x = Gyr_rawX * elapsedTime;
-        Gyro_angle_y = Gyr_rawY * elapsedTime;
-    } else {
-        ESP_LOGE(TAG, "Failed to read gyro data");
-        return;
-    }
+    // === P-Term ===
+    float Pterm = P * Error;
 
-    if (i2c_read_bytes(MPU6050_ADDR, 0x3B, data, 6) == ESP_OK) {
-        Acc_rawX = ((int16_t)(data[0] << 8) | data[1]) / 4096.0;
-        Acc_rawY = ((int16_t)(data[2] << 8) | data[3]) / 4096.0;
-        Acc_rawZ = ((int16_t)(data[4] << 8) | data[5]) / 4096.0;
-        Acc_angleX = (atan2(Acc_rawY, sqrt(Acc_rawX * Acc_rawX + Acc_rawZ * Acc_rawZ)) * rad_to_deg) - Acc_raw_error_x;
-        Acc_angleY = (atan2(-Acc_rawX, sqrt(Acc_rawY * Acc_rawY + Acc_rawZ * Acc_rawZ)) * rad_to_deg) - Acc_raw_error_y;
+    // === I-Term với Conditional Integration ===
+    float Iterm = PrevIterm + I * (Error + PrevError) * dt / 2.0f;
 
-        Total_angleX = 0.98 * (Total_angleX + Gyro_angle_x) + 0.02 * Acc_angleX;
-        Total_angleY = 0.98 * (Total_angleY + Gyro_angle_y) + 0.02 * Acc_angleY;
+    // Clamping Iterm
+    if (Iterm > Iterm_max) Iterm = Iterm_max;
+    else if (Iterm < Iterm_min) Iterm = Iterm_min;
 
-    } else {
-        ESP_LOGE(TAG, "Failed to read accel data");
-        return;
-    }
-    //ESP_LOGI(TAG, "Gyr_rawX: %.2f, Gyr_rawY: %.2f, Acc_rawX: %.2f, Acc_rawY: %.2f, Acc_rawZ: %.2f", Gyr_rawX, Gyr_rawY, Acc_rawX, Acc_rawY, Acc_rawZ);
+    // === D-Term (Derivative) ===
+    float Dterm = D * (Error - PrevError) / dt_d;
 
-    roll_desired_angle = ((control_data->roll) - 1500) / 50.0; // -10 to 10 degrees
-    pitch_desired_angle = ((control_data->pitch) - 1500) / 50.0;
-    yaw_desired_angle = ((control_data->yaw) - 1500) / 5.0; 
-    //ESP_LOGI(TAG, "Desired angles: roll=%.2f, pitch=%.2f", roll_desired_angle, pitch_desired_angle);
-    roll_error = Total_angleY - roll_desired_angle;
-    pitch_error = Total_angleX - pitch_desired_angle;
-    //ESP_LOGI(TAG, "Roll error: %.2f, Pitch error: %.2f", roll_error, pitch_error);
+    // === Tổng đầu ra PID chưa giới hạn ===
+    float rawOutput = Pterm + Iterm + Dterm;
 
-    roll_pid_p = roll_kp * roll_error;
-    pitch_pid_p = pitch_kp * pitch_error;
-
-    if (-3 < roll_error && roll_error < 3) roll_pid_i += roll_ki * roll_error;
-    if (-3 < pitch_error && pitch_error < 3) pitch_pid_i += pitch_ki * pitch_error;
-
-    roll_pid_d = roll_kd * (roll_error - roll_previous_error) / elapsedTime;
-    pitch_pid_d = pitch_kd * (pitch_error - pitch_previous_error) / elapsedTime;
-
-    roll_PID = roll_pid_p + roll_pid_i + roll_pid_d;
-    pitch_PID = pitch_pid_p + pitch_pid_i + pitch_pid_d;
-
-    roll_PID = (roll_PID < -400) ? -400 : (roll_PID > 400 ? 400 : roll_PID);
-    pitch_PID = (pitch_PID < -400) ? -400 : (pitch_PID > 400 ? 400 : pitch_PID);
-    yaw_PID = yaw_desired_angle; // Directly use desired yaw as control output.
-    yaw_PID = (yaw_PID < -200) ? -200 : (yaw_PID > 200 ? 200 : yaw_PID); // Clamp Yaw PID - Adjust limits as needed
-
-    //ESP_LOGI(TAG, "Roll PID: %.2f, Pitch PID: %.2f", roll_PID, pitch_PID);
-    float throttle = control_data->throttle;
-   // Sửa công thức thành:
-    MotorInput1 = throttle + roll_PID + pitch_PID; //- yaw_PID; // phai truoc
-    MotorInput2 = throttle + roll_PID - pitch_PID; //+ yaw_PID; // phai sau
-    MotorInput3 = throttle - roll_PID - pitch_PID; //- yaw_PID; // trai sau
-    MotorInput4 = throttle - roll_PID + pitch_PID; //+ yaw_PID; // trai truoc
-    MotorInput1 = (MotorInput1 < 1025) ? PWM_MIN_US : (MotorInput1 > PWM_MAX_US ? PWM_MAX_US : MotorInput1);
-    MotorInput2 = (MotorInput2 < 1025) ? PWM_MIN_US : (MotorInput2 > PWM_MAX_US ? PWM_MAX_US : MotorInput2);
-    MotorInput3 = (MotorInput3 < 1025) ? PWM_MIN_US : (MotorInput3 > PWM_MAX_US ? PWM_MAX_US : MotorInput3);
-    MotorInput4 = (MotorInput4 < 1025) ? PWM_MIN_US : (MotorInput4 > PWM_MAX_US ? PWM_MAX_US : MotorInput4);
-
-
-    roll_previous_error = roll_error;
-    pitch_previous_error = pitch_error;
-
-    ESP_LOGI(TAG, "Control Data - Throttle: %d, Roll: %d, Pitch: %d, Yaw: %d, AUX1: %d", control_data->throttle, control_data->roll, control_data->pitch, control_data->yaw, control_data->AUX1);
-    ESP_LOGI(TAG, "IMU Data - GyrX: %.2f, GyrY: %.2f, AccX: %.2f, AccY: %.2f, AccZ: %.2f", Gyr_rawX, Gyr_rawY, Acc_rawX, Acc_rawY, Acc_rawZ);
-    ESP_LOGI(TAG, "Angles - TotalX: %.2f, TotalY: %.2f, DesiredRoll: %.2f, DesiredPitch: %.2f", Total_angleX, Total_angleY, roll_desired_angle, pitch_desired_angle);
-    ESP_LOGI(TAG, "Errors - Roll: %.2f, Pitch: %.2f", roll_error, pitch_error);
-    ESP_LOGI(TAG, "PID Terms - Roll_P: %.2f, Roll_I: %.2f, Roll_D: %.2f, Pitch_P: %.2f, Pitch_I: %.2f, Pitch_D: %.2f", roll_pid_p, roll_pid_i, roll_pid_d, pitch_pid_p, pitch_pid_i, pitch_pid_d);
-    ESP_LOGI(TAG, "PID Outputs - Roll_PID: %.2f, Pitch_PID: %.2f", roll_PID, pitch_PID);
-    ESP_LOGI(TAG, "Motor Inputs (Raw) - M1: %.2f, M2: %.2f, M3: %.2f, M4: %.2f", MotorInput1, MotorInput2, MotorInput3, MotorInput4);
-
-
-    if (control_data->AUX1 == 0) {
-        roll_PID = 0; // Zero out PID outputs when disarmed
-        pitch_PID = 0;
-        yaw_PID = 0;
-        setMotorSpeed(LEDC_CHANNEL_0, PWM_MIN_US);
-        setMotorSpeed(LEDC_CHANNEL_1, PWM_MIN_US);
-        setMotorSpeed(LEDC_CHANNEL_2, PWM_MIN_US);
-        setMotorSpeed(LEDC_CHANNEL_3, PWM_MIN_US);
-        ESP_LOGI(TAG, "Motors Disarmed - PWM set to MIN_US");
-    } else {
-        setMotorSpeed(LEDC_CHANNEL_0, MotorInput1);
-        setMotorSpeed(LEDC_CHANNEL_1, MotorInput2);
-        setMotorSpeed(LEDC_CHANNEL_2, MotorInput3);
-        setMotorSpeed(LEDC_CHANNEL_3, MotorInput4);
-        ESP_LOGI(TAG, "Motors Armed - PWM set to calculated values");
-    }
-    ESP_LOGI(TAG, "Motor PWM Output - M1: %.2f, M2: %.2f, M3: %.2f, M4: %.2f", MotorInput1, MotorInput2, MotorInput3, MotorInput4);
-    ESP_LOGI(TAG, "--------------------------------------------------");
-}
-
-// Task điều khiển
-static void control_task(void *pvParam) {
-    timePrev = esp_timer_get_time();
-    joystick_data_t local_data;
-    esp_task_wdt_add(NULL);
-
-    vTaskDelay(pdMS_TO_TICKS(1000));
-
-    web_control_data.throttle = PWM_MIN_US; // Đảm bảo throttle khởi đầu ở mức thấp nhất
-    ESP_LOGI(TAG, "Initial Throttle set to PWM_MIN_US at task start");
-
-    // Reset PID and angle variables at the start of the control task loop
-    Total_angleX = 0;
-    Total_angleY = 0;
-    roll_pid_i = 0;
-    pitch_pid_i = 0;
-    roll_previous_error = 0;
-    pitch_previous_error = 0;
-    ESP_LOGI(TAG, "Control Task Started - PID and Angle variables reset");
-
-    while (1) {
-        // Reset PID and angle variables at the beginning of each loop iteration as well (for safety)
-        Total_angleX = 0; // Reset angle each loop, consider if this is desired.
-        Total_angleY = 0; // Reset angle each loop, consider if this is desired.
-        roll_pid_i = 0;  // Reset integral term each loop, may reduce windup, but also PID performance.
-        pitch_pid_i = 0; // Reset integral term each loop, may reduce windup, but also PID performance.
-        roll_previous_error = 0; // Reset previous error each loop, might not be ideal for derivative term.
-        pitch_previous_error = 0; // Reset previous error each loop, might not be ideal for derivative term.
-        yaw_PID = 0;
-
-        ESP_LOGI(TAG, "Control Loop Iteration - PID and Angle variables reset at loop start");
-
-
-        xSemaphoreTake(web_data_mutex, portMAX_DELAY);
-        local_data = web_control_data;
-        xSemaphoreGive(web_data_mutex);
-
-        if (local_data.AUX1 == 1) { // Kiểm tra AUX1 để arm/disarm
-            update_motor(&local_data); // Truyền địa chỉ của local_data
-        } else {
-            Total_angleX = 0;
-            Total_angleY = 0;
-            roll_pid_i = 0;
-            pitch_pid_i = 0;
-            roll_previous_error = 0;
-            pitch_previous_error = 0;
-            yaw_PID = 0;
-            // Disarm - Đặt tốc độ động cơ về MIN hoặc tắt hoàn toàn (nếu muốn tắt PWM)
-            setMotorSpeed(LEDC_CHANNEL_0, PWM_MIN_US);
-            setMotorSpeed(LEDC_CHANNEL_1, PWM_MIN_US);
-            setMotorSpeed(LEDC_CHANNEL_2, PWM_MIN_US);
-            setMotorSpeed(LEDC_CHANNEL_3, PWM_MIN_US);
-            ESP_LOGI(TAG, "Motors Disarmed via AUX1=0 - PWM set to MIN_US"); // Thêm log khi disarm
+    // === Anti-windup với Back-calculation ===
+    float PIDOutput = rawOutput;
+    if (rawOutput > output_max) {
+        PIDOutput = output_max;
+        if (Error > 0) {
+            float output_error = output_max - rawOutput;
+            Iterm += anti_windup_gain * output_error;
         }
-        esp_task_wdt_reset();
-        vTaskDelay(pdMS_TO_TICKS(40)); // Giảm delay để phản hồi nhanh hơn
-        taskYIELD();//
+    } else if (rawOutput < output_min) {
+        PIDOutput = output_min;
+        if (Error < 0) {
+            float output_error = output_min - rawOutput;
+            Iterm += anti_windup_gain * output_error;
+        }
     }
+
+    // Clamping lại Iterm sau anti-windup
+    if (Iterm > Iterm_max) Iterm = Iterm_max;
+    else if (Iterm < Iterm_min) Iterm = Iterm_min;
+
+    // === Cập nhật đầu ra ===
+    PIDReturn[0] = PIDOutput;
+    PIDReturn[1] = Error;
+    PIDReturn[2] = Iterm;
 }
 
-
+void reset_pid(void) {
+    PrevErrorRateRoll = 0; PrevErrorRatePitch = 0; PrevErrorRateYaw = 0;
+    PrevItermRateRoll = 0; PrevItermRatePitch = 0; PrevItermRateYaw = 0;
+    PrevErrorAngleRoll = 0; PrevErrorAnglePitch = 0;    
+    PrevItermAngleRoll = 0; PrevItermAnglePitch = 0;
+}
 void app_main(void) {
-    esp_err_t ret = nvs_flash_erase();
-    if (ret == ESP_OK) {
-        ESP_LOGI(TAG, "NVS partition erased");
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        // Nếu NVS bị hỏng hoặc phiên bản mới, hãy xóa và khởi tạo lại
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ret = nvs_flash_init();
     }
+    ESP_ERROR_CHECK(ret);
     web_data_mutex = xSemaphoreCreateMutex();
-
-    // Initialize PID and angle variables in app_main
-    Total_angleX = 0;
-    Total_angleY = 0;
-    roll_pid_i = 0;
-    pitch_pid_i = 0;
-    roll_previous_error = 0;
-    pitch_previous_error = 0;
-    ESP_LOGI(TAG, "App Main Started - PID and Angle variables initialized");
-
-
     ESP_ERROR_CHECK(nvs_flash_init());
     esp_netif_init();
     ESP_ERROR_CHECK(esp_event_loop_create_default());
-    i2c_master_init();
     init_wifi();
 
     start_webserver();
+        // Cấu hình bus I2C
+    i2c_master_bus_config_t bus_config = {
+        .i2c_port = I2C_MASTER_NUM,
+        .sda_io_num = I2C_MASTER_SDA_IO,
+        .scl_io_num = I2C_MASTER_SCL_IO,
+        .clk_source = I2C_CLK_SRC_DEFAULT,
+        .glitch_ignore_cnt = 7,
+        .flags.enable_internal_pullup = true, // Kích hoạt pullup nội
+    };
 
-    ESP_ERROR_CHECK(i2c_write_byte(MPU6050_ADDR, 0x6B, 0x00)); // Reset MPU6050
-    ESP_ERROR_CHECK(i2c_write_byte(MPU6050_ADDR, 0x1B, 0x10)); // Gyro 1000dps
-    ESP_ERROR_CHECK(i2c_write_byte(MPU6050_ADDR, 0x1C, 0x10)); // Accel +/-8g
-    ESP_LOGI(TAG, "MPU6050 Initialized");
+    // Khởi tạo bus I2C
+    ESP_ERROR_CHECK(i2c_new_master_bus(&bus_config, &bus_handle));
 
-    // Tính lỗi ban đầu cho gyro
-    if (!gyro_error) {
-        ESP_LOGI(TAG, "Starting Gyro Calibration");
-        for (int i = 0; i < 200; i++) {
-            uint8_t data[4];
-            if (i2c_read_bytes(MPU6050_ADDR, 0x43, data, 4) == ESP_OK) {
-                Gyr_rawX = ((int16_t)(data[0] << 8) | data[1]) / 32.8;
-                Gyr_rawY = ((int16_t)(data[2] << 8) | data[3]) / 32.8;
-                Gyro_raw_error_x += Gyr_rawX;
-                Gyro_raw_error_y += Gyr_rawY;
-            }
-            vTaskDelay(pdMS_TO_TICKS(5));
-        }
-        Gyro_raw_error_x /= 200;
-        Gyro_raw_error_y /= 200;
-        gyro_error = 1;
-        ESP_LOGI(TAG, "Gyro Calibration Complete - ErrorX: %.2f, ErrorY: %.2f", Gyro_raw_error_x, Gyro_raw_error_y);
+    // Cấu hình thiết bị MPU6050 trên bus
+    i2c_device_config_t dev_config = {
+        .dev_addr_length = I2C_ADDR_BIT_7,
+        .device_address = MPU6050_ADDR,
+        .scl_speed_hz = I2C_MASTER_FREQ_HZ,
+    };
+
+    // Thêm thiết bị vào bus
+    ESP_ERROR_CHECK(i2c_master_bus_add_device(bus_handle, &dev_config, &dev_handle));
+    // Khởi động MPU6050
+    ESP_ERROR_CHECK(mpu6050_register_write(0x6B, 0x00));
+    vTaskDelay(pdMS_TO_TICKS(250));
+    for (RateCalibrationNumber = 0; RateCalibrationNumber < 2000; RateCalibrationNumber++) {
+        gyro_signals();
+        RateCalibrationRoll += RateRoll;
+        RateCalibrationPitch += RatePitch;
+        RateCalibrationYaw += RateYaw;
+        vTaskDelay(1);
     }
-
-    // Tính lỗi ban đầu cho accel
-    if (!acc_error) {
-        ESP_LOGI(TAG, "Starting Accel Calibration");
-        for (int i = 0; i < 200; i++) {
-            uint8_t data[6];
-            if (i2c_read_bytes(MPU6050_ADDR, 0x3B, data, 6) == ESP_OK) {
-                Acc_rawX = ((int16_t)(data[0] << 8) | data[1]) / 4096.0;
-                Acc_rawY = ((int16_t)(data[2] << 8) | data[3]) / 4096.0;
-                Acc_rawZ = ((int16_t)(data[4] << 8) | data[5]) / 4096.0;
-                Acc_raw_error_x += atan2(Acc_rawY, sqrt(Acc_rawX * Acc_rawX + Acc_rawZ * Acc_rawZ)) * rad_to_deg;
-                Acc_raw_error_y += atan2(-Acc_rawX, sqrt(Acc_rawY * Acc_rawY + Acc_rawZ * Acc_rawZ)) * rad_to_deg;
-            }
-            vTaskDelay(pdMS_TO_TICKS(5));
-        }
-        Acc_raw_error_x /= 200;
-        Acc_raw_error_y /= 200;
-        acc_error = 1;
-        ESP_LOGI(TAG, "Accel Calibration Complete - ErrorX: %.2f, ErrorY: %.2f", Acc_raw_error_x, Acc_raw_error_y);
-    }
+    RateCalibrationRoll /= 2000;
+    RateCalibrationPitch /= 2000;
+    RateCalibrationYaw /= 2000;
     esp_rom_gpio_pad_select_gpio(LED);
     gpio_set_direction(LED, GPIO_MODE_OUTPUT);
     gpio_set_level(LED, 1);
@@ -487,9 +441,91 @@ void app_main(void) {
     vTaskDelay(pdMS_TO_TICKS(5000));
     gpio_set_level(LED, 0);
     ESP_LOGI(TAG, "Motor PWM Configured");
-    
+    LoopTimer = esp_timer_get_time();
+    while (1) {
+        gyro_signals();
+        RateRoll -= RateCalibrationRoll;
+        RatePitch -= RateCalibrationPitch;
+        RateYaw -= RateCalibrationYaw;
+        kalman_1d(KalmanAngleRoll, KalmanUncertaintyAngleRoll, RateRoll, AngleRoll);
+        KalmanAngleRoll = Kalman1DOutput[0]; KalmanUncertaintyAngleRoll = Kalman1DOutput[1];
+        kalman_1d(KalmanAnglePitch, KalmanUncertaintyAnglePitch, RatePitch, AnglePitch);
+        KalmanAnglePitch = Kalman1DOutput[0]; KalmanUncertaintyAnglePitch = Kalman1DOutput[1];
+        read_receiver();
+        DesiredAngleRoll = 0.10 * (Roll - 1500);
+        DesiredAnglePitch = 0.10 * (Pitch - 1500);
+        InputThrottle = Throttle;
+        DesiredRateYaw = 0.15 * (Yaw - 1500);
+        ErrorAngleRoll = DesiredAngleRoll - KalmanAngleRoll;
+        ErrorAnglePitch = DesiredAnglePitch - KalmanAnglePitch;
+        pid_equation(ErrorAngleRoll, PAngleRoll, IAngleRoll, DAngleRoll, PrevErrorAngleRoll, PrevItermAngleRoll);     
+        DesiredRateRoll = PIDReturn[0]; 
+        PrevErrorAngleRoll = PIDReturn[1];
+        PrevItermAngleRoll = PIDReturn[2];
+        pid_equation(ErrorAnglePitch, PAnglePitch, IAnglePitch, DAnglePitch, PrevErrorAnglePitch, PrevItermAnglePitch);
+        DesiredRatePitch = PIDReturn[0]; 
+        PrevErrorAnglePitch = PIDReturn[1];
+        PrevItermAnglePitch = PIDReturn[2];
+        ErrorRateRoll = DesiredRateRoll - RateRoll;
+        ErrorRatePitch = DesiredRatePitch - RatePitch;
+        ErrorRateYaw = DesiredRateYaw - RateYaw;
+        pid_equation(ErrorRateRoll, PRateRoll, IRateRoll, DRateRoll, PrevErrorRateRoll, PrevItermRateRoll);
+        InputRoll = PIDReturn[0];
+        PrevErrorRateRoll = PIDReturn[1]; 
+        PrevItermRateRoll = PIDReturn[2];
+        pid_equation(ErrorRatePitch, PRatePitch,IRatePitch, DRatePitch, PrevErrorRatePitch, PrevItermRatePitch);
+        InputPitch = PIDReturn[0]; 
+        PrevErrorRatePitch = PIDReturn[1]; 
+        PrevItermRatePitch = PIDReturn[2];
+        pid_equation(ErrorRateYaw, PRateYaw,IRateYaw, DRateYaw, PrevErrorRateYaw, PrevItermRateYaw);
+        InputYaw = PIDReturn[0]; 
+        PrevErrorRateYaw = PIDReturn[1]; 
+        PrevItermRateYaw = PIDReturn[2];
+        if (InputThrottle > 1800) InputThrottle = 1800;
+        MotorInput3 = 1.024 * (InputThrottle + InputRoll + InputPitch + InputYaw);
+        MotorInput4 = 1.024 * (InputThrottle - InputRoll + InputPitch - InputYaw);
+        MotorInput1 = 1.024 * (InputThrottle - InputRoll - InputPitch + InputYaw);
+        MotorInput2 = 1.024 * (InputThrottle + InputRoll - InputPitch - InputYaw);
 
-    xTaskCreate(control_task, "control_loop", 4096, NULL, 10, NULL);
-    ESP_LOGI(TAG, "Control Task Created");
-    ESP_LOGI(TAG, "App Main Initialization Complete");
+        if (MotorInput1 > 2000) MotorInput1 = 1999;
+        if (MotorInput2 > 2000) MotorInput2 = 1999; 
+        if (MotorInput3 > 2000) MotorInput3 = 1999; 
+        if (MotorInput4 > 2000) MotorInput4 = 1999;
+        int ThrottleIdle = 1180;
+        if (MotorInput1 < ThrottleIdle) MotorInput1 = ThrottleIdle;
+        if (MotorInput2 < ThrottleIdle) MotorInput2 = ThrottleIdle;
+        if (MotorInput3 < ThrottleIdle) MotorInput3 = ThrottleIdle;
+        if (MotorInput4 < ThrottleIdle) MotorInput4 = ThrottleIdle;
+        int ThrottleCutOff = 1000;
+        if (Throttle < 1050) {
+            MotorInput1 = ThrottleCutOff; 
+            MotorInput2 = ThrottleCutOff;
+            MotorInput3 = ThrottleCutOff; 
+            MotorInput4 = ThrottleCutOff;
+            reset_pid();
+        }
+        if (web_control_data.AUX1 == 0) {
+            MotorInput1 = ThrottleCutOff; 
+            MotorInput2 = ThrottleCutOff;
+            MotorInput3 = ThrottleCutOff; 
+            MotorInput4 = ThrottleCutOff;
+            reset_pid();
+        } else {
+            setMotorSpeed(LEDC_CHANNEL_0, MotorInput1);
+            setMotorSpeed(LEDC_CHANNEL_1, MotorInput2);
+            setMotorSpeed(LEDC_CHANNEL_2, MotorInput3);
+            setMotorSpeed(LEDC_CHANNEL_3, MotorInput4);
+            printf("AccX: %.2f, AccY: %.2f, AccZ: %.2f\n", AccX, AccY, AccZ);
+            printf("AngleRoll: %.2f, AnglePitch: %.2f\n", AngleRoll, AnglePitch);
+            printf("Throttle: %.2f, Yaw: %.2f, Roll: %.2f, Pitch: %.2f\n", Throttle, Yaw, Roll, Pitch);
+            printf("RateRoll: %.2f, RatePitch: %.2f, RateYaw: %.2f\n", RateRoll, RatePitch, RateYaw);
+            printf("InputThrottle: %.2f, InputRoll: %.2f, InputPitch: %.2f, InputYaw: %.2f\n", InputThrottle, InputRoll, InputPitch, InputYaw);
+            printf("MotorInput1: %.2f, MotorInput2: %.2f, MotorInput3: %.2f, MotorInput4: %.2f\n", MotorInput1, MotorInput2, MotorInput3, MotorInput4);
+
+        }
+        while (esp_timer_get_time() - LoopTimer < 20000) {
+            vTaskDelay(pdMS_TO_TICKS(1)); // Chờ 1ms
+        }
+        LoopTimer = esp_timer_get_time();
+    }
 }
